@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — cntnct</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --surface:   #111118;
+      --border:    #1e1e2e;
+      --accent:    #4af0c4;
+      --accent2:   #7b6fff;
+      --text:      #e8e8f0;
+      --muted:     #6b6b88;
+      --mono:      'DM Mono', monospace;
+      --sans:      'Noto Sans JP', sans-serif;
+      --title:     'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── Main ── */
+    main {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8rem 2.5rem 6rem;
+    }
+
+    /* ── Page header ── */
+    .page-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .page-title {
+      font-family: var(--title);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s forwards;
+    }
+
+    .page-meta {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+    }
+
+    /* ── Content ── */
+    .content {
+      opacity: 0;
+      animation: fadeUp 0.8s 0.65s forwards;
+    }
+
+    .app-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--accent2);
+      background: rgba(123,111,255,0.08);
+      border: 1px solid rgba(123,111,255,0.2);
+      border-radius: 4px;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-section {
+      margin-bottom: 2.8rem;
+    }
+
+    .policy-section h2 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .policy-section h2::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .policy-section p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 2;
+    }
+
+    .policy-section a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(74,240,196,0.3);
+      transition: border-color 0.2s;
+    }
+    .policy-section a:hover {
+      border-color: var(--accent);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      main { padding: 7rem 1.2rem 4rem; }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="./index.html" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="./index.html#concept">Concept</a></li>
+      <li><a href="./index.html#product">Product</a></li>
+      <li><a href="./index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="page-eyebrow">// legal</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-meta">制定日：2026年4月2日</p>
+
+    <div class="content">
+      <div class="app-label">触って覚える高校物理</div>
+
+      <div class="policy-section">
+        <h2>1. 個人情報の取得について</h2>
+        <p>
+          本アプリは、利用者の個人情報を一切取得しません。<br>
+          利用状況や学習データはすべて利用者の端末内に保存され、外部サーバに送信されることはありません。<br>
+          また、本アプリは第三者への個人情報の提供を一切行いません。<br>
+          本アプリは、通常の利用においてインターネット通信を必要としません。
+          ただし、アプリ内課金の処理においては、各プラットフォーム（Google Play、App Store等）の提供する決済サービスとの通信が行われます。
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. お問い合わせについて</h2>
+        <p>
+          本アプリに関するお問い合わせは、以下のフォームから受け付けます。<br>
+          お問い合わせフォームにはGoogleフォームを利用しています。<br>
+          お問い合わせ内容および、利用者が任意で入力したメールアドレスは、お問い合わせ対応および本アプリ改善の参考のみに利用します。<br>
+          メールアドレスの入力は任意です。<br>
+          返信を保証するものではありませんが、必要に応じて対応させていただく場合があります。<br><br>
+          <a href="https://forms.gle/xLJMrN7GDd4kz5ki6" target="_blank" rel="noopener">お問い合わせフォーム</a>
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. 適用範囲</h2>
+        <p>
+          本ポリシーは、本アプリにのみ適用されます。
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. 変更について</h2>
+        <p>
+          本ポリシーの内容は、予告なく変更されることがあります。
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">cntnct</span>
+    <ul class="footer-links">
+      <li><a href="./privacy.html">プライバシーポリシー</a></li>
+      <li><a href="./index.html#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 cntnct（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
