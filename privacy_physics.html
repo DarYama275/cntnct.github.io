@@ -124,6 +124,7 @@
       border-bottom: 1px solid var(--border);
       opacity: 0;
       animation: fadeUp 0.8s 0.5s forwards;
+      line-height: 1.8;
     }
 
     /* ── Content ── */
@@ -176,6 +177,27 @@
       color: var(--muted);
       font-size: 0.92rem;
       line-height: 2;
+      margin-bottom: 0.8rem;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 2;
+      padding-left: 1.4em;
+      margin: 0.6rem 0 0.8rem;
+    }
+
+    .policy-section ul li { margin-bottom: 0.4rem; }
+
+    .policy-section ul small {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      opacity: 0.7;
+      display: block;
+      line-height: 1.6;
     }
 
     .policy-section a {
@@ -186,6 +208,43 @@
     }
     .policy-section a:hover {
       border-color: var(--accent);
+    }
+
+    /* ── Revision history ── */
+    .revision-history {
+      margin-top: 3rem;
+      padding: 1.4rem 1.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .revision-history h3 {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .revision-history ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .revision-history ul li {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.9;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .revision-history .rev-ver {
+      color: var(--accent2);
+      flex-shrink: 0;
     }
 
     /* ── Footer ── */
@@ -264,7 +323,11 @@
   <main>
     <p class="page-eyebrow">// legal</p>
     <h1 class="page-title">Privacy Policy</h1>
-    <p class="page-meta">制定日：2026年4月2日</p>
+    <p class="page-meta">
+      アプリ名：触って覚える高校物理<br>
+      開発者：コンテネクト<br>
+      最終更新日：2026年5月3日（版数：1.1）
+    </p>
 
     <div class="content">
       <div class="app-label">触って覚える高校物理</div>
@@ -272,16 +335,39 @@
       <div class="policy-section">
         <h2>1. 個人情報の取得について</h2>
         <p>
-          本アプリは、利用者の個人情報を一切取得しません。<br>
-          利用状況や学習データはすべて利用者の端末内に保存され、外部サーバに送信されることはありません。<br>
-          また、本アプリは第三者への個人情報の提供を一切行いません。<br>
-          本アプリは、通常の利用においてインターネット通信を必要としません。
-          ただし、アプリ内課金の処理においては、各プラットフォーム（Google Play、App Store等）の提供する決済サービスとの通信が行われます。
+          本アプリは、利用者の氏名・メールアドレス等の個人情報を一切取得しません。<br>
+          学習データ・進捗状況はすべて利用者の端末内にのみ保存され、外部に送信されることはありません。
+        </p>
+        <p>ただし、アプリの機能提供のため、以下の匿名データを当方のサーバー（Cloudflare）に送信・保存します。</p>
+        <ul>
+          <li>
+            アプリ内で生成した匿名の識別子（インストールID）<br>
+            <small>※個人を特定するものではなく、アプリの再インストールまたは機種変更の際にリセットされます</small>
+          </li>
+          <li>購入済みコンテンツのID</li>
+          <li>購入トランザクションの情報（Google Playが発行するもの）</li>
+          <li>AIチャット機能のチケット残数</li>
+          <li>コンテンツへのアクセス日時（不正利用検知のため）</li>
+        </ul>
+        <p>
+          これらは個人を特定できない情報であり、利用者の学習内容や行動履歴は含まれません。<br>
+          アプリ内課金の処理においては、Google PlayおよびApp Store等の提供する決済サービスとの通信が行われます。<br>
+          本アプリは、第三者への個人情報の提供を一切行いません。
         </p>
       </div>
 
       <div class="policy-section">
-        <h2>2. お問い合わせについて</h2>
+        <h2>2. データの引き継ぎについて</h2>
+        <p>
+          購入済みのコンテンツおよびAIチャット機能の有料チケットは、同一のGoogleアカウントでGoogle Playの購入履歴を復元することで引き継ぐことができます。
+        </p>
+        <p>
+          ただし、無料で付与されたチケットは端末内の匿名IDに紐づくため、機種変更・アプリの再インストールの際に引き継ぐことができません。あらかじめご了承ください。
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. お問い合わせについて</h2>
         <p>
           本アプリに関するお問い合わせは、以下のフォームから受け付けます。<br>
           お問い合わせフォームにはGoogleフォームを利用しています。<br>
@@ -293,18 +379,33 @@
       </div>
 
       <div class="policy-section">
-        <h2>3. 適用範囲</h2>
+        <h2>4. 適用範囲</h2>
         <p>
           本ポリシーは、本アプリにのみ適用されます。
         </p>
       </div>
 
       <div class="policy-section">
-        <h2>4. 変更について</h2>
+        <h2>5. 変更について</h2>
         <p>
           本ポリシーの内容は、予告なく変更されることがあります。
         </p>
       </div>
+
+      <div class="revision-history">
+        <h3>改訂履歴</h3>
+        <ul>
+          <li>
+            <span class="rev-ver">v1.1</span>
+            <span>2026年5月3日 — AIチャット機能のチケット制導入に伴い、匿名データの取得項目およびデータの引き継ぎに関する条項を追加</span>
+          </li>
+          <li>
+            <span class="rev-ver">v1.0</span>
+            <span>2026年4月2日 — 制定</span>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </main>
 
@@ -315,7 +416,7 @@
       <li><a href="./privacy.html">プライバシーポリシー</a></li>
       <li><a href="./index.html#contact">Contact</a></li>
     </ul>
-    <p class="footer-copy">© 2026 cntnct（コンテネクト）. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
   </footer>
 
 </body>
