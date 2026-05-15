@@ -46,7 +46,6 @@
       z-index: 0;
     }
 
-    /* ── Nav ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -84,7 +83,6 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ── Main ── */
     main {
       position: relative;
       max-width: 720px;
@@ -92,7 +90,6 @@
       padding: 8rem 2.5rem 6rem;
     }
 
-    /* ── Page header ── */
     .page-eyebrow {
       font-family: var(--mono);
       font-size: 0.68rem;
@@ -127,7 +124,6 @@
       line-height: 1.8;
     }
 
-    /* ── Content ── */
     .content {
       opacity: 0;
       animation: fadeUp 0.8s 0.65s forwards;
@@ -206,11 +202,8 @@
       border-bottom: 1px solid rgba(74,240,196,0.3);
       transition: border-color 0.2s;
     }
-    .policy-section a:hover {
-      border-color: var(--accent);
-    }
+    .policy-section a:hover { border-color: var(--accent); }
 
-    /* ── Revision history ── */
     .revision-history {
       margin-top: 3rem;
       padding: 1.4rem 1.6rem;
@@ -247,7 +240,6 @@
       flex-shrink: 0;
     }
 
-    /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 2.5rem;
@@ -294,7 +286,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Responsive ── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.2rem; }
       .nav-links { gap: 1.2rem; }
@@ -310,7 +301,6 @@
 </head>
 <body>
 
-  <!-- Nav -->
   <nav>
     <a href="./index.html" class="nav-logo">cntnct</a>
     <ul class="nav-links">
@@ -326,7 +316,7 @@
     <p class="page-meta">
       アプリ名：触って覚える高校物理<br>
       開発者：コンテネクト<br>
-      最終更新日：2026年5月3日（版数：1.1）
+      最終更新日：2026年5月15日（版数：1.2）
     </p>
 
     <div class="content">
@@ -345,8 +335,9 @@
             <small>※個人を特定するものではなく、アプリの再インストールまたは機種変更の際にリセットされます</small>
           </li>
           <li>購入済みコンテンツのID</li>
-          <li>購入トランザクションの情報（Google Playが発行するもの）</li>
-          <li>AIチャット機能のチケット残数</li>
+          <li>購入トランザクションの情報（Google PlayまたはApp Storeが発行するもの）</li>
+          <li>AIチャット機能のチケット残数および消費履歴</li>
+          <li>利用規約への同意日時および同意バージョン</li>
           <li>コンテンツへのアクセス日時（不正利用検知のため）</li>
         </ul>
         <p>
@@ -357,17 +348,30 @@
       </div>
 
       <div class="policy-section">
-        <h2>2. データの引き継ぎについて</h2>
+        <h2>2. AI機能におけるデータの取り扱い</h2>
         <p>
-          購入済みのコンテンツおよびAIチャット機能の有料チケットは、同一のGoogleアカウントでGoogle Playの購入履歴を復元することで引き継ぐことができます。
+          本アプリのAI質問機能はAnthropicのAPIを利用しています。AI機能をご利用の際、入力された質問内容は当方のサーバーを経由してAnthropicに送信・処理されます。
         </p>
         <p>
-          ただし、無料で付与されたチケットは端末内の匿名IDに紐づくため、機種変更・アプリの再インストールの際に引き継ぐことができません。あらかじめご了承ください。
+          AI機能への入力内容は、不適切・有害な利用を検知する安全システムによる処理の対象となります。不適切な利用が検知された場合、該当の端末識別IDに基づきAI機能の利用を制限することがあります。
+        </p>
+        <p>
+          入力内容にはお名前・連絡先等の個人情報を含めないようにしてください。Anthropicのデータ取り扱いについては、<a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropicのプライバシーポリシー</a>をご確認ください。
         </p>
       </div>
 
       <div class="policy-section">
-        <h2>3. お問い合わせについて</h2>
+        <h2>3. データの引き継ぎについて</h2>
+        <p>
+          有料チケット（購入済み）は、同一のストアアカウント（GoogleアカウントまたはApple ID）で購入履歴を復元することで引き継ぐことができます。
+        </p>
+        <p>
+          ただし、チケットの残数は当方サーバーで端末識別IDと紐づけて管理されるため、機種変更・アプリの再インストールの際に残数の引き継ぎを保証できません。無料で付与されたチケットについても同様です。あらかじめご了承ください。
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. お問い合わせについて</h2>
         <p>
           本アプリに関するお問い合わせは、以下のフォームから受け付けます。<br>
           お問い合わせフォームにはGoogleフォームを利用しています。<br>
@@ -379,14 +383,14 @@
       </div>
 
       <div class="policy-section">
-        <h2>4. 適用範囲</h2>
+        <h2>5. 適用範囲</h2>
         <p>
           本ポリシーは、本アプリにのみ適用されます。
         </p>
       </div>
 
       <div class="policy-section">
-        <h2>5. 変更について</h2>
+        <h2>6. 変更について</h2>
         <p>
           本ポリシーの内容は、予告なく変更されることがあります。
         </p>
@@ -395,6 +399,10 @@
       <div class="revision-history">
         <h3>改訂履歴</h3>
         <ul>
+          <li>
+            <span class="rev-ver">v1.2</span>
+            <span>2026年5月15日 — AI機能におけるデータ取り扱い条項を独立して追加。同意記録・安全システム・App Store対応を反映</span>
+          </li>
           <li>
             <span class="rev-ver">v1.1</span>
             <span>2026年5月3日 — AIチャット機能のチケット制導入に伴い、匿名データの取得項目およびデータの引き継ぎに関する条項を追加</span>
@@ -409,7 +417,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     <span class="footer-logo">cntnct</span>
     <ul class="footer-links">
