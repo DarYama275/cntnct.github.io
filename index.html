@@ -1,1 +1,647 @@
-<meta http-equiv="refresh" content="0; url=index_top.html">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Containnect — コンテネクト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --surface:   #111118;
+      --border:    #1e1e2e;
+      --accent:    #4af0c4;
+      --accent2:   #7b6fff;
+      --text:      #e8e8f0;
+      --muted:     #6b6b88;
+      --mono:      'DM Mono', monospace;
+      --sans:      'Noto Sans JP', sans-serif;
+      --title:     'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── Grid noise overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── Hero ── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 2.5rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,240,196,0.08) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      pointer-events: none;
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%, -60%) scale(1); opacity: 1; }
+      50%       { transform: translate(-50%, -60%) scale(1.1); opacity: 0.7; }
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-title {
+      font-family: var(--title);
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      max-width: 900px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+
+    .hero-title .accent { color: var(--accent); }
+    .hero-title .accent2 { color: var(--accent2); }
+
+    .hero-sub {
+      margin-top: 2rem;
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.9;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+
+    .hero-cta {
+      margin-top: 3rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+
+    .btn {
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      padding: 0.85rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0a0f;
+      font-weight: 500;
+    }
+    .btn-primary:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(74,240,196,0.4);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Concept ── */
+    #concept {
+      position: relative;
+      padding: 7rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    .concept-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1000px;
+    }
+
+    .concept-text h2 {
+      font-family: var(--title);
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .concept-text p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .concept-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container-diagram {
+      position: relative;
+      width: 280px;
+      height: 220px;
+    }
+
+    .c-box {
+      position: absolute;
+      border: 1.5px solid;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+    }
+
+    .c-box-a {
+      width: 100px; height: 64px;
+      top: 20px; left: 10px;
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(74,240,196,0.05);
+      animation: boxPulse 3s ease-in-out infinite;
+    }
+    .c-box-b {
+      width: 100px; height: 64px;
+      top: 20px; right: 10px;
+      border-color: var(--accent2);
+      color: var(--accent2);
+      background: rgba(123,111,255,0.05);
+      animation: boxPulse 3s ease-in-out 1s infinite;
+    }
+    .c-box-c {
+      width: 120px; height: 64px;
+      bottom: 20px; left: 50%;
+      transform: translateX(-50%);
+      border-color: #f0a24a;
+      color: #f0a24a;
+      background: rgba(240,162,74,0.05);
+      animation: boxPulse 3s ease-in-out 2s infinite;
+    }
+
+    @keyframes boxPulse {
+      0%, 100% { opacity: 0.7; }
+      50%       { opacity: 1; }
+    }
+
+    .c-line {
+      position: absolute;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2));
+      width: 1.5px;
+    }
+    .c-line-1 {
+      height: 40px;
+      top: 84px; left: 62px;
+    }
+    .c-line-2 {
+      height: 40px;
+      top: 84px; right: 62px;
+    }
+
+    .c-dot {
+      position: absolute;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .c-dot-1 { top: 84px; left: 59px; }
+    .c-dot-2 { top: 84px; right: 59px; }
+
+    /* ── Product ── */
+    #product {
+      padding: 7rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .product-card {
+      max-width: 720px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .product-card:hover { border-color: rgba(74,240,196,0.3); }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+    }
+
+    .product-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      color: #f0a24a;
+      background: rgba(240,162,74,0.08);
+      border: 1px solid rgba(240,162,74,0.2);
+      border-radius: 100px;
+      padding: 0.3rem 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-status::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #f0a24a;
+      animation: blink 1.5s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    .product-card h3 {
+      font-family: var(--title);
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+
+    .product-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      background: rgba(74,240,196,0.06);
+      border: 1px solid rgba(74,240,196,0.15);
+      border-radius: 4px;
+      padding: 0.25rem 0.7rem;
+    }
+
+    .product-links {
+      display: flex;
+      gap: 1.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .product-links a {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .product-links a:hover { color: var(--accent); }
+    .product-links a::before {
+      content: '→';
+      font-size: 0.75rem;
+    }
+
+    /* ── Contact ── */
+    #contact {
+      padding: 7rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-inner {
+      max-width: 560px;
+    }
+
+    .contact-inner h2 {
+      font-family: var(--title);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-inner p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 2rem;
+      line-height: 1.9;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .nav-links a { font-size: 0.72rem; }
+
+      #hero, #concept, #product, #contact { padding-left: 1.2rem; padding-right: 1.2rem; }
+
+      .concept-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .concept-visual { display: none; }
+
+      footer {
+        padding: 2rem 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="#concept">Concept</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-glow"></div>
+    <p class="hero-eyebrow">// Containnect — コンテネクト</p>
+    <h1 class="hero-title">
+      Container.<br>
+      <span class="accent">Connect.</span><br>
+      <span class="accent2">Expand.</span>
+    </h1>
+    <p class="hero-sub">
+      知識をコンテナとしてパッケージ化し、<br>
+      繋げることで学びを拡張していく。
+    </p>
+    <div class="hero-cta">
+      <a href="#product" class="btn btn-primary">プロダクトを見る</a>
+      <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+    </div>
+  </section>
+
+  <!-- Concept -->
+  <section id="concept">
+    <p class="section-label reveal">// concept</p>
+    <div class="concept-grid">
+      <div class="concept-text reveal">
+        <h2>Container × Connect<br>= 知識の拡張</h2>
+        <p>
+          Containnect（コンテネクト）は、知識を「コンテナ」として捉え、パッケージ化・接続することで学びを構造的に広げていくというコンセプトのもと活動しています。<br><br>
+          教育分野を起点に、インタラクティブな体験を通じてより深い理解を届けるプロダクトを開発しています。
+        </p>
+      </div>
+      <div class="concept-visual reveal">
+        <div class="container-diagram">
+          <div class="c-box c-box-a">PHYSICS</div>
+          <div class="c-box c-box-b">VISUAL</div>
+          <div class="c-line c-line-1"></div>
+          <div class="c-line c-line-2"></div>
+          <div class="c-dot c-dot-1"></div>
+          <div class="c-dot c-dot-2"></div>
+          <div class="c-box c-box-c">KNOWLEDGE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section id="product">
+    <p class="section-label reveal">// product</p>
+    <div class="product-card reveal">
+      <div class="product-status">IN DEVELOPMENT</div>
+      <h3>触って覚える物理</h3>
+      <p>
+        物理をAIと学んでいくスマホアプリ。力学・波動・熱力学・電磁気学・原子物理をカバーした直感クイズ／動く教科書／ランダム計算問題等の豊富なコンテンツで物理の概念を体感できる参考書アプリ。
+      </p>
+      <div class="product-tags">
+        <span class="tag">Android</span>
+        <span class="tag">Google Play</span>
+        <span class="tag">Education</span>
+        <span class="tag">Interactive</span>
+        <span class="tag">Physics</span>
+        <span class="tag">React + Capacitor</span>
+      </div>
+      <div class="product-links">
+        <a href="./privacy_physics.html">プライバシーポリシー</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <p class="section-label reveal">// contact</p>
+    <div class="contact-inner">
+      <h2 class="reveal">Get in touch.</h2>
+      <p class="reveal">
+        プロダクトへのご意見・ご要望、取材・協業のご相談など、お気軽にどうぞ。
+      </p>
+      <div class="reveal" style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+        <a href="https://forms.gle/xLJMrN7GDd4kz5ki6" class="btn btn-primary" target="_blank" rel="noopener">お問い合わせフォーム</a>
+        <a href="https://github.com/daryama275" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-logo">cntnct</span>
+    <ul class="footer-links">
+      <li><a href="./privacy.html">プライバシーポリシー</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
