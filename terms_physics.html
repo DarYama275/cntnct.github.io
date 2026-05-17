@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>利用規約 — cntnct</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --surface:   #111118;
+      --border:    #1e1e2e;
+      --accent:    #4af0c4;
+      --accent2:   #7b6fff;
+      --text:      #e8e8f0;
+      --muted:     #6b6b88;
+      --mono:      'DM Mono', monospace;
+      --sans:      'Noto Sans JP', sans-serif;
+      --title:     'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    main {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8rem 2.5rem 6rem;
+    }
+
+    .page-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .page-title {
+      font-family: var(--title);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s forwards;
+    }
+
+    .page-meta {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+      line-height: 1.8;
+    }
+
+    .content {
+      opacity: 0;
+      animation: fadeUp 0.8s 0.65s forwards;
+    }
+
+    .app-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--accent2);
+      background: rgba(123,111,255,0.08);
+      border: 1px solid rgba(123,111,255,0.2);
+      border-radius: 4px;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-section {
+      margin-bottom: 2.8rem;
+    }
+
+    .policy-section h2 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .policy-section h2::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .policy-section p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 2;
+      margin-bottom: 0.8rem;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 2;
+      padding-left: 1.4em;
+      margin: 0.6rem 0 0.8rem;
+    }
+
+    .policy-section ul li { margin-bottom: 0.4rem; }
+
+    .policy-section a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(74,240,196,0.3);
+      transition: border-color 0.2s;
+    }
+    .policy-section a:hover { border-color: var(--accent); }
+
+    .revision-history {
+      margin-top: 3rem;
+      padding: 1.4rem 1.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .revision-history h3 {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .revision-history ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .revision-history ul li {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.9;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .revision-history .rev-ver {
+      color: var(--accent2);
+      flex-shrink: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      main { padding: 7rem 1.2rem 4rem; }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="./index.html" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="./index.html#concept">Concept</a></li>
+      <li><a href="./index.html#product">Product</a></li>
+      <li><a href="./index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="page-eyebrow">// legal</p>
+    <h1 class="page-title">Terms of Service</h1>
+    <p class="page-meta">
+      アプリ名：触って覚える高校物理<br>
+      開発者：コンテネクト<br>
+      最終更新日：2026年5月15日（版数：1.0）
+    </p>
+
+    <div class="content">
+      <div class="app-label">触って覚える高校物理</div>
+
+      <div class="policy-section">
+        <h2>1. 適用について</h2>
+        <p>本利用規約（以下「本規約」）は、コンテネクト（以下「当方」）が提供するアプリケーション「触って覚える高校物理」（以下「本アプリ」）の利用条件を定めるものです。</p>
+        <p>利用者は本アプリを利用することで、本規約に同意したものとみなします。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. 無料コンテンツと有料機能について</h2>
+        <p>本アプリの基本コンテンツ（物理解説、インタラクティブアニメーション、演習問題等）はすべて無料でご利用いただけます。</p>
+        <p>以下の機能は、アプリ内チケット（有料）の消費により利用できます。</p>
+        <ul>
+          <li>AIへの物理に関する質問・相談</li>
+          <li>共通テスト回答照合機能</li>
+        </ul>
+        <p>チケットは消費型のため、一度使用すると返還されません。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. 知的財産権について</h2>
+        <p>本アプリに含まれるテキスト、図解、アニメーション、問題、その他すべてのコンテンツの著作権は、当方に帰属します。</p>
+        <p>利用者は、本アプリのコンテンツを個人的な学習目的にのみ使用することができます。</p>
+        <p>以下の行為を禁止します。</p>
+        <ul>
+          <li>コンテンツの無断転載、複製、配布</li>
+          <li>スクリーンショットや録画による第三者への共有</li>
+          <li>コンテンツを利用した二次的著作物の作成</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. 課金・返金について</h2>
+        <p>本アプリ内のチケットは、Google PlayまたはApp Store（Apple）を通じて販売されます。</p>
+        <p>チケットは消費型アイテムであり、AI質問機能等の利用時に消費されます。</p>
+        <p>購入・消費済みを問わず、チケットの返金は原則行いません。ただし、ストアの返金ポリシーに基づきストア側が対応する場合はこの限りではありません。</p>
+        <p>チケットの残数は当方サーバーで管理されます。機種変更・アプリ再インストール時の残数引き継ぎについては、同一端末での継続利用が前提となるため保証できません。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. AIによる回答について</h2>
+        <p>本アプリのAI質問機能はAnthropicのAIサービスを利用しています。</p>
+        <p>AIの回答は参考情報であり、正確性・完全性を保証するものではありません。誤りが含まれる場合があります。教科書や信頼できる参考書での確認を推奨します。</p>
+        <p>試験・受験における最終判断は、利用者自身の責任において行ってください。</p>
+        <p>当方は、AIの回答を参考にしたことにより生じた損害について責任を負いません。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. 禁止事項</h2>
+        <p>利用者は以下の行為を行ってはなりません。</p>
+        <ul>
+          <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル</li>
+          <li>本アプリの技術的保護手段の回避または解除</li>
+          <li>不正な手段によるチケットの取得またはAI機能への不正アクセス</li>
+          <li>本アプリのサーバーへの不正アクセスまたは過剰な負荷をかける行為</li>
+          <li>AIに対する不適切・有害・違法なコンテンツの入力</li>
+          <li>本規約に違反する目的での本アプリの利用</li>
+        </ul>
+        <p>これらの行為は、不正競争防止法、著作権法、不正アクセス禁止法等の法律により処罰される可能性があります。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>7. 利用制限について</h2>
+        <p>当方は、以下の場合に利用者のAI機能の利用を一時停止または永続的に制限することがあります。</p>
+        <ul>
+          <li>AIに対する不適切・有害な入力が検知された場合</li>
+          <li>本規約の禁止事項に違反した場合</li>
+          <li>その他、当方が不適切と判断した利用が認められた場合</li>
+        </ul>
+        <p>利用制限に伴う既存チケットの返金は行いません。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>8. 免責事項</h2>
+        <p>本アプリのコンテンツは、高校物理の学習を支援することを目的としています。</p>
+        <p>当方は、本アプリの利用による学習効果、成績向上、試験合格等を保証するものではありません。</p>
+        <p>当方は、本アプリの利用により生じた損害について、一切の責任を負いません。</p>
+        <p>本アプリは予告なくサービス内容の変更、停止、終了を行う場合があります。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>9. サーバーとデータについて</h2>
+        <p>本アプリは、以下の目的でCloudflare上のサーバーを利用しています。</p>
+        <ul>
+          <li>アプリのインストール情報の管理</li>
+          <li>利用規約への同意日時および同意バージョンの記録</li>
+          <li>チケット残数・消費履歴の管理</li>
+          <li>AI質問機能の処理（入力内容はAnthropicのAPIに送信されます）</li>
+          <li>安全システムによる不適切利用の検知</li>
+        </ul>
+        <p>これらの目的のため、端末識別ID（installId）、チケット情報、同意記録、およびAIへの入力内容が当方サーバーに送信・処理されます。</p>
+        <p>個人を特定できる情報は収集していません。AI入力内容の取り扱いについては、<a href="./privacy.html">プライバシーポリシー</a>もあわせてご確認ください。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>10. 規約の変更について</h2>
+        <p>当方は、必要に応じて本規約を変更することがあります。</p>
+        <p>変更後の規約は、本アプリ内に掲示した時点から適用されます。</p>
+        <p>規約の改訂により再同意が必要な場合は、アプリ起動時に通知します。</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>11. お問い合わせ</h2>
+        <p>
+          本規約に関するお問い合わせは、以下のフォームから受け付けます。<br>
+          <a href="https://forms.gle/xLJMrN7GDd4kz5ki6" target="_blank" rel="noopener">お問い合わせフォーム</a>
+        </p>
+      </div>
+
+      <div class="revision-history">
+        <h3>改訂履歴</h3>
+        <ul>
+          <li>
+            <span class="rev-ver">v1.0</span>
+            <span>2026年5月15日 — 制定</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Containnect</span>
+    <ul class="footer-links">
+      <li><a href="./privacy.html">プライバシーポリシー</a></li>
+      <li><a href="./terms.html">利用規約</a></li>
+      <li><a href="./index.html#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
