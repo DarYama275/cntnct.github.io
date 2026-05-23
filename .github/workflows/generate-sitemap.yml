@@ -1,0 +1,68 @@
+name: Generate sitemap.xml
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - '.github/workflows/generate-sitemap.yml'
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate sitemap.xml
+        run: |
+          BASE_URL="https://containnect.com"
+          TODAY=$(date +%Y-%m-%d)
+
+          # 除外するHTMLファイルのパターン（必要に応じて追加）
+          EXCLUDE_PATTERN="404|privacy|terms"
+
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+
+          # ルートのHTMLファイルを列挙（サブディレクトリは含まない）
+          for file in *.html; do
+            # 除外パターンに一致するファイルはスキップ
+            if echo "$file" | grep -qiE "$EXCLUDE_PATTERN"; then
+              continue
+            fi
+
+            if [ "$file" = "index.html" ]; then
+              loc="${BASE_URL}/"
+              priority="1.0"
+              changefreq="monthly"
+            else
+              # index.html以外: .htmlを除いたパス
+              slug="${file%.html}"
+              loc="${BASE_URL}/${slug}.html"
+              priority="0.9"
+              changefreq="monthly"
+            fi
+
+            echo "  <url>" >> sitemap.xml
+            echo "    <loc>${loc}</loc>" >> sitemap.xml
+            echo "    <lastmod>${TODAY}</lastmod>" >> sitemap.xml
+            echo "    <changefreq>${changefreq}</changefreq>" >> sitemap.xml
+            echo "    <priority>${priority}</priority>" >> sitemap.xml
+            echo "  </url>" >> sitemap.xml
+          done
+
+          echo '</urlset>' >> sitemap.xml
+
+          echo "--- Generated sitemap.xml ---"
+          cat sitemap.xml
+
+      - name: Commit sitemap.xml
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml
+          # 変更がなければコミットしない
+          git diff --cached --quiet || git commit -m "chore: auto-update sitemap.xml [skip ci]"
+          git push
+
