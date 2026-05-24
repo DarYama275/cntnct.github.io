@@ -12,7 +12,7 @@ Containnect（コンテネクト）は、知識を「コンテナ」としてパ
 
 ## プロダクト
 
-### 触って覚える物理（Android アプリ）
+### さわっておぼえる物理（Android アプリ）
 
 - 詳細ページ：https://containnect.com/physics.html
 - カテゴリ：教育 / 高校物理 / AI学習
@@ -67,3 +67,4 @@ Containnect（コンテネクト）は、知識を「コンテナ」としてパ
 
 - フォーム：https://forms.gle/xLJMrN7GDd4kz5ki6
 - GitHub：https://github.com/daryama275
+
