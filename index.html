@@ -4,6 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Containnect — コンテネクト</title>
+  <meta name="description" content="知識をコンテナとしてパッケージ化し、繋げることで学びを拡張していく。Containnect（コンテネクト）はインタラクティブな教育プロダクトを開発するインディーデベロッパーです。">
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://containnect.com/">
+  <meta property="og:site_name"   content="Containnect（コンテネクト）">
+  <meta property="og:title"       content="Containnect — コンテネクト">
+  <meta property="og:description" content="知識をコンテナとしてパッケージ化し、繋げることで学びを拡張していく。インタラクティブな教育プロダクトを開発するインディーデベロッパー。">
+  <meta property="og:locale"      content="ja_JP">
+  <meta name="twitter:card"       content="summary">
+  <meta name="twitter:title"      content="Containnect — コンテネクト">
+  <meta name="twitter:description" content="知識をコンテナとしてパッケージ化し、繋げることで学びを拡張していく。インタラクティブな教育プロダクトを開発するインディーデベロッパー。">
+
+  <!-- Schema.org: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Containnect",
+    "alternateName": "コンテネクト",
+    "url": "https://containnect.com",
+    "logo": "https://containnect.com/assets/logo.png",
+    "description": "知識をコンテナとしてパッケージ化・接続し、学びを構造的に広げる教育プロダクトを開発するインディーデベロッパー。",
+    "founder": {
+      "@type": "Person",
+      "name": "コンテネクト"
+    },
+    "foundingLocation": {
+      "@type": "Place",
+      "addressCountry": "JP"
+    },
+    "sameAs": [
+      "https://github.com/daryama275"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "url": "https://forms.gle/xLJMrN7GDd4kz5ki6"
+    },
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "MobileApplication",
+        "name": "触って覚える物理",
+        "url": "https://containnect.com/physics.html",
+        "operatingSystem": "Android",
+        "applicationCategory": "EducationApplication"
+      }
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -34,7 +86,6 @@
       overflow-x: hidden;
     }
 
-    /* ── Grid noise overlay ── */
     body::before {
       content: '';
       position: fixed;
@@ -47,7 +98,6 @@
       z-index: 0;
     }
 
-    /* ── Nav ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -85,7 +135,6 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ── Hero ── */
     #hero {
       position: relative;
       min-height: 100vh;
@@ -195,7 +244,6 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Concept ── */
     #concept {
       position: relative;
       padding: 7rem 2.5rem;
@@ -292,14 +340,8 @@
       background: linear-gradient(to bottom, var(--accent), var(--accent2));
       width: 1.5px;
     }
-    .c-line-1 {
-      height: 40px;
-      top: 84px; left: 62px;
-    }
-    .c-line-2 {
-      height: 40px;
-      top: 84px; right: 62px;
-    }
+    .c-line-1 { height: 40px; top: 84px; left: 62px; }
+    .c-line-2 { height: 40px; top: 84px; right: 62px; }
 
     .c-dot {
       position: absolute;
@@ -310,7 +352,6 @@
     .c-dot-1 { top: 84px; left: 59px; }
     .c-dot-2 { top: 84px; right: 59px; }
 
-    /* ── Product ── */
     #product {
       padding: 7rem 2.5rem;
       border-top: 1px solid var(--border);
@@ -402,6 +443,8 @@
       gap: 1.5rem;
       padding-top: 1.2rem;
       border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .product-links a {
@@ -416,20 +459,26 @@
       gap: 0.4rem;
     }
     .product-links a:hover { color: var(--accent); }
-    .product-links a::before {
-      content: '→';
-      font-size: 0.75rem;
+    .product-links a::before { content: '→'; font-size: 0.75rem; }
+
+    /* アプリ詳細リンクは少し目立たせる */
+    .product-links a.link-detail {
+      color: var(--accent);
+      border: 1px solid rgba(74,240,196,0.25);
+      background: rgba(74,240,196,0.05);
+      border-radius: 4px;
+      padding: 0.3rem 0.8rem;
+    }
+    .product-links a.link-detail:hover {
+      background: rgba(74,240,196,0.12);
     }
 
-    /* ── Contact ── */
     #contact {
       padding: 7rem 2.5rem;
       border-top: 1px solid var(--border);
     }
 
-    .contact-inner {
-      max-width: 560px;
-    }
+    .contact-inner { max-width: 560px; }
 
     .contact-inner h2 {
       font-family: var(--title);
@@ -445,7 +494,6 @@
       line-height: 1.9;
     }
 
-    /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 2.5rem;
@@ -487,7 +535,6 @@
       text-align: right;
     }
 
-    /* ── Scroll reveal ── */
     .reveal {
       opacity: 0;
       transform: translateY(32px);
@@ -498,25 +545,14 @@
       transform: none;
     }
 
-    /* ── Responsive ── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.2rem; }
       .nav-links { gap: 1.2rem; }
       .nav-links a { font-size: 0.72rem; }
-
       #hero, #concept, #product, #contact { padding-left: 1.2rem; padding-right: 1.2rem; }
-
-      .concept-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
+      .concept-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .concept-visual { display: none; }
-
-      footer {
-        padding: 2rem 1.2rem;
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
       .footer-copy { text-align: left; }
     }
 
@@ -527,7 +563,6 @@
 </head>
 <body>
 
-  <!-- Nav -->
   <nav>
     <a href="#" class="nav-logo">cntnct</a>
     <ul class="nav-links">
@@ -537,7 +572,6 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
   <section id="hero">
     <div class="hero-glow"></div>
     <p class="hero-eyebrow">// Containnect — コンテネクト</p>
@@ -556,7 +590,6 @@
     </div>
   </section>
 
-  <!-- Concept -->
   <section id="concept">
     <p class="section-label reveal">// concept</p>
     <div class="concept-grid">
@@ -581,12 +614,11 @@
     </div>
   </section>
 
-  <!-- Product -->
   <section id="product">
     <p class="section-label reveal">// product</p>
     <div class="product-card reveal">
       <div class="product-status">IN DEVELOPMENT</div>
-      <h3>さわっておぼえる物理</h3>
+      <h3>触って覚える物理</h3>
       <p>
         物理をAIと学んでいくスマホアプリ。力学・波動・熱力学・電磁気学・原子物理をカバーした直感クイズ／動く教科書／ランダム計算問題等の豊富なコンテンツで物理の概念を体感できる参考書アプリ。
       </p>
@@ -606,7 +638,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
     <p class="section-label reveal">// contact</p>
     <div class="contact-inner">
@@ -621,7 +652,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <span class="footer-logo">cntnct</span>
     <ul class="footer-links">
@@ -632,7 +662,6 @@
   </footer>
 
   <script>
-    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -641,7 +670,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
