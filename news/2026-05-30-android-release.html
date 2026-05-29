@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>「さわっておぼえる物理」Android版 Google Play にて正式リリース — Containnect</title>
+  <meta name="description" content="物理をAIと学ぶスマホアプリ「さわっておぼえる物理」が、Google Play ストアにて正式公開されました。高校物理の全分野をカバーしたインタラクティブコンテンツ＋AI質問機能が利用可能です。">
+
+  <!-- OGP -->
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         content="https://containnect.com/news/2026-05-30-android-release.html">
+  <meta property="og:site_name"   content="Containnect（コンテネクト）">
+  <meta property="og:title"       content="「さわっておぼえる物理」Android版 Google Play にて正式リリース">
+  <meta property="og:description" content="物理をAIと学ぶスマホアプリが、Google Play ストアにて正式公開されました。高校物理の全分野をカバーしたインタラクティブコンテンツ＋AI質問機能が利用可能です。">
+  <meta property="og:locale"      content="ja_JP">
+  <meta name="twitter:card"       content="summary">
+  <meta name="twitter:title"      content="「さわっておぼえる物理」Android版 Google Play にて正式リリース">
+  <meta name="twitter:description" content="物理をAIと学ぶスマホアプリが、Google Play ストアにて正式公開されました。">
+
+  <!-- Schema.org: NewsArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "「さわっておぼえる物理」Android版 Google Play にて正式リリース",
+    "datePublished": "2026-05-30",
+    "dateModified": "2026-05-30",
+    "author": {
+      "@type": "Organization",
+      "name": "Containnect",
+      "url": "https://containnect.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Containnect",
+      "url": "https://containnect.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://containnect.com/assets/logo.png"
+      }
+    },
+    "url": "https://containnect.com/news/2026-05-30-android-release.html",
+    "description": "物理をAIと学ぶスマホアプリ「さわっておぼえる物理」が、Google Play ストアにて正式公開されました。",
+    "about": {
+      "@type": "MobileApplication",
+      "name": "さわっておぼえる物理",
+      "operatingSystem": "Android",
+      "applicationCategory": "EducationApplication",
+      "url": "https://play.google.com/store/apps/details?id=com.daryama275.physics"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0a0a0f;
+      --surface: #111118;
+      --border:  #1e1e2e;
+      --accent:  #4af0c4;
+      --accent2: #7b6fff;
+      --gold:    #f0a24a;
+      --text:    #e8e8f0;
+      --muted:   #6b6b88;
+      --mono:    'DM Mono', monospace;
+      --sans:    'Noto Sans JP', sans-serif;
+      --title:   'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
+
+    /* ── Article Header ── */
+    .article-header {
+      position: relative;
+      padding: 9rem 2.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .article-header::after {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,240,196,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .breadcrumb {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .article-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(74,240,196,0.07);
+      border: 1px solid rgba(74,240,196,0.2);
+      border-radius: 100px;
+      padding: 0.25rem 0.8rem;
+    }
+    .article-badge::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .article-date {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    .article-header h1 {
+      font-family: var(--title);
+      font-size: clamp(1.5rem, 4vw, 2.6rem);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-lead {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 2;
+      max-width: 640px;
+    }
+
+    /* ── Article Body ── */
+    article {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 2rem;
+    }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: var(--surface);
+      border: 1px solid rgba(74,240,196,0.2);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+    }
+
+    .cta-banner-text p:first-child {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .cta-banner-text p:last-child {
+      font-family: var(--title);
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .cta-banner-btn {
+      flex-shrink: 0;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      padding: 0.8rem 1.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--accent);
+      color: #0a0a0f;
+      font-weight: 500;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .cta-banner-btn:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 0 24px rgba(74,240,196,0.4);
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .section h2 {
+      font-family: var(--title);
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .section p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 2;
+      margin-bottom: 1rem;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .feature-item {
+      background: var(--surface);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .feature-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .feature-title {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .feature-desc {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Tag list */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      background: rgba(74,240,196,0.06);
+      border: 1px solid rgba(74,240,196,0.15);
+      border-radius: 4px;
+      padding: 0.25rem 0.7rem;
+    }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    /* Back nav */
+    .back-nav {
+      padding: 2rem 2.5rem 5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .back-link {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+
+    /* Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .article-header { padding: 8rem 1.2rem 3rem; }
+      article { padding: 3rem 1.2rem 2rem; }
+      .back-nav { padding: 1.5rem 1.2rem 4rem; }
+      .cta-banner { flex-direction: column; align-items: flex-start; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#concept">Concept</a></li>
+      <li><a href="../index.html#product">Product</a></li>
+      <li><a href="./index.html" class="active">News</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="article-header">
+    <div class="breadcrumb">
+      <a href="../index.html">HOME</a>
+      <span>/</span>
+      <a href="./index.html">NEWS</a>
+      <span>/</span>
+      <span>2026.05.30</span>
+    </div>
+    <div class="article-meta">
+      <span class="article-badge">Release</span>
+      <span class="article-date">2026.05.30</span>
+    </div>
+    <h1>「さわっておぼえる物理」<br>Android版 Google Play にて正式リリース</h1>
+    <p class="article-lead">
+      物理をAIと学ぶスマホアプリ「さわっておぼえる物理」が、本日 Google Play ストアにて正式公開されました。
+    </p>
+  </header>
+
+  <article>
+
+    <!-- CTA -->
+    <div class="cta-banner reveal">
+      <div class="cta-banner-text">
+        <p>// Now Available on Android</p>
+        <p>さわっておぼえる物理</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.daryama275.physics"
+         class="cta-banner-btn"
+         target="_blank" rel="noopener">
+        Google Play で入手
+      </a>
+    </div>
+
+    <!-- Overview -->
+    <div class="section reveal">
+      <p class="section-label">// overview</p>
+      <h2>アプリについて</h2>
+      <p>
+        「さわっておぼえる物理」は、高校物理の全分野をインタラクティブなアニメーションと AI を組み合わせて学べる Android 向けアプリです。教科書を読むだけでは掴みにくい物理の直感的な理解を、動くビジュアルと対話的な問題演習を通じてサポートします。
+      </p>
+      <p>
+        力学・波動・熱力学・電磁気学・原子物理の5分野にわたる豊富なコンテンツと、疑問をその場で解決できる AI 質問機能を搭載し、参考書とチューターを一体化した新しい学習体験を提供します。
+      </p>
+    </div>
+
+    <!-- Features -->
+    <div class="section reveal">
+      <p class="section-label">// features</p>
+      <h2>主な機能</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <p class="feature-title">インタラクティブ図解</p>
+          <p class="feature-desc">物理現象をリアルタイムアニメーションで可視化。パラメータを操作しながら直感的に理解できます。</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🤖</div>
+          <p class="feature-title">AI 質問機能</p>
+          <p class="feature-desc">わからない問題や概念を AI に質問。図の文脈を踏まえた的確な解説を即座に得られます。</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📐</div>
+          <p class="feature-title">計算問題演習</p>
+          <p class="feature-desc">ランダム生成の計算問題で反復練習。解法の手順を確認しながら入試レベルまで対応します。</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🗺️</div>
+          <p class="feature-title">学習進捗管理</p>
+          <p class="feature-desc">ノードマップUIで自分の学習状況を可視化。AIが次に取り組むべき単元をアドバイスします。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coverage -->
+    <div class="section reveal">
+      <p class="section-label">// content coverage</p>
+      <h2>収録分野</h2>
+      <p>高校物理の主要5分野を網羅しています。</p>
+      <div class="tag-list">
+        <span class="tag">力学</span>
+        <span class="tag">波動</span>
+        <span class="tag">熱力学</span>
+        <span class="tag">電磁気学</span>
+        <span class="tag">原子物理</span>
+        <span class="tag">特殊相対性理論</span>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- Availability -->
+    <div class="section reveal">
+      <p class="section-label">// availability</p>
+      <h2>ダウンロード</h2>
+      <p>
+        Google Play ストアより無料でダウンロードいただけます（一部コンテンツはアプリ内課金）。Android 端末をお持ちの方はぜひお試しください。
+      </p>
+      <div style="margin-top:1.5rem;">
+        <a href="https://play.google.com/store/apps/details?id=com.daryama275.physics"
+           target="_blank" rel="noopener"
+           style="display:inline-flex; align-items:center; gap:0.6rem;
+                  font-family:var(--mono); font-size:0.8rem; letter-spacing:0.1em;
+                  padding:0.85rem 2rem; border-radius:4px; background:var(--accent);
+                  color:#0a0a0f; font-weight:500; text-decoration:none;
+                  transition:all 0.25s;"
+           onmouseover="this.style.background='#fff';this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.background='var(--accent)';this.style.transform='none'">
+          → Google Play で入手する
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="back-nav">
+    <a href="./index.html" class="back-link">← ニュース一覧に戻る</a>
+  </div>
+
+  <footer>
+    <span class="footer-logo">cntnct</span>
+    <ul class="footer-links">
+      <li><a href="../privacy.html">プライバシーポリシー</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
