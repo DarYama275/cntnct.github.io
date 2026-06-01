@@ -19,17 +19,12 @@
   <meta name="twitter:description" content="スマホで物理を楽しく学べる新感覚のAI学習アプリ。クイズや図解アニメーションで物理のイメージをつかみ、AIに相談しながら自分のペースで学習を進められます。基本無料。">
   <meta name="twitter:image"      content="https://containnect.com/assets/feature_graphic.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Schema.org structured data -->
+  <!-- Schema.org: MobileApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "さわっておぼえる物理",
-    "alternateName": "さわっておぼえる物理",
     "description": "スマホで物理を楽しく学べる新感覚のAI学習アプリ。クイズや図解アニメーションで物理のイメージをつかみ、AIに相談しながら自分のペースで学習を進められます。",
     "applicationCategory": "EducationApplication",
     "operatingSystem": "Android",
@@ -87,7 +82,7 @@
         "name": "無料で使えますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "はい、クイズ・図解アニメーション・テキスト・計算問題など、メインコンテンツはすべて基本無料でご利用いただけます。AI相談機能の一部（質問チャット・学習サポート）にはチケットが必要です。"
+          "text": "はい、クイズ・図解アニメーション・テキスト・計算問題など、メインコンテンツはすべて基本無料でご利用いただけます。AI相談機能（質問チャット・進め方ナビ・学習サポート）にはチケットが必要です。"
         }
       },
       {
@@ -95,7 +90,7 @@
         "name": "チケットとは何ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI相談機能の利用に使う消費アイテムです。アプリ内購入でまとめて入手できます。「進め方ナビ」は1日1回チケットなしで無料利用できます。"
+          "text": "AI相談機能の利用に使う消費アイテムです。アプリ内購入でまとめて入手できます。"
         }
       },
       {
@@ -126,605 +121,15 @@
   }
   </script>
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0a0a0f;
-      --surface:   #111118;
-      --surface2:  #16161f;
-      --border:    #1e1e2e;
-      --accent:    #4af0c4;
-      --accent2:   #7b6fff;
-      --accent3:   #f0a24a;
-      --text:      #e8e8f0;
-      --muted:     #6b6b88;
-      --mono:      'DM Mono', monospace;
-      --sans:      'Noto Sans JP', sans-serif;
-      --title:     'Space Mono', monospace;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-weight: 300;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* ── Nav ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.2rem 2.5rem;
-      background: rgba(10,10,15,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      font-family: var(--title);
-      font-size: 1.05rem;
-      letter-spacing: 0.15em;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--accent); }
-
-    /* ── Hero ── */
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 9rem 2.5rem 4rem;
-      overflow: hidden;
-    }
-
-    .hero-glow {
-      position: absolute;
-      width: 700px; height: 700px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(123,111,255,0.1) 0%, rgba(74,240,196,0.05) 40%, transparent 70%);
-      top: 40%; left: 50%;
-      transform: translate(-40%, -55%);
-      pointer-events: none;
-      animation: pulse 8s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: translate(-40%, -55%) scale(1); opacity: 1; }
-      50%       { transform: translate(-40%, -55%) scale(1.08); opacity: 0.7; }
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      max-width: 1100px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 1.2rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.2s forwards;
-    }
-
-    .hero-title {
-      font-family: var(--title);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.4s forwards;
-    }
-
-    .hero-title .accent { color: var(--accent); }
-    .hero-title .accent2 { color: var(--accent2); }
-
-    .hero-sub {
-      font-size: 0.95rem;
-      color: var(--muted);
-      line-height: 2;
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.6s forwards;
-    }
-
-    .hero-badges {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.7s forwards;
-    }
-
-    .badge {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      padding: 0.25rem 0.7rem;
-      border-radius: 100px;
-      border: 1px solid;
-    }
-    .badge-free {
-      color: var(--accent);
-      border-color: rgba(74,240,196,0.3);
-      background: rgba(74,240,196,0.06);
-    }
-    .badge-android {
-      color: var(--muted);
-      border-color: var(--border);
-    }
-
-    .hero-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.8s forwards;
-    }
-
-    .btn {
-      font-family: var(--mono);
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: all 0.25s;
-      cursor: pointer;
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0a0a0f;
-      font-weight: 500;
-    }
-    .btn-primary:hover {
-      background: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(74,240,196,0.4);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid var(--border);
-    }
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .hero-image-wrap {
-      opacity: 0;
-      animation: fadeUp 0.8s 0.5s forwards;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-image-wrap img {
-      width: 100%;
-      max-width: 520px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 0 60px rgba(123,111,255,0.15), 0 0 120px rgba(74,240,196,0.05);
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ── Sections shared ── */
-    section {
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-inner {
-      padding: 7rem 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-    }
-
-    .section-title {
-      font-family: var(--title);
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .section-desc {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 2;
-      max-width: 560px;
-      margin-bottom: 3rem;
-    }
-
-    /* ── Units ── */
-    .units-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-      max-width: 1000px;
-    }
-
-    .unit-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.4rem 1.5rem;
-      transition: border-color 0.25s, transform 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-    .unit-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--accent), var(--accent2));
-      opacity: 0;
-      transition: opacity 0.25s;
-    }
-    .unit-card:hover {
-      border-color: rgba(74,240,196,0.25);
-      transform: translateY(-3px);
-    }
-    .unit-card:hover::before { opacity: 1; }
-
-    .unit-num {
-      font-family: var(--mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .unit-name {
-      font-family: var(--title);
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.01em;
-    }
-
-    .unit-topics {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
-    /* ── Features ── */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.2rem;
-      max-width: 1000px;
-    }
-
-    .feature-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 2rem;
-      transition: border-color 0.25s;
-    }
-    .feature-card:hover { border-color: rgba(74,240,196,0.2); }
-
-    .feature-icon {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .feature-name {
-      font-family: var(--title);
-      font-size: 0.95rem;
-      margin-bottom: 0.6rem;
-      letter-spacing: -0.01em;
-    }
-
-    .feature-desc {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
-
-    /* ── AI Section ── */
-    .ai-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-      max-width: 1000px;
-    }
-
-    .ai-card {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.8rem;
-      position: relative;
-      overflow: hidden;
-      transition: border-color 0.25s;
-    }
-    .ai-card:hover { border-color: rgba(123,111,255,0.3); }
-    .ai-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--accent2), var(--accent));
-    }
-
-    .ai-card-label {
-      font-family: var(--mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      color: var(--accent2);
-      margin-bottom: 0.8rem;
-    }
-
-    .ai-card h4 {
-      font-family: var(--title);
-      font-size: 1.05rem;
-      margin-bottom: 0.7rem;
-      letter-spacing: -0.01em;
-    }
-
-    .ai-card p {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
-
-    .ai-ticket-note {
-      margin-top: 0.8rem;
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .ai-ticket-note.free { color: var(--accent); }
-    .ai-ticket-note.paid { color: var(--accent3); }
-
-    .ai-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .ai-note-box {
-      margin-top: 2rem;
-      background: rgba(240,162,74,0.05);
-      border: 1px solid rgba(240,162,74,0.15);
-      border-radius: 8px;
-      padding: 1.2rem 1.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
-    .ai-note-box strong {
-      color: var(--accent3);
-      font-weight: 400;
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.15em;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    /* ── FAQ ── */
-    .faq-list {
-      max-width: 700px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-q {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 0.92rem;
-      font-weight: 400;
-      padding: 1.4rem 0;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      transition: color 0.2s;
-    }
-    .faq-q:hover { color: var(--accent); }
-
-    .faq-icon {
-      font-family: var(--mono);
-      font-size: 1.2rem;
-      color: var(--accent);
-      flex-shrink: 0;
-      transition: transform 0.3s;
-    }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-
-    .faq-a {
-      font-size: 0.87rem;
-      color: var(--muted);
-      line-height: 2;
-      padding: 0 0 1.4rem;
-      display: none;
-    }
-    .faq-item.open .faq-a { display: block; }
-
-    /* ── CTA ── */
-    .cta-inner {
-      text-align: center;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    .cta-inner h2 {
-      font-family: var(--title);
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-
-    .cta-inner p {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.9;
-      margin-bottom: 2.5rem;
-    }
-
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-logo {
-      font-family: var(--title);
-      font-size: 0.9rem;
-      color: var(--muted);
-      letter-spacing: 0.15em;
-      text-decoration: none;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-    .footer-links a {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--accent); }
-
-    .footer-copy {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--muted);
-      opacity: 0.5;
-      width: 100%;
-      text-align: right;
-    }
-
-    /* ── Reveal ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: none;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .hero-image-wrap { order: -1; }
-      .ai-inner { grid-template-columns: 1fr; gap: 2rem; }
-    }
-
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.2rem; }
-      .nav-links { gap: 1.2rem; }
-      .section-inner { padding: 5rem 1.2rem; }
-      #hero { padding: 8rem 1.2rem 3rem; }
-    }
-
-    @media (max-width: 480px) {
-      .nav-links { display: none; }
-      .units-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="physics.css">
 </head>
 <body>
 
-  <!-- Nav -->
+  <!-- NAV -->
   <nav>
     <a href="./index.html" class="nav-logo">cntnct</a>
     <ul class="nav-links">
@@ -735,7 +140,7 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-glow"></div>
     <div class="hero-inner">
@@ -766,7 +171,7 @@
     </div>
   </section>
 
-  <!-- Units -->
+  <!-- UNITS -->
   <section id="units">
     <div class="section-inner">
       <p class="section-label reveal">// curriculum</p>
@@ -812,7 +217,7 @@
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- FEATURES -->
   <section id="features">
     <div class="section-inner">
       <p class="section-label reveal">// features</p>
@@ -857,10 +262,10 @@
       <div class="ai-inner">
         <div class="ai-list">
           <div class="ai-card reveal">
-            <p class="ai-card-label">FREE / 1日1回</p>
+            <p class="ai-card-label">TICKET REQUIRED</p>
             <h4>進め方ナビ</h4>
-            <p>今日どこから学べばいいか、AIがあなたの状況に合わせてガイドします。迷ったときの道しるべとして毎日活用できます。</p>
-            <p class="ai-ticket-note free">✦ 1日1回 無料</p>
+            <p>今日どこから学べばいいか、AIがあなたの状況に合わせてガイドします。迷ったときの道しるべとして活用できます。</p>
+            <p class="ai-ticket-note paid">◈ チケット消費</p>
           </div>
           <div class="ai-card reveal">
             <p class="ai-card-label">TICKET REQUIRED</p>
@@ -878,17 +283,14 @@
         <div class="reveal">
           <div class="ai-note-box">
             <strong>⚠ NOTICE</strong>
-            ・質問チャット・学習モニターの利用にはチケットが必要です。<br>
-            ・進め方ナビは1日1回無料で利用できます。<br>
+            ・AI機能の利用にはすべてチケットが必要です。<br>
             ・チケットはアプリ内で購入できます。<br>
             ・AIの回答は正確でない場合があります。必要に応じて、教科書などもあわせて確認してください。
           </div>
-          <div style="margin-top: 2rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;">
-            <p style="font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.2em; color: var(--accent2); margin-bottom: 1rem;">// TICKET SYSTEM</p>
-            <p style="font-size: 0.85rem; color: var(--muted); line-height: 2;">
-              チケットはAI機能の利用に使う消費アイテムです。アプリ内購入でまとめて入手できます。<br>
-              メインコンテンツ（クイズ・アニメーション・テキストなど）はすべて<span style="color: var(--accent);">無料</span>でお使いいただけます。
-            </p>
+          <div class="ai-ticket-box">
+            <p class="ai-ticket-box-label">// TICKET SYSTEM</p>
+            <p>チケットはAI機能の利用に使う消費アイテムです。アプリ内購入でまとめて入手できます。<br>
+            メインコンテンツ（クイズ・アニメーション・テキストなど）はすべて<span class="accent-text">無料</span>でお使いいただけます。</p>
           </div>
         </div>
       </div>
@@ -903,57 +305,37 @@
       <div class="faq-list reveal">
 
         <div class="faq-item">
-          <button class="faq-q">
-            どんな人向けのアプリですか？
-            <span class="faq-icon">+</span>
-          </button>
+          <button class="faq-q">どんな人向けのアプリですか？<span class="faq-icon">+</span></button>
           <p class="faq-a">高校で物理を学んでいる方、物理が苦手で基礎からやり直したい方、大学受験に向けて物理を固めたい方に特に向いています。直感的な操作で使えるため、物理が初めての方でも取り組みやすいよう設計されています。</p>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">
-            無料で使えますか？
-            <span class="faq-icon">+</span>
-          </button>
-          <p class="faq-a">はい、クイズ・図解アニメーション・テキスト・計算問題など、メインコンテンツはすべて基本無料でご利用いただけます。AI相談機能の一部（質問チャット・学習サポート）にはチケットが必要です。</p>
+          <button class="faq-q">無料で使えますか？<span class="faq-icon">+</span></button>
+          <p class="faq-a">はい、クイズ・図解アニメーション・テキスト・計算問題など、メインコンテンツはすべて基本無料でご利用いただけます。AI相談機能（質問チャット・進め方ナビ・学習サポート）にはチケットが必要です。</p>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">
-            チケットとは何ですか？
-            <span class="faq-icon">+</span>
-          </button>
-          <p class="faq-a">AI相談機能の利用に使う消費アイテムです。アプリ内購入でまとめて入手できます。「進め方ナビ」は1日1回チケットなしで無料利用できます。</p>
+          <button class="faq-q">チケットとは何ですか？<span class="faq-icon">+</span></button>
+          <p class="faq-a">AI相談機能の利用に使う消費アイテムです。アプリ内購入でまとめて入手できます。</p>
         </div>
+
         <div class="faq-item">
-          <button class="faq-q">
-            iOSには対応していますか？
-            <span class="faq-icon">+</span>
-          </button>
+          <button class="faq-q">iOSには対応していますか？<span class="faq-icon">+</span></button>
           <p class="faq-a">現在はAndroid（Google Play）のみ対応しています。iOS版は今後対応予定です。</p>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">
-            高校の授業・受験勉強に使えますか？
-            <span class="faq-icon">+</span>
-          </button>
+          <button class="faq-q">高校の授業・受験勉強に使えますか？<span class="faq-icon">+</span></button>
           <p class="faq-a">はい、高校物理の全範囲（力学・波動・熱力学・電磁気学・原子物理）をカバーしています。直感クイズやランダム計算問題で反復練習もできるため、定期テスト・大学受験の補助教材として活用いただけます。</p>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">
-            AIの回答は正確ですか？
-            <span class="faq-icon">+</span>
-          </button>
+          <button class="faq-q">AIの回答は正確ですか？<span class="faq-icon">+</span></button>
           <p class="faq-a">AIは物理の疑問への回答や学習のサポートをしますが、回答が正確でない場合があります。重要な内容は教科書や信頼できる参考書と合わせてご確認ください。</p>
         </div>
 
         <div class="faq-item">
-          <button class="faq-q">
-            開発元はどこですか？
-            <span class="faq-icon">+</span>
-          </button>
+          <button class="faq-q">開発元はどこですか？<span class="faq-icon">+</span></button>
           <p class="faq-a">Containnect（コンテネクト）が開発・提供しています。「知識をコンテナとしてパッケージ化し、繋げることで学びを拡張する」というコンセプトのもと、インタラクティブな教育プロダクトを開発しています。</p>
         </div>
 
@@ -966,8 +348,8 @@
     <div class="section-inner">
       <div class="cta-inner">
         <p class="section-label reveal" style="text-align:center;">// download</p>
-        <h2 class="reveal">今すぐ学び始める</h2>
-        <p class="reveal">基本無料。いつでも、自分のペースで。</p>
+        <h2 class="section-title reveal">今すぐ学び始める</h2>
+        <p class="section-desc reveal" style="max-width:none; text-align:center;">基本無料。いつでも、自分のペースで。</p>
         <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
           <a href="https://play.google.com/store/apps/details?id=com.daryama275.physics" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Google Play で入手</a>
           <a href="./index.html" class="btn btn-ghost">← cntnct トップへ</a>
@@ -976,7 +358,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <a href="./index.html" class="footer-logo">cntnct</a>
     <ul class="footer-links">
@@ -987,28 +369,8 @@
     <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
   </footer>
 
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-  </script>
+  <script src="main.js"></script>
+  <script src="physics.js"></script>
 
 </body>
 </html>
