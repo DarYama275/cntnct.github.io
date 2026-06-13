@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特定商取引法に基づく表記 — Containnect</title>
+  <meta name="description" content="Containnect（コンテネクト）の特定商取引法に基づく表記。">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --bg-card:   #111118;
+      --border:    rgba(255,255,255,0.08);
+      --accent:    #7b61ff;
+      --accent2:   #00e5ff;
+      --text:      #e8e8f0;
+      --text-muted:#8888a0;
+      --font-mono: 'Space Mono', 'DM Mono', monospace;
+      --font-body: 'Noto Sans JP', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      color: var(--accent2);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .nav-back {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--text); }
+
+    /* MAIN */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    .page-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: var(--font-mono);
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      font-family: var(--font-mono);
+    }
+
+    /* TABLE */
+    .tokusho-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 3rem;
+    }
+
+    .tokusho-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tokusho-table tr:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .tokusho-table th {
+      width: 38%;
+      padding: 1.1rem 1rem 1.1rem 0;
+      vertical-align: top;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--accent2);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .tokusho-table td {
+      padding: 1.1rem 0 1.1rem 1rem;
+      vertical-align: top;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .tokusho-table td a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(123,97,255,0.3);
+      transition: border-color 0.2s;
+    }
+    .tokusho-table td a:hover {
+      border-color: var(--accent);
+    }
+
+    .note {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.2rem 1.4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .updated {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .footer-logo {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 540px) {
+      nav { padding: 1rem; }
+      main { padding: 2.5rem 1rem 5rem; }
+
+      .tokusho-table th,
+      .tokusho-table td {
+        display: block;
+        width: 100%;
+        padding: 0.4rem 0;
+      }
+      .tokusho-table th {
+        padding-top: 1rem;
+        border: none;
+      }
+      .tokusho-table td {
+        padding-bottom: 1rem;
+      }
+      .tokusho-table tr {
+        border-bottom: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">cntnct</a>
+    <a href="/" class="nav-back">← トップへ戻る</a>
+  </nav>
+
+  <main>
+    <p class="page-label">// legal</p>
+    <h1>特定商取引法に基づく表記</h1>
+    <p class="subtitle">Specified Commercial Transaction Act</p>
+
+    <table class="tokusho-table">
+      <tr>
+        <th>販売業者</th>
+        <td>CONTAINNECT</td>
+      </tr>
+      <tr>
+        <th>運営責任者</th>
+        <td>Kento Yamada</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>
+          3-3-13, Nishishinjuku, Nishishinjuku Mizuma Bldg. 2F,<br>
+          Shinjuku-ku, Tokyo 160-0023, Japan
+        </td>
+      </tr>
+      <tr>
+        <th>電話番号</th>
+        <td>
+          080-5430-3918<br>
+          <span style="font-size:0.8rem; color: var(--text-muted);">※お問い合わせはメールにてお願いいたします。</span>
+        </td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>
+          <a href="mailto:cntnct.support@gmail.com">cntnct.support@gmail.com</a>
+        </td>
+      </tr>
+      <tr>
+        <th>販売URL</th>
+        <td>
+          <a href="https://play.google.com/store/apps/details?id=com.daryama275.physics" target="_blank" rel="noopener">Google Play（さわっておぼえる物理）</a>
+        </td>
+      </tr>
+      <tr>
+        <th>販売価格</th>
+        <td>各商品ページに記載</td>
+      </tr>
+      <tr>
+        <th>商品代金以外の<br>必要料金</th>
+        <td>インターネット接続に必要な通信料金（お客様負担）</td>
+      </tr>
+      <tr>
+        <th>支払方法</th>
+        <td>Google Play の決済方法に準拠<br>（クレジットカード・キャリア決済 等）</td>
+      </tr>
+      <tr>
+        <th>支払時期</th>
+        <td>Google Play の規定に準拠</td>
+      </tr>
+      <tr>
+        <th>商品の引渡し時期</th>
+        <td>決済完了後、即時にアプリ内でご利用いただけます。</td>
+      </tr>
+      <tr>
+        <th>返品・キャンセルに<br>ついて</th>
+        <td>
+          デジタルコンテンツの性質上、購入完了後の返品・返金は原則お受けできません。<br>
+          ただし、Google Play の返金ポリシーが適用される場合はこの限りではありません。<br>
+          不具合等が発生した場合は、サポートまでお問い合わせください。
+        </td>
+      </tr>
+      <tr>
+        <th>動作環境</th>
+        <td>Android 8.0 以上</td>
+      </tr>
+    </table>
+
+    <div class="note">
+      本サービスはGoogle Play を通じて提供されるデジタルコンテンツです。課金に関する詳細はGoogle Play の利用規約もあわせてご確認ください。
+    </div>
+
+    <p class="updated">最終更新: 2026年6月</p>
+  </main>
+
+  <footer>
+    <span class="footer-logo">cntnct</span>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
