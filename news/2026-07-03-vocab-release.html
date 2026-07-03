@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>「つなげておぼえる英単語」Android版 Google Play にて正式リリース — Containnect</title>
-  <meta name="description" content="中学レベルから英検2級レベルまでカバーする英単語学習アプリ「つなげておぼえる英単語」が、Google Play ストアにて正式公開されました。赤シート式暗記＋クイズ＋コロケーション機能で単語力を効率的に鍛えられます。">
+  <meta name="description" content="中学レベルから英検2級レベルまでカバーする英単語学習アプリ「つなげておぼえる英単語」が、Google Play ストアにて正式公開されました。赤シート式暗記＋三択クイズ＋コロケーション機能で単語力を効率的に鍛えられます。">
 
   <!-- OGP -->
   <meta property="og:type"        content="article">
   <meta property="og:url"         content="https://containnect.com/news/2026-07-03-android-release.html">
   <meta property="og:site_name"   content="Containnect（コンテネクト）">
   <meta property="og:title"       content="「つなげておぼえる英単語」Android版 Google Play にて正式リリース">
-  <meta property="og:description" content="中学レベルから英検2級レベルまでカバーする英単語学習アプリが、Google Play ストアにて正式公開されました。赤シート式暗記＋クイズ＋コロケーション機能を搭載。">
+  <meta property="og:description" content="中学レベルから英検2級レベルまでカバーする英単語学習アプリが、Google Play ストアにて正式公開されました。赤シート式暗記＋三択クイズ＋コロケーション機能を搭載。">
   <meta property="og:locale"      content="ja_JP">
   <meta name="twitter:card"       content="summary">
   <meta name="twitter:title"      content="「つなげておぼえる英単語」Android版 Google Play にて正式リリース">
@@ -46,7 +46,7 @@
       "name": "つなげておぼえる英単語",
       "operatingSystem": "Android",
       "applicationCategory": "EducationApplication",
-      "url": "https://play.google.com/store/apps/details?id=com.cntnct.englishvocab"
+      "url": "https://play.google.com/store/apps/details?id=com.containnect.vocab"
     }
   }
   </script>
@@ -372,6 +372,80 @@
       padding: 0.25rem 0.7rem;
     }
 
+    /* Intro Video */
+    .video-section {
+      margin-top: -0.5rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      margin: 1.8rem auto 1.4rem;
+      aspect-ratio: 9 / 16;
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid rgba(74,240,196,0.2);
+      box-shadow: 0 0 40px rgba(74,240,196,0.08);
+    }
+
+    .video-wrapper::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: 18px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+      z-index: 1;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .video-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .secondary-btn {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 0.7rem 1.3rem;
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid rgba(74,240,196,0.25);
+      background: rgba(74,240,196,0.04);
+      transition: all 0.25s;
+    }
+
+    .secondary-btn:hover {
+      color: #0a0a0f;
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .secondary-btn.accent-btn {
+      color: #0a0a0f;
+      background: var(--accent);
+      border-color: var(--accent);
+      font-weight: 500;
+    }
+
+    .secondary-btn.accent-btn:hover {
+      background: #fff;
+      border-color: #fff;
+      box-shadow: 0 0 24px rgba(74,240,196,0.35);
+    }
+
     /* Note box (for freemium explanation) */
     .note-box {
       background: var(--surface);
@@ -527,7 +601,7 @@
         <p>// Now Available on Android</p>
         <p>つなげておぼえる英単語</p>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.cntnct.englishvocab"
+      <a href="https://play.google.com/store/apps/details?id=com.containnect.vocab"
          class="cta-banner-btn"
          target="_blank" rel="noopener">
         Google Play で入手
@@ -542,7 +616,7 @@
         「つなげておぼえる英単語」は、中学レベルから英検2級レベルまでを一貫してカバーする Android 向け英単語学習アプリです。単語を単体で暗記するのではなく、前後に来やすい語との「つながり」も一緒に学べる点が最大の特徴です。
       </p>
       <p>
-        赤シート風の一問一答や四択クイズといった定番の学習方式に加え、学習履歴から単語ごとの理解度を数値化する仕組みを搭載。自分がどの単語をどれくらい覚えられているかが一目でわかります。
+        赤シート風の一問一答や三択クイズといった定番の学習方式に加え、学習履歴から単語ごとの理解度を数値化する仕組みを搭載。自分がどの単語をどれくらい覚えられているかが一目でわかります。
       </p>
     </div>
 
@@ -558,7 +632,7 @@
         </div>
         <div class="feature-item">
           <div class="feature-icon">✅</div>
-          <p class="feature-title">クイズ</p>
+          <p class="feature-title">三択クイズ</p>
           <p class="feature-desc">選択式で気軽に力試し。正誤の積み重ねが理解度スコアに反映されます。</p>
         </div>
         <div class="feature-item">
@@ -599,6 +673,38 @@
       </div>
     </div>
 
+    <!-- Intro Video -->
+    <div class="section video-section reveal">
+      <p class="section-label">// intro video</p>
+      <h2>紹介ショート動画</h2>
+      <p>
+        「英単語、意味だけで覚えていませんか？」をテーマに、アプリの特徴をショート動画で紹介しています。赤シート風の暗記、クイズ、理解度スコアに加えて、単語の前後に来やすい言葉を確率で見られるコロケーション機能をご覧いただけます。
+      </p>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/-cXwkXDSVQs"
+          title="つなげておぼえる英単語 紹介ショート動画"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-actions">
+        <a href="https://youtube.com/shorts/-cXwkXDSVQs"
+           target="_blank" rel="noopener"
+           class="secondary-btn">
+          YouTube で見る
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.containnect.vocab"
+           target="_blank" rel="noopener"
+           class="secondary-btn accent-btn">
+          Google Play で入手
+        </a>
+      </div>
+    </div>
+
     <hr class="divider">
 
     <!-- Availability -->
@@ -609,7 +715,7 @@
         Google Play ストアより無料でダウンロードいただけます（一部コンテンツはアプリ内課金）。Android 端末をお持ちの方はぜひお試しください。
       </p>
       <div style="margin-top:1.5rem;">
-        <a href="https://play.google.com/store/apps/details?id=com.cntnct.englishvocab"
+        <a href="https://play.google.com/store/apps/details?id=com.containnect.vocab"
            target="_blank" rel="noopener"
            style="display:inline-flex; align-items:center; gap:0.6rem;
                   font-family:var(--mono); font-size:0.8rem; letter-spacing:0.1em;
