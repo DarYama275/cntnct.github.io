@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News — Containnect（コンテネクト）</title>
+  <meta name="description" content="Containnect（コンテネクト）の最新ニュース・リリース情報。">
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://containnect.com/news/">
+  <meta property="og:site_name"   content="Containnect（コンテネクト）">
+  <meta property="og:title"       content="News — Containnect（コンテネクト）">
+  <meta property="og:description" content="Containnect（コンテネクト）の最新ニュース・リリース情報。">
+  <meta property="og:locale"      content="ja_JP">
+  <meta name="twitter:card"       content="summary">
+
+  <!-- Schema.org: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Containnect News",
+    "url": "https://containnect.com/news/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Containnect",
+      "url": "https://containnect.com"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "「つなげておぼえる英単語」Android版 Google Play にて正式リリース",
+        "datePublished": "2026-07-03",
+        "url": "https://containnect.com/news/2026-07-03-vocab-release.html"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "「さわっておぼえる物理」Android版 Google Play にて正式リリース",
+        "datePublished": "2026-05-30",
+        "url": "https://containnect.com/news/2026-05-30-android-release.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0a0a0f;
+      --surface: #111118;
+      --border:  #1e1e2e;
+      --accent:  #4af0c4;
+      --accent2: #7b6fff;
+      --text:    #e8e8f0;
+      --muted:   #6b6b88;
+      --mono:    'DM Mono', monospace;
+      --sans:    'Noto Sans JP', sans-serif;
+      --title:   'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
+
+    /* ── Page Header ── */
+    .page-header {
+      position: relative;
+      padding: 9rem 2.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .page-header::after {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,240,196,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .breadcrumb {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+
+    .page-header h1 {
+      font-family: var(--title);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+    }
+    .page-header h1 .accent { color: var(--accent); }
+
+    .page-header .sub {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    /* ── News List ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 7rem;
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 0 2.5rem;
+      padding: 2.2rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+      position: relative;
+    }
+
+    .news-item::before {
+      content: '';
+      position: absolute;
+      left: -2.5rem; right: -2.5rem;
+      top: 0; bottom: 0;
+      background: rgba(74,240,196,0.03);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .news-item:hover::before { opacity: 1; }
+
+    .news-item:hover .news-title { color: var(--accent); }
+
+    .news-date {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      padding-top: 0.25rem;
+      white-space: nowrap;
+    }
+
+    .news-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .news-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 0.2rem 0.7rem;
+      width: fit-content;
+    }
+
+    .badge-release {
+      color: var(--accent);
+      background: rgba(74,240,196,0.07);
+      border: 1px solid rgba(74,240,196,0.2);
+    }
+    .badge-release::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .news-title {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      transition: color 0.2s;
+    }
+
+    .news-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .news-arrow {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-top: 0.3rem;
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .news-item:hover .news-arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+
+    /* ── Animations ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .page-header { padding: 8rem 1.2rem 3rem; }
+      main { padding: 3rem 1.2rem 5rem; }
+      .news-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .news-date { font-size: 0.68rem; }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#concept">Concept</a></li>
+      <li><a href="../index.html#product">Product</a></li>
+      <li><a href="./index.html" class="active">News</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <div class="breadcrumb">
+      <a href="../index.html">HOME</a>
+      <span>/</span>
+      <span>NEWS</span>
+    </div>
+    <h1>Latest <span class="accent">News.</span></h1>
+    <p class="sub">// release notes &amp; updates</p>
+  </header>
+
+  <main>
+    <div class="news-list">
+
+      <a href="./2026-07-03-vocab-release.html" class="news-item reveal">
+        <div class="news-date">2026.07.03</div>
+        <div class="news-meta">
+          <span class="news-badge badge-release">Release</span>
+          <p class="news-title">「つなげておぼえる英単語」Android版<br>Google Play にて正式リリース</p>
+          <p class="news-desc">中学レベルから英検2級レベルまでカバーする英単語学習アプリが、Google Play ストアにて正式公開されました。赤シート式暗記＋三択クイズ＋コロケーション機能を搭載。</p>
+          <p class="news-arrow">→ 記事を読む</p>
+        </div>
+      </a>
+
+      <a href="./2026-05-30-android-release.html" class="news-item reveal">
+        <div class="news-date">2026.05.30</div>
+        <div class="news-meta">
+          <span class="news-badge badge-release">Release</span>
+          <p class="news-title">「さわっておぼえる物理」Android版<br>Google Play にて正式リリース</p>
+          <p class="news-desc">物理をAIと学ぶスマホアプリが、Google Play ストアにて正式公開されました。高校物理の全分野をカバーしたインタラクティブコンテンツ＋AI質問機能が利用可能です。</p>
+          <p class="news-arrow">→ 記事を読む</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-logo">cntnct</span>
+    <ul class="footer-links">
+      <li><a href="../privacy.html">プライバシーポリシー</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
