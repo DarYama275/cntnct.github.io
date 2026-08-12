@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.daryama275.physics",
+      "sha256_cert_fingerprints": [
+        "7C:A3:AD:53:AA:C3:09:E5:D6:82:2B:9E:15:29:79:DE:35:AF:E2:37:2D:A6:EC:81:74:54:93:EA:88:53:A2:9D"
+      ]
+    }
+  }
+]
