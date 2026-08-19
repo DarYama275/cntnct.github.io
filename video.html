@@ -66,8 +66,19 @@
     .video-body { padding: 1rem 1rem 1.2rem; }
     .video-type { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.16em; color: var(--accent2); text-transform: uppercase; margin-bottom: 0.45rem; }
     .video-title { font-size: 0.98rem; font-weight: 700; color: var(--text); line-height: 1.55; }
+    .chapter-heading { justify-content: space-between; }
+    .chapter-title { display: flex; align-items: baseline; gap: 1rem; }
+    .shorts-link { flex: none; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; border: 1px solid rgba(74,240,196,0.35); border-radius: 999px; padding: 0.55rem 0.85rem; transition: all 0.2s; }
+    .shorts-link:hover { color: #08080d; background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+    .shorts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; }
+    .shorts-card { position: relative; min-height: 168px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; padding: 1.2rem; color: var(--text); text-decoration: none; border: 1px solid var(--border); border-radius: 14px; background: linear-gradient(145deg, rgba(31,31,45,0.96), rgba(12,12,18,0.96)); transition: transform 0.2s, border-color 0.2s; }
+    .shorts-card::before { content: ''; position: absolute; width: 130px; height: 130px; top: -48px; right: -38px; border-radius: 50%; background: radial-gradient(circle, rgba(74,240,196,0.18), transparent 70%); }
+    .shorts-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .shorts-card .video-type { position: relative; }
+    .shorts-card .video-title { position: relative; margin-bottom: 0.55rem; }
+    .shorts-card-action { position: relative; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.08em; color: var(--accent); }
     .empty-note { border: 1px dashed var(--border); color: var(--muted); padding: 1.2rem; border-radius: 12px; background: rgba(17,17,24,0.45); }
-    @media (max-width: 720px) { .archive-header { padding: 7.5rem 1.5rem 3rem; } .archive-main { padding: 3rem 1.5rem 5rem; } .latest-videos { padding: 1rem; } .latest-videos-header { display: block; } .latest-videos-link { display: inline-block; margin-top: 0.8rem; } .chapter-heading { display: block; } }
+    @media (max-width: 720px) { .archive-header { padding: 7.5rem 1.5rem 3rem; } .archive-main { padding: 3rem 1.5rem 5rem; } .latest-videos { padding: 1rem; } .latest-videos-header { display: block; } .latest-videos-link { display: inline-block; margin-top: 0.8rem; } .chapter-heading { display: block; } .chapter-title { display: block; } .shorts-link { display: inline-block; margin-top: 0.8rem; } }
   </style>
 </head>
 <body>
@@ -113,14 +124,14 @@
     </div>
 
     <section class="chapter" id="basics">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 01</span><h2>物理の基本概念</h2></div>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 01</span><h2>物理の基本概念</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E7%89%A9%E7%90%86%E9%87%8F" target="_blank" rel="noopener">この分野のShorts →</a></div>
       <div class="video-grid">
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/2Nt0Jdnu9nk" title="【高校物理単元解説】1.1 物理量と単位 | さわっておぼえる物理" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">単元解説</p><h3 class="video-title">1.1 物理量と単位</h3></div></article>
       </div>
     </section>
 
     <section class="chapter" id="mechanics">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 02</span><h2>力学</h2></div>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 02</span><h2>力学</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E5%8A%9B%E5%AD%A6" target="_blank" rel="noopener">この分野のShorts →</a></div>
       <div class="video-grid">
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/n4VBvDyUs9U" title="動く図解「等速直線運動」" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">動く図解</p><h3 class="video-title">等速直線運動</h3></div></article>
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/sxnW4JD9q-4" title="動く図解「鉛直投げ上げ」" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">動く図解</p><h3 class="video-title">鉛直投げ上げ</h3></div></article>
@@ -131,19 +142,25 @@
     </section>
 
     <section class="chapter" id="waves">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 03</span><h2>振動と波</h2></div>
-      <p class="empty-note">波の回折など、この章に対応する公開済み動画を確認しながら追加予定です。</p>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 03</span><h2>振動と波</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E6%B3%A2" target="_blank" rel="noopener">この分野のShorts →</a></div>
+      <div class="shorts-grid">
+        <a class="shorts-card" href="https://www.youtube.com/@containnect/search?query=%E5%8D%98%E6%8C%AF%E5%8B%95" target="_blank" rel="noopener"><p class="video-type">YouTube Shorts</p><h3 class="video-title">単振動</h3><span class="shorts-card-action">動画を見る →</span></a>
+        <a class="shorts-card" href="https://www.youtube.com/@containnect/search?query=%E6%B3%A2%E3%81%AE%E5%8F%8D%E5%B0%84" target="_blank" rel="noopener"><p class="video-type">YouTube Shorts</p><h3 class="video-title">波の反射</h3><span class="shorts-card-action">動画を見る →</span></a>
+        <a class="shorts-card" href="https://www.youtube.com/@containnect/search?query=%E6%B3%A2%E3%81%AE%E5%9B%9E%E6%8A%98" target="_blank" rel="noopener"><p class="video-type">YouTube Shorts</p><h3 class="video-title">波の回折</h3><span class="shorts-card-action">動画を見る →</span></a>
+        <a class="shorts-card" href="https://www.youtube.com/@containnect/search?query=%E6%B3%A2%E3%81%AE%E5%B9%B2%E6%B8%89" target="_blank" rel="noopener"><p class="video-type">YouTube Shorts</p><h3 class="video-title">波の干渉</h3><span class="shorts-card-action">動画を見る →</span></a>
+        <a class="shorts-card" href="https://www.youtube.com/@containnect/search?query=%E5%AE%9A%E5%B8%B8%E6%B3%A2" target="_blank" rel="noopener"><p class="video-type">YouTube Shorts</p><h3 class="video-title">定常波</h3><span class="shorts-card-action">動画を見る →</span></a>
+      </div>
     </section>
 
     <section class="chapter" id="thermal">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 04</span><h2>熱とエネルギー</h2></div>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 04</span><h2>熱とエネルギー</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E7%86%B1%E5%8A%9B%E5%AD%A6" target="_blank" rel="noopener">この分野のShorts →</a></div>
       <div class="video-grid">
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/6pIk9VYF1QI" title="動く図解「熱力学第一法則」" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">動く図解</p><h3 class="video-title">熱力学第一法則</h3></div></article>
       </div>
     </section>
 
     <section class="chapter" id="em">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 05</span><h2>電気と磁気</h2></div>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 05</span><h2>電気と磁気</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E9%9B%BB%E7%A3%81%E6%B0%97" target="_blank" rel="noopener">この分野のShorts →</a></div>
       <div class="video-grid">
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/WseJFzbHu2E" title="【高校物理単元解説】5.1 電荷と電場 | さわっておぼえる物理" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">単元解説</p><h3 class="video-title">5.1 電荷と電場</h3></div></article>
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/wEdSfHIHJMw" title="動く図解「静電エネルギー」" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">動く図解</p><h3 class="video-title">静電エネルギー</h3></div></article>
@@ -152,14 +169,14 @@
     </section>
 
     <section class="chapter" id="quantum">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 06</span><h2>光と量子</h2></div>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 06</span><h2>光と量子</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E5%85%89" target="_blank" rel="noopener">この分野のShorts →</a></div>
       <div class="video-grid">
         <article class="video-card"><div class="video-frame"><iframe src="https://www.youtube.com/embed/PYtOb9VxS-4" title="動く図解「凸レンズと焦点」" loading="lazy" allowfullscreen></iframe></div><div class="video-body"><p class="video-type">動く図解</p><h3 class="video-title">凸レンズと焦点</h3></div></article>
       </div>
     </section>
 
     <section class="chapter" id="modern">
-      <div class="chapter-heading"><span class="chapter-num">CHAPTER 07</span><h2>現代物理・応用</h2></div>
+      <div class="chapter-heading"><div class="chapter-title"><span class="chapter-num">CHAPTER 07</span><h2>現代物理・応用</h2></div><a class="shorts-link" href="https://www.youtube.com/@containnect/search?query=%E7%8F%BE%E4%BB%A3%E7%89%A9%E7%90%86" target="_blank" rel="noopener">この分野のShorts →</a></div>
       <p class="empty-note">この章の動画は今後追加予定です。公開済み動画が増えたら、同じカード形式で追記していきます。</p>
     </section>
   </main>
