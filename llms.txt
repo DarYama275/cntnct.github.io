@@ -12,11 +12,11 @@ Containnect（コンテネクト）は、知識を「コンテナ」としてパ
 
 ## プロダクト
 
-### さわっておぼえる物理（Android アプリ）
+### さわっておぼえる物理（Android・iOS アプリ）
 
 - 詳細ページ：https://containnect.com/physics.html
 - カテゴリ：教育 / 高校物理 / AI学習
-- プラットフォーム：Android（Google Play）、iOS対応予定
+- プラットフォーム：Android（Google Play）、iOS（App Store）
 - 価格：基本無料。AI相談機能の一部にチケット購入が必要。
 
 #### アプリの説明
