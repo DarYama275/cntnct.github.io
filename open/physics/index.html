@@ -4,18 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.daryama275.physics">
   <link rel="canonical" href="https://containnect.com/open/physics">
   <title>さわっておぼえる物理を開く</title>
   <script>
-    window.location.replace('https://play.google.com/store/apps/details?id=com.daryama275.physics');
+    const googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.daryama275.physics';
+    const appStoreUrl = 'https://apps.apple.com/jp/app/id6803118421';
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
+      || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+    window.location.replace(isIOS ? appStoreUrl : googlePlayUrl);
   </script>
 </head>
 <body>
   <main>
     <h1>さわっておぼえる物理</h1>
-    <p>Google Play に移動しています。</p>
-    <p><a href="https://play.google.com/store/apps/details?id=com.daryama275.physics">移動しない場合はこちらをタップしてください</a></p>
+    <p>お使いの端末に対応するストアへ移動しています。</p>
+    <p>移動しない場合は、対応するストアを選んでください。</p>
+    <p><a href="https://play.google.com/store/apps/details?id=com.daryama275.physics">Google Play で入手</a></p>
+    <p><a href="https://apps.apple.com/jp/app/id6803118421">App Store で入手</a></p>
   </main>
 </body>
 </html>
