@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "DFPCC9ZKPV.com.cntnct.physics"
+        ],
+        "components": [
+          {
+            "/": "/open/physics*"
+          }
+        ]
+      }
+    ]
+  }
+}
