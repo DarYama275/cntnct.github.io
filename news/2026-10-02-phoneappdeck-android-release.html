@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhoneAppDeck Android版をGoogle Playでリリース — Containnect</title>
+  <meta name="description" content="スマートフォンからアプリ開発を進めるための開発支援アプリ「PhoneAppDeck」のAndroid版をGoogle Playで公開しました。iOS版もApp Storeで審査中です。">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://containnect.com/news/2026-10-02-phoneappdeck-android-release.html">
+  <meta property="og:site_name" content="Containnect（コンテネクト）">
+  <meta property="og:title" content="PhoneAppDeck Android版をGoogle Playでリリース">
+  <meta property="og:description" content="GitHub・AI開発サービス・プレビュー・ビルド・リリースを、スマートフォンからひとつの流れで扱う開発支援アプリです。iOS版も審査中です。">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PhoneAppDeck Android版をGoogle Playでリリース">
+  <meta name="twitter:description" content="スマートフォンからアプリ開発を進めるための開発支援アプリ。Android版を公開、iOS版も審査中です。">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "PhoneAppDeck Android版をGoogle Playでリリース",
+    "datePublished": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "author": {
+      "@type": "Organization",
+      "name": "Containnect",
+      "url": "https://containnect.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Containnect",
+      "url": "https://containnect.com"
+    },
+    "url": "https://containnect.com/news/2026-10-02-phoneappdeck-android-release.html",
+    "description": "スマートフォンからアプリ開発を進めるための開発支援アプリ「PhoneAppDeck」のAndroid版をGoogle Playで公開しました。iOS版もApp Storeで審査中です。",
+    "about": {
+      "@type": "MobileApplication",
+      "name": "PhoneAppDeck",
+      "operatingSystem": "Android, iOS",
+      "applicationCategory": "DeveloperApplication",
+      "url": "https://containnect.com/phoneappdeck.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --surface: #111118;
+      --border: #1e1e2e;
+      --accent: #4af0c4;
+      --accent2: #7b6fff;
+      --gold: #f0a24a;
+      --text: #e8e8f0;
+      --muted: #6b6b88;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Noto Sans JP', sans-serif;
+      --title: 'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent); }
+
+    .article-header {
+      position: relative;
+      padding: 9rem 2.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .article-header::after {
+      content: '';
+      position: absolute;
+      top: -120px; right: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(123,111,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .breadcrumb {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--accent); }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .article-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(74,240,196,0.07);
+      border: 1px solid rgba(74,240,196,0.2);
+      border-radius: 100px;
+      padding: 0.25rem 0.8rem;
+    }
+    .article-badge::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .article-date {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    .article-header h1 {
+      font-family: var(--title);
+      font-size: clamp(1.5rem, 4vw, 2.6rem);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+    .article-lead {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 2;
+      max-width: 680px;
+    }
+
+    article {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 2rem;
+    }
+    .hero-image {
+      margin-bottom: 3.5rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .hero-image figcaption {
+      padding: 0.75rem 1rem;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .cta-banner {
+      background: var(--surface);
+      border: 1px solid rgba(74,240,196,0.2);
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+    }
+    .cta-banner-text p:first-child {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .cta-banner-text p:last-child {
+      font-family: var(--title);
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+    .cta-banner-btn {
+      flex-shrink: 0;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      background: var(--accent);
+      color: #0a0a0f;
+      font-weight: 500;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .cta-banner-btn:hover { background: #fff; transform: translateY(-2px); }
+
+    .section { margin-bottom: 3.5rem; }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .section h2 {
+      font-family: var(--title);
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .section p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 2;
+      margin-bottom: 1rem;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+    .feature-item {
+      background: var(--surface);
+      padding: 1.5rem;
+    }
+    .feature-num {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.16em;
+      margin-bottom: 0.6rem;
+    }
+    .feature-title {
+      font-family: var(--title);
+      font-size: 0.95rem;
+      margin-bottom: 0.55rem;
+    }
+    .feature-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .status-note {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      color: var(--text);
+      background: rgba(123,111,255,0.08);
+      border: 1px solid rgba(123,111,255,0.28);
+      border-radius: 8px;
+    }
+    .status-note strong { color: #b5adff; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+    .back-nav {
+      padding: 2rem 2.5rem 5rem;
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .back-link {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--accent); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      .article-header { padding: 8rem 1.2rem 3rem; }
+      article { padding: 3rem 1.2rem 2rem; }
+      .back-nav { padding: 1.5rem 1.2rem 4rem; }
+      .cta-banner { flex-direction: column; align-items: flex-start; }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+    @media (max-width: 520px) {
+      .nav-links { display: none; }
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#concept">Concept</a></li>
+      <li><a href="../index.html#product">Product</a></li>
+      <li><a href="./index.html" class="active">News</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="article-header">
+    <div class="breadcrumb">
+      <a href="../index.html">HOME</a>
+      <span>/</span>
+      <a href="./index.html">NEWS</a>
+      <span>/</span>
+      <span>2026.10.02</span>
+    </div>
+    <div class="article-meta">
+      <span class="article-badge">Release</span>
+      <span class="article-date">2026.10.02</span>
+    </div>
+    <h1>PhoneAppDeck Android版を<br>Google Playでリリース</h1>
+    <p class="article-lead">
+      スマートフォンから、相談・実装・確認・リリースまで。アプリ開発の流れをひとつの場所で進めるための開発支援アプリ「PhoneAppDeck」のAndroid版を公開しました。
+    </p>
+  </header>
+
+  <article>
+
+    <figure class="hero-image reveal">
+      <img src="../assets/phoneappdeck-feature-graphic.png"
+           alt="PhoneAppDeckのホーム・開発・確認・リリース画面"
+           onerror="this.closest('.hero-image').style.display='none'">
+      <figcaption>PhoneAppDeck — Home / Development / Preview / Release</figcaption>
+    </figure>
+
+    <div class="cta-banner reveal">
+      <div class="cta-banner-text">
+        <p>// Android now available</p>
+        <p>PhoneAppDeck</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.cntnct.phoneappdeck"
+         class="cta-banner-btn"
+         target="_blank" rel="noopener">
+        Google Playで見る
+      </a>
+    </div>
+
+    <div class="section reveal">
+      <p class="section-label">// overview</p>
+      <h2>PCの前にいなくても、開発の続きを進める</h2>
+      <p>
+        PhoneAppDeckは、GitHub上のプロジェクトを中心に、AI開発サービスへの相談・実装依頼、コードやプレビューの確認、GitHub Actionsによるビルド、ストア公開までの流れをスマートフォンから扱うためのアプリです。
+      </p>
+      <p>
+        「コードを書く画面」だけをスマートフォンへ移すのではなく、開発中に何度も発生するサービス間の往復を減らし、次にやることが見える状態をつくることを目指しています。
+      </p>
+    </div>
+
+    <div class="section reveal">
+      <p class="section-label">// four areas</p>
+      <h2>4つの領域で、開発の流れを整理</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <p class="feature-num">01 / HOME</p>
+          <p class="feature-title">ホーム</p>
+          <p class="feature-desc">GitHub接続やAI、変更確認、ビルドなど、開発環境の準備状況と次のステップをまとめて確認します。</p>
+        </div>
+        <div class="feature-item">
+          <p class="feature-num">02 / DEVELOPMENT</p>
+          <p class="feature-title">開発</p>
+          <p class="feature-desc">ChatGPTやClaudeで相談し、CodexやClaude Codeなどの外部AI開発サービスへ実装依頼をつなぎます。</p>
+        </div>
+        <div class="feature-item">
+          <p class="feature-num">03 / PREVIEW</p>
+          <p class="feature-title">確認</p>
+          <p class="feature-desc">コード変更をスマートフォン上でプレビュー。単体UIやアプリ画面を確認し、次の修正へ進みやすくします。</p>
+        </div>
+        <div class="feature-item">
+          <p class="feature-num">04 / RELEASE</p>
+          <p class="feature-title">リリース</p>
+          <p class="feature-desc">GitHub Actionsの実行状況や履歴を確認し、Android / iOSのビルドからストア公開までを支援します。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section reveal">
+      <p class="section-label">// platform status</p>
+      <h2>Android版を公開、iOS版も審査中</h2>
+      <p>
+        Android版はGoogle Playで公開済みです。iOS版も同時期にApp Storeへ申請しており、現在Appleによる審査が進んでいます。
+      </p>
+      <p class="status-note">
+        <strong>iOS版について：</strong>公開が確認でき次第、PhoneAppDeckの製品ページとニュースで改めてお知らせします。
+      </p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section reveal">
+      <p class="section-label">// download</p>
+      <h2>Google Playからダウンロード</h2>
+      <p>
+        Android端末をお持ちの方は、Google Playから無料でダウンロードできます。スマートフォン中心でGitHubやAI開発サービスを使っている方は、ぜひお試しください。
+      </p>
+      <div style="margin-top:1.5rem; display:flex; gap:0.8rem; flex-wrap:wrap;">
+        <a href="https://play.google.com/store/apps/details?id=com.cntnct.phoneappdeck"
+           target="_blank" rel="noopener"
+           style="display:inline-flex; align-items:center; gap:0.6rem;
+                  font-family:var(--mono); font-size:0.8rem; letter-spacing:0.08em;
+                  padding:0.85rem 1.6rem; border-radius:4px; background:var(--accent);
+                  color:#0a0a0f; font-weight:500; text-decoration:none;">
+          → Google Playで見る
+        </a>
+        <a href="../phoneappdeck.html"
+           style="display:inline-flex; align-items:center; gap:0.6rem;
+                  font-family:var(--mono); font-size:0.8rem; letter-spacing:0.08em;
+                  padding:0.85rem 1.6rem; border-radius:4px; border:1px solid var(--border);
+                  color:var(--text); text-decoration:none;">
+          製品ページを見る
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div class="back-nav">
+    <a href="./index.html" class="back-link">← ニュース一覧に戻る</a>
+  </div>
+
+  <footer>
+    <span class="footer-logo">cntnct</span>
+    <ul class="footer-links">
+      <li><a href="../privacy_phoneappdeck.html">プライバシーポリシー</a></li>
+      <li><a href="../terms_phoneappdeck.html">利用規約</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
