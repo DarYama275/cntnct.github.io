@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高校物理 教材カタログ — さわっておぼえる物理</title>
+  <meta name="description" content="「さわっておぼえる物理」に収録されている教科書、動く図解、直感クイズ、計算問題、共通テスト解説を単元ごとに一覧できます。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://containnect.com/physics-catalog.html">
+  <meta property="og:site_name" content="Containnect（コンテネクト）">
+  <meta property="og:title" content="高校物理 教材カタログ — さわっておぼえる物理">
+  <meta property="og:description" content="教科書・動く図解・直感クイズ・計算問題・共通テスト解説を、単元ごとに見渡せます。">
+  <meta property="og:locale" content="ja_JP">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="physics-catalog.css">
+</head>
+<body>
+  <nav>
+    <a href="./index.html" class="nav-logo">cntnct</a>
+    <ul class="nav-links">
+      <li><a href="./physics.html">物理アプリ</a></li>
+      <li><a href="#catalog">教材一覧</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="catalog-hero-inner">
+        <p class="section-label">// learning catalog</p>
+        <h1>高校物理の教材を、<br><span class="catalog-accent">単元ごとに見渡す。</span></h1>
+        <p class="catalog-lead">
+          「さわっておぼえる物理」に収録されている教科書、動く図解、直感クイズ、計算問題、共通テスト解説を、
+          アプリの教材データから自動生成した索引で整理しています。
+        </p>
+        <div class="catalog-note">
+          このページはアプリ側の教材索引と同期して更新されます。教材の追加・変更は、同期PRを経て反映されます。
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section">
+      <div class="catalog-shell">
+        <div id="catalog-status" class="catalog-status" aria-live="polite">教材データを読み込んでいます…</div>
+
+        <div id="catalog-stats" class="catalog-stats" hidden></div>
+
+        <div class="catalog-controls">
+          <label class="catalog-search">
+            <span>検索</span>
+            <input id="catalog-search-input" type="search" placeholder="例: 運動量、電磁誘導、Snell…" autocomplete="off">
+          </label>
+          <div id="chapter-filters" class="chapter-filters" aria-label="章で絞り込み"></div>
+        </div>
+
+        <div id="catalog-results" class="catalog-results"></div>
+      </div>
+    </section>
+
+    <section class="catalog-cta">
+      <div class="catalog-shell">
+        <p class="section-label">// app</p>
+        <h2>実際の教材はアプリで。</h2>
+        <p>このカタログは収録内容の一覧です。動く図解やクイズ、計算問題は「さわっておぼえる物理」で利用できます。</p>
+        <div class="catalog-actions">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.daryama275.physics" target="_blank" rel="noopener noreferrer">Google Play</a>
+          <a class="btn btn-primary" href="https://apps.apple.com/jp/app/id6803118421" target="_blank" rel="noopener noreferrer">App Store</a>
+          <a class="btn btn-ghost" href="./physics.html">物理アプリ紹介へ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="./index.html" class="footer-logo">cntnct</a>
+    <ul class="footer-links">
+      <li><a href="./physics.html">さわっておぼえる物理</a></li>
+      <li><a href="./privacy_physics.html">プライバシーポリシー</a></li>
+      <li><a href="./terms_physics.html">利用規約</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect（コンテネクト）. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="physics-catalog.js"></script>
+</body>
+</html>
