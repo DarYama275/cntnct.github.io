@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "purpose": "ViteReactから自動同期される物理教材カタログ索引",
+  "stats": {
+    "chapters": 0,
+    "sections": 0,
+    "keywords": 0,
+    "introQuizzes": 0,
+    "diagrams": 0,
+    "calculations": 0,
+    "explanations": 0,
+    "unmappedDiagrams": 0,
+    "unmappedExplanations": 0
+  },
+  "sections": [],
+  "diagnostics": {
+    "unmappedDiagrams": [],
+    "unmappedExplanations": []
+  },
+  "syncStatus": "placeholder_until_first_automatic_sync"
+}
