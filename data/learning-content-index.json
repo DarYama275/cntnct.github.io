@@ -1,21 +1,5459 @@
 {
   "schemaVersion": 1,
-  "purpose": "ViteReactから自動同期される物理教材カタログ索引",
+  "purpose": "AIや共有学習が、既存教材を本文全量なしで検索・推薦するための軽量索引",
   "stats": {
-    "chapters": 0,
-    "sections": 0,
-    "keywords": 0,
-    "introQuizzes": 0,
-    "diagrams": 0,
-    "calculations": 0,
-    "explanations": 0,
-    "unmappedDiagrams": 0,
+    "chapters": 7,
+    "sections": 41,
+    "keywords": 250,
+    "introQuizzes": 230,
+    "diagrams": 220,
+    "calculations": 40,
+    "explanations": 47,
+    "unmappedDiagrams": 7,
     "unmappedExplanations": 0
   },
-  "sections": [],
+  "sections": [
+    {
+      "id": "1.1",
+      "chapterId": "1",
+      "chapterTitle": "物理の基本概念",
+      "title": "物理量と単位",
+      "summary": "身の回りの現象を、「なんとなく」ではなく 数字で説明する のが物理です。",
+      "searchTerms": [
+        "物理量と単位",
+        "物理量",
+        "physical quantity",
+        "基本量",
+        "fundamental quantity",
+        "導出量",
+        "derived quantity",
+        "SI単位系",
+        "SI units",
+        "次元解析",
+        "dimensional analysis"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=1.1"
+      },
+      "keywords": [
+        {
+          "ja": "物理量",
+          "en": "physical quantity",
+          "quizId": "physicalQuantityIntroQuestions",
+          "quizRoute": "/quiz/physicalQuantityIntroQuestions"
+        },
+        {
+          "ja": "基本量",
+          "en": "fundamental quantity",
+          "quizId": "fundamentalQuantityIntroQuestions",
+          "quizRoute": "/quiz/fundamentalQuantityIntroQuestions"
+        },
+        {
+          "ja": "導出量",
+          "en": "derived quantity",
+          "quizId": "derivedQuantityIntroQuestions",
+          "quizRoute": "/quiz/derivedQuantityIntroQuestions"
+        },
+        {
+          "ja": "SI単位系",
+          "en": "SI units",
+          "quizId": "siUnitsIntroQuestions",
+          "quizRoute": "/quiz/siUnitsIntroQuestions"
+        },
+        {
+          "ja": "次元解析",
+          "en": "dimensional analysis",
+          "quizId": "dimensionAnalysisIntroQuestions",
+          "quizRoute": "/quiz/dimensionAnalysisIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "QuantityAndUnit",
+          "title": "物理量と単位",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "DistanceTimeComparison",
+          "title": "速さの単位って何？",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "VelocityChange",
+          "title": "速さが変わるとき ― 加速度",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "DimensionalAnalysis",
+          "title": "次元解析 ― 式が正しいか確かめる",
+          "available": false,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise1_1",
+          "route": "/calc/Exercise1_1"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2024-q3-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問3",
+          "tags": [
+            "音速",
+            "測定誤差",
+            "物理量"
+          ],
+          "route": "/explanations/phy2024-q3-3"
+        }
+      ]
+    },
+    {
+      "id": "1.2",
+      "chapterId": "1",
+      "chapterTitle": "物理の基本概念",
+      "title": "スカラーとベクトル",
+      "summary": "同じ速さ 60 km/h でも、「北へ進む 60 km/h」と「南へ進む 60 km/h」では、まったく違う動きになります。",
+      "searchTerms": [
+        "スカラーとベクトル",
+        "スカラー量",
+        "scalar quantity",
+        "ベクトル量",
+        "vector quantity",
+        "大きさと向き",
+        "magnitude and direction",
+        "ベクトルの合成",
+        "resultant vector",
+        "ベクトルの分解",
+        "vector decomposition",
+        "位置ベクトル",
+        "position vector",
+        "単位ベクトル",
+        "unit vector"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=1.2"
+      },
+      "keywords": [
+        {
+          "ja": "スカラー量",
+          "en": "scalar quantity",
+          "quizId": "scalarIntroQuestions",
+          "quizRoute": "/quiz/scalarIntroQuestions"
+        },
+        {
+          "ja": "ベクトル量",
+          "en": "vector quantity",
+          "quizId": "vectorIntroQuestions",
+          "quizRoute": "/quiz/vectorIntroQuestions"
+        },
+        {
+          "ja": "大きさと向き",
+          "en": "magnitude and direction",
+          "quizId": "vectorMagnitudeDirectionIntroQuestions",
+          "quizRoute": "/quiz/vectorMagnitudeDirectionIntroQuestions"
+        },
+        {
+          "ja": "ベクトルの合成",
+          "en": "resultant vector",
+          "quizId": "vectorAdditionIntroQuestions",
+          "quizRoute": "/quiz/vectorAdditionIntroQuestions"
+        },
+        {
+          "ja": "ベクトルの分解",
+          "en": "vector decomposition",
+          "quizId": "vectorDecompositionIntroQuestions",
+          "quizRoute": "/quiz/vectorDecompositionIntroQuestions"
+        },
+        {
+          "ja": "位置ベクトル",
+          "en": "position vector",
+          "quizId": "positionVectorIntroQuestions",
+          "quizRoute": "/quiz/positionVectorIntroQuestions"
+        },
+        {
+          "ja": "単位ベクトル",
+          "en": "unit vector",
+          "quizId": "unitVectorIntroQuestions",
+          "quizRoute": "/quiz/unitVectorIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ScalarVsVector",
+          "title": "スカラーとベクトル",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "VectorArrowMeaning",
+          "title": "ベクトルとは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "VectorAddition",
+          "title": "ベクトルの合成",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "VectorDecomposition",
+          "title": "ベクトルの分解",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "VectorMagnitude",
+          "title": "ベクトルの大きさ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PositionVector",
+          "title": "位置ベクトル",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "UnitVector",
+          "title": "単位ベクトル",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise1_2",
+          "route": "/calc/Exercise1_2"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "1.3",
+      "chapterId": "1",
+      "chapterTitle": "物理の基本概念",
+      "title": "位置・速度・加速度",
+      "summary": "物体の運動を表すには、まず - どこにあるか - どの向きにどれくらいの速さで動いているか - その速さがどのように変わるか を順に考えることが大切です。",
+      "searchTerms": [
+        "位置・速度・加速度",
+        "変位",
+        "displacement",
+        "速度",
+        "velocity",
+        "平均速度",
+        "average velocity",
+        "瞬間速度",
+        "instantaneous velocity",
+        "加速度",
+        "acceleration",
+        "等速直線運動",
+        "uniform linear motion",
+        "等加速度運動",
+        "uniformly accelerated motion",
+        "自由落下",
+        "free fall",
+        "重力",
+        "gravity"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=1.3"
+      },
+      "keywords": [
+        {
+          "ja": "変位",
+          "en": "displacement",
+          "quizId": "displacementIntroQuestions",
+          "quizRoute": "/quiz/displacementIntroQuestions"
+        },
+        {
+          "ja": "速度",
+          "en": "velocity",
+          "quizId": "speedIntroQuestions",
+          "quizRoute": "/quiz/speedIntroQuestions"
+        },
+        {
+          "ja": "平均速度",
+          "en": "average velocity",
+          "quizId": "averageSpeedIntroQuestions",
+          "quizRoute": "/quiz/averageSpeedIntroQuestions"
+        },
+        {
+          "ja": "瞬間速度",
+          "en": "instantaneous velocity",
+          "quizId": "instantSpeedIntroQuestions",
+          "quizRoute": "/quiz/instantSpeedIntroQuestions"
+        },
+        {
+          "ja": "加速度",
+          "en": "acceleration",
+          "quizId": "accelerationIntroQuestions",
+          "quizRoute": "/quiz/accelerationIntroQuestions"
+        },
+        {
+          "ja": "等速直線運動",
+          "en": "uniform linear motion",
+          "quizId": "constantVelocityIntroQuestions",
+          "quizRoute": "/quiz/constantVelocityIntroQuestions"
+        },
+        {
+          "ja": "等加速度運動",
+          "en": "uniformly accelerated motion",
+          "quizId": "constantAccelerationIntroQuestions",
+          "quizRoute": "/quiz/constantAccelerationIntroQuestions"
+        },
+        {
+          "ja": "自由落下",
+          "en": "free fall",
+          "quizId": "freeFallIntroQuestions",
+          "quizRoute": "/quiz/freeFallIntroQuestions"
+        },
+        {
+          "ja": "重力",
+          "en": "gravity",
+          "quizId": "gravityIntroQuestions",
+          "quizRoute": "/quiz/gravityIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "PositionAndDisplacement",
+          "title": "位置と変位",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AverageVelocity",
+          "title": "平均速度と瞬間速度",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "Acceleration",
+          "title": "加速度",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "InertiaMagic",
+          "title": "等速直線運動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AcceleratedMotion",
+          "title": "等加速度運動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "FreeFallMotion",
+          "title": "自由落下と重力",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise1_3",
+          "route": "/calc/Exercise1_3"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q2-4",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問4",
+          "tags": [
+            "等加速度運動",
+            "加速度",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/phy2025-q2-4"
+        },
+        {
+          "id": "phy2025-q2-5",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問5",
+          "tags": [
+            "加速度",
+            "運動方程式",
+            "重力加速度",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/phy2025-q2-5"
+        },
+        {
+          "id": "phy2025-q2-3",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問3",
+          "tags": [
+            "速度",
+            "等速直線運動"
+          ],
+          "route": "/explanations/phy2025-q2-3"
+        },
+        {
+          "id": "phy2025-q2-1",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問1",
+          "tags": [
+            "張力",
+            "重力",
+            "つり合い条件",
+            "等速直線運動"
+          ],
+          "route": "/explanations/phy2025-q2-1"
+        },
+        {
+          "id": "phy2025-q2-2",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問2",
+          "tags": [
+            "加速度",
+            "等加速度運動"
+          ],
+          "route": "/explanations/phy2025-q2-2"
+        },
+        {
+          "id": "physics2024-q2-5",
+          "questionRef": "共通テスト 2024年 物理 第2問 問5",
+          "tags": [
+            "力積",
+            "運動量",
+            "重力"
+          ],
+          "route": "/explanations/physics2024-q2-5"
+        },
+        {
+          "id": "phy2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問2",
+          "tags": [
+            "浮力",
+            "張力",
+            "重力",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-2"
+        }
+      ]
+    },
+    {
+      "id": "1.4",
+      "chapterId": "1",
+      "chapterTitle": "物理の基本概念",
+      "title": "グラフによる運動の表現",
+      "summary": "物体の運動を考えるとき、 時間とともに量がどのように変化するか を調べることが重要になります。",
+      "searchTerms": [
+        "グラフによる運動の表現",
+        "位置-時間グラフ",
+        "position-time graph",
+        "速度-時間グラフ",
+        "velocity-time graph",
+        "加速度-時間グラフ",
+        "acceleration-time graph",
+        "グラフの傾き",
+        "slope of the graph",
+        "グラフの面積",
+        "area under the graph",
+        "面積と変位",
+        "area as displacement"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=1.4"
+      },
+      "keywords": [
+        {
+          "ja": "位置-時間グラフ",
+          "en": "position-time graph",
+          "quizId": "positionTimeGraphIntroQuestions",
+          "quizRoute": "/quiz/positionTimeGraphIntroQuestions"
+        },
+        {
+          "ja": "速度-時間グラフ",
+          "en": "velocity-time graph",
+          "quizId": "velocityTimeGraphIntroQuestions",
+          "quizRoute": "/quiz/velocityTimeGraphIntroQuestions"
+        },
+        {
+          "ja": "加速度-時間グラフ",
+          "en": "acceleration-time graph",
+          "quizId": "accelerationTimeGraphIntroQuestions",
+          "quizRoute": "/quiz/accelerationTimeGraphIntroQuestions"
+        },
+        {
+          "ja": "グラフの傾き",
+          "en": "slope of the graph",
+          "quizId": "graphSlopeIntroQuestions",
+          "quizRoute": "/quiz/graphSlopeIntroQuestions"
+        },
+        {
+          "ja": "グラフの面積",
+          "en": "area under the graph",
+          "quizId": "graphAreaIntroQuestions",
+          "quizRoute": "/quiz/graphAreaIntroQuestions"
+        },
+        {
+          "ja": "面積と変位",
+          "en": "area as displacement",
+          "quizId": "areaDisplacementIntroQuestions",
+          "quizRoute": "/quiz/areaDisplacementIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "AcceleratedMotion",
+          "title": "速度–時間グラフ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "UniformLinearMotionIntegral",
+          "title": "グラフの面積が表すもの",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "DerivativeIntegral",
+          "title": "微分と積分",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise1_4",
+          "route": "/calc/Exercise1_4"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q2-4",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問4",
+          "tags": [
+            "等加速度運動",
+            "加速度",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/phy2025-q2-4"
+        },
+        {
+          "id": "phy2025-q2-5",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問5",
+          "tags": [
+            "加速度",
+            "運動方程式",
+            "重力加速度",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/phy2025-q2-5"
+        },
+        {
+          "id": "physics2024-q4-4",
+          "questionRef": "共通テスト 2024年 物理 第4問 問4",
+          "tags": [
+            "電位",
+            "電場",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/physics2024-q4-4"
+        }
+      ]
+    },
+    {
+      "id": "1.5",
+      "chapterId": "1",
+      "chapterTitle": "物理の基本概念",
+      "title": "誤差の考え方",
+      "summary": "物理では、測定値には必ず誤差が伴います。",
+      "searchTerms": [
+        "誤差の考え方",
+        "有効数字",
+        "significant figures",
+        "測定誤差",
+        "measurement error",
+        "絶対誤差",
+        "absolute error",
+        "相対誤差",
+        "relative error"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=1.5"
+      },
+      "keywords": [
+        {
+          "ja": "有効数字",
+          "en": "significant figures",
+          "quizId": "significantFiguresIntroQuestions",
+          "quizRoute": "/quiz/significantFiguresIntroQuestions"
+        },
+        {
+          "ja": "測定誤差",
+          "en": "measurement error",
+          "quizId": "measurementErrorIntroQuestions",
+          "quizRoute": "/quiz/measurementErrorIntroQuestions"
+        },
+        {
+          "ja": "絶対誤差",
+          "en": "absolute error",
+          "quizId": "absoluteErrorIntroQuestions",
+          "quizRoute": "/quiz/absoluteErrorIntroQuestions"
+        },
+        {
+          "ja": "相対誤差",
+          "en": "relative error",
+          "quizId": "relativeErrorIntroQuestions",
+          "quizRoute": "/quiz/relativeErrorIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "SignificantFiguresMeasurement",
+          "title": "有効数字 ― 数の「確かさ」",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AbsoluteError",
+          "title": "有効数字 ― 数の「確かさ」",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "RelativeError",
+          "title": "相対誤差 ― どれくらいの割合でズレるか",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [],
+      "explanations": [
+        {
+          "id": "phy2024-q2-5",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問5",
+          "tags": [
+            "浮力",
+            "垂直抗力",
+            "有効数字"
+          ],
+          "route": "/explanations/phy2024-q2-5"
+        },
+        {
+          "id": "phy2024-q3-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問3",
+          "tags": [
+            "音速",
+            "測定誤差",
+            "物理量"
+          ],
+          "route": "/explanations/phy2024-q3-3"
+        }
+      ]
+    },
+    {
+      "id": "2.1",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "運動の法則（ニュートンの3法則）",
+      "summary": "力学では、物体の運動を - 位置 - 速度 - 加速度 によって表します。",
+      "searchTerms": [
+        "運動の法則（ニュートンの3法則）",
+        "慣性の法則",
+        "law of inertia",
+        "質量",
+        "mass",
+        "力",
+        "force",
+        "作用・反作用の法則",
+        "action-reaction law",
+        "合力",
+        "resultant force",
+        "慣性系",
+        "inertial frame"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.1"
+      },
+      "keywords": [
+        {
+          "ja": "慣性の法則",
+          "en": "law of inertia",
+          "quizId": "firstLawIntroQuestions",
+          "quizRoute": "/quiz/firstLawIntroQuestions"
+        },
+        {
+          "ja": "質量",
+          "en": "mass",
+          "quizId": "massIntroQuestions",
+          "quizRoute": "/quiz/massIntroQuestions"
+        },
+        {
+          "ja": "力",
+          "en": "force",
+          "quizId": "forceIntroQuestions",
+          "quizRoute": "/quiz/forceIntroQuestions"
+        },
+        {
+          "ja": "作用・反作用の法則",
+          "en": "action-reaction law",
+          "quizId": "actionReactionIntroQuestions",
+          "quizRoute": "/quiz/actionReactionIntroQuestions"
+        },
+        {
+          "ja": "合力",
+          "en": "resultant force",
+          "quizId": "resultantForceIntroQuestions",
+          "quizRoute": "/quiz/resultantForceIntroQuestions"
+        },
+        {
+          "ja": "慣性系",
+          "en": "inertial frame",
+          "quizId": "inertialFrameIntroQuestions",
+          "quizRoute": "/quiz/inertialFrameIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "InertiaMotion",
+          "title": "第一法則：慣性の法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ForceMassAccelerationRelation",
+          "title": "第二法則：運動の法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ForceAngleMotion",
+          "title": "第二法則：運動の法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LeaningChairThirdLaw",
+          "title": "第三法則：作用・反作用の法則",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_1",
+          "route": "/calc/Exercise2_1"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理 第2問 問2",
+          "tags": [
+            "質量",
+            "圧力",
+            "仕事",
+            "気体の仕事"
+          ],
+          "route": "/explanations/physics2024-q2-2"
+        },
+        {
+          "id": "physics2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理 第2問 問3",
+          "tags": [
+            "仕事",
+            "運動エネルギー",
+            "圧力",
+            "質量"
+          ],
+          "route": "/explanations/physics2024-q2-3"
+        },
+        {
+          "id": "phy2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問3",
+          "tags": [
+            "浮力",
+            "張力",
+            "作用・反作用の法則",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-3"
+        }
+      ]
+    },
+    {
+      "id": "2.2",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "力のつり合い・摩擦",
+      "summary": "ニュートンの第二法則では、物体に力が働くと、その物体の速度が変化することを学びました。",
+      "searchTerms": [
+        "力のつり合い・摩擦",
+        "つり合い条件",
+        "conditions for equilibrium",
+        "摩擦",
+        "friction",
+        "静止摩擦力",
+        "static friction",
+        "動摩擦力",
+        "kinetic friction",
+        "摩擦係数",
+        "coefficient of friction",
+        "垂直抗力",
+        "normal force",
+        "張力",
+        "tension"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.2"
+      },
+      "keywords": [
+        {
+          "ja": "つり合い条件",
+          "en": "conditions for equilibrium",
+          "quizId": "forceBalanceIntroQuestions",
+          "quizRoute": "/quiz/forceBalanceIntroQuestions"
+        },
+        {
+          "ja": "摩擦",
+          "en": "friction",
+          "quizId": "frictionIntroQuestions",
+          "quizRoute": "/quiz/frictionIntroQuestions"
+        },
+        {
+          "ja": "静止摩擦力",
+          "en": "static friction",
+          "quizId": "staticFrictionIntroQuestions",
+          "quizRoute": "/quiz/staticFrictionIntroQuestions"
+        },
+        {
+          "ja": "動摩擦力",
+          "en": "kinetic friction",
+          "quizId": "kineticFrictionIntroQuestions",
+          "quizRoute": "/quiz/kineticFrictionIntroQuestions"
+        },
+        {
+          "ja": "摩擦係数",
+          "en": "coefficient of friction",
+          "quizId": "frictionCoefficientIntroQuestions",
+          "quizRoute": "/quiz/frictionCoefficientIntroQuestions"
+        },
+        {
+          "ja": "垂直抗力",
+          "en": "normal force",
+          "quizId": "normalForceIntroQuestions",
+          "quizRoute": "/quiz/normalForceIntroQuestions"
+        },
+        {
+          "ja": "張力",
+          "en": "tension",
+          "quizId": "tensionIntroQuestions",
+          "quizRoute": "/quiz/tensionIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ForceBalanceOnObject",
+          "title": "力のつり合い・摩擦",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "BookOnTable",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "Tension",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "StaticFrictionEquilibrium",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MaxStaticFrictionBox",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "FrictionNormalForceRelation",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KineticFrictionBalance",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "StaticVsKineticFriction",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MulticopterForceBalance",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ForceBalance",
+          "title": "身の回りにある力の釣り合い",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_2",
+          "route": "/calc/Exercise2_2"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q2-1",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問1",
+          "tags": [
+            "張力",
+            "重力",
+            "つり合い条件",
+            "等速直線運動"
+          ],
+          "route": "/explanations/phy2025-q2-1"
+        },
+        {
+          "id": "phy2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問2",
+          "tags": [
+            "浮力",
+            "張力",
+            "重力",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-2"
+        },
+        {
+          "id": "phy2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問3",
+          "tags": [
+            "浮力",
+            "張力",
+            "作用・反作用の法則",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-3"
+        },
+        {
+          "id": "phy2024-q2-4",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問4",
+          "tags": [
+            "浮力",
+            "張力",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-4"
+        },
+        {
+          "id": "phy2024-q2-5",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問5",
+          "tags": [
+            "浮力",
+            "垂直抗力",
+            "有効数字"
+          ],
+          "route": "/explanations/phy2024-q2-5"
+        }
+      ]
+    },
+    {
+      "id": "2.3",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "運動方程式の応用（鉛直投げ上げ・斜面・円運動）",
+      "summary": "ニュートンの第二法則 は、落下・投げ上げ・斜面・円運動など、 さまざまな運動を同じ考え方で説明できる基本法則 です。",
+      "searchTerms": [
+        "運動方程式の応用（鉛直投げ上げ・斜面・円運動）",
+        "鉛直投げ上げ",
+        "vertical projectile motion",
+        "斜面運動",
+        "inclined plane motion",
+        "円運動",
+        "circular motion",
+        "向心力",
+        "centripetal force",
+        "運動方程式",
+        "equation of motion",
+        "力の分解",
+        "force decomposition"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.3"
+      },
+      "keywords": [
+        {
+          "ja": "鉛直投げ上げ",
+          "en": "vertical projectile motion",
+          "quizId": "verticalThrowIntroQuestions",
+          "quizRoute": "/quiz/verticalThrowIntroQuestions"
+        },
+        {
+          "ja": "斜面運動",
+          "en": "inclined plane motion",
+          "quizId": "inclinedPlaneIntroQuestions",
+          "quizRoute": "/quiz/inclinedPlaneIntroQuestions"
+        },
+        {
+          "ja": "円運動",
+          "en": "circular motion",
+          "quizId": "circularMotionIntroQuestions",
+          "quizRoute": "/quiz/circularMotionIntroQuestions"
+        },
+        {
+          "ja": "向心力",
+          "en": "centripetal force",
+          "quizId": "centripetalForceIntroQuestions",
+          "quizRoute": "/quiz/centripetalForceIntroQuestions"
+        },
+        {
+          "ja": "運動方程式",
+          "en": "equation of motion",
+          "quizId": "equationOfMotionIntroQuestions",
+          "quizRoute": "/quiz/equationOfMotionIntroQuestions"
+        },
+        {
+          "ja": "力の分解",
+          "en": "force decomposition",
+          "quizId": "forceDecompositionIntroQuestions",
+          "quizRoute": "/quiz/forceDecompositionIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "VerticalThrowMotion",
+          "title": "運動方程式の応用（鉛直投げ上げ・斜面・円運動）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ForceDecompositionOnIncline",
+          "title": "鉛直投げ上げ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CircularMotionVectors",
+          "title": "斜面上の運動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PerpendicularForceCircularMotion",
+          "title": "円運動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CentrifugalForce",
+          "title": "円運動",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_3",
+          "route": "/calc/Exercise2_3"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q2-5",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問5",
+          "tags": [
+            "加速度",
+            "運動方程式",
+            "重力加速度",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/phy2025-q2-5"
+        },
+        {
+          "id": "phy2025-q1-2",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問2",
+          "tags": [
+            "エネルギー保存則",
+            "運動エネルギー",
+            "位置エネルギー",
+            "鉛直投げ上げ"
+          ],
+          "route": "/explanations/phy2025-q1-2"
+        },
+        {
+          "id": "physics2024-q1-4",
+          "questionRef": "共通テスト 2024年 物理 第1問 問4",
+          "tags": [
+            "ローレンツ力",
+            "磁場",
+            "円運動"
+          ],
+          "route": "/explanations/physics2024-q1-4"
+        }
+      ]
+    },
+    {
+      "id": "2.4",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "運動量保存則・反発・衝突",
+      "summary": "衝突や爆発のような現象では、力が非常に短い時間だけ働きます。",
+      "searchTerms": [
+        "運動量保存則・反発・衝突",
+        "運動量",
+        "momentum",
+        "運動量保存則",
+        "law of conservation of momentum",
+        "反発係数",
+        "coefficient of restitution",
+        "弾性衝突",
+        "elastic collision",
+        "非弾性衝突",
+        "inelastic collision",
+        "力積",
+        "impulse"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.4"
+      },
+      "keywords": [
+        {
+          "ja": "運動量",
+          "en": "momentum",
+          "quizId": "momentumIntroQuestions",
+          "quizRoute": "/quiz/momentumIntroQuestions"
+        },
+        {
+          "ja": "運動量保存則",
+          "en": "law of conservation of momentum",
+          "quizId": "momentumConservationIntroQuestions",
+          "quizRoute": "/quiz/momentumConservationIntroQuestions"
+        },
+        {
+          "ja": "反発係数",
+          "en": "coefficient of restitution",
+          "quizId": "coefficientOfRestitutionIntroQuestions",
+          "quizRoute": "/quiz/coefficientOfRestitutionIntroQuestions"
+        },
+        {
+          "ja": "弾性衝突",
+          "en": "elastic collision",
+          "quizId": "elasticCollisionIntroQuestions",
+          "quizRoute": "/quiz/elasticCollisionIntroQuestions"
+        },
+        {
+          "ja": "非弾性衝突",
+          "en": "inelastic collision",
+          "quizId": "inelasticCollisionIntroQuestions",
+          "quizRoute": "/quiz/inelasticCollisionIntroQuestions"
+        },
+        {
+          "ja": "力積",
+          "en": "impulse",
+          "quizId": "impulseIntroQuestions",
+          "quizRoute": "/quiz/impulseIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "MomentumBeforeAfterCollision",
+          "title": "運動量保存則・反発・衝突",
+          "available": false,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ImpulseMomentumRelation",
+          "title": "外力が働かない系",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "RestitutionCoefficient",
+          "title": "力積",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElasticCollision",
+          "title": "衝突の種類",
+          "available": false,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_4",
+          "route": "/calc/Exercise2_4"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q2-4",
+          "questionRef": "共通テスト 2024年 物理 第2問 問4",
+          "tags": [
+            "運動量",
+            "運動量保存則"
+          ],
+          "route": "/explanations/physics2024-q2-4"
+        },
+        {
+          "id": "physics2024-q2-5",
+          "questionRef": "共通テスト 2024年 物理 第2問 問5",
+          "tags": [
+            "力積",
+            "運動量",
+            "重力"
+          ],
+          "route": "/explanations/physics2024-q2-5"
+        }
+      ]
+    },
+    {
+      "id": "2.5",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "仕事とエネルギー保存則",
+      "summary": "これまで力と運動を時間の変化として見てきましたが、力を距離に沿って考えると、運動をエネルギーのやり取りとして理解できるようになります。",
+      "searchTerms": [
+        "仕事とエネルギー保存則",
+        "仕事",
+        "work",
+        "エネルギー",
+        "energy",
+        "運動エネルギー",
+        "kinetic energy",
+        "位置エネルギー",
+        "potential energy",
+        "保存力",
+        "conservative force",
+        "エネルギー保存則",
+        "law of conservation of energy",
+        "仕事率",
+        "power"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.5"
+      },
+      "keywords": [
+        {
+          "ja": "仕事",
+          "en": "work",
+          "quizId": "workIntroQuestions",
+          "quizRoute": "/quiz/workIntroQuestions"
+        },
+        {
+          "ja": "エネルギー",
+          "en": "energy",
+          "quizId": "energyIntroQuestions",
+          "quizRoute": "/quiz/energyIntroQuestions"
+        },
+        {
+          "ja": "運動エネルギー",
+          "en": "kinetic energy",
+          "quizId": "kineticEnergyIntroQuestions",
+          "quizRoute": "/quiz/kineticEnergyIntroQuestions"
+        },
+        {
+          "ja": "位置エネルギー",
+          "en": "potential energy",
+          "quizId": "potentialEnergyIntroQuestions",
+          "quizRoute": "/quiz/potentialEnergyIntroQuestions"
+        },
+        {
+          "ja": "保存力",
+          "en": "conservative force",
+          "quizId": "conservativeForceIntroQuestions",
+          "quizRoute": "/quiz/conservativeForceIntroQuestions"
+        },
+        {
+          "ja": "エネルギー保存則",
+          "en": "law of conservation of energy",
+          "quizId": "mechanicalEnergyConservationIntroQuestions",
+          "quizRoute": "/quiz/mechanicalEnergyConservationIntroQuestions"
+        },
+        {
+          "ja": "仕事率",
+          "en": "power",
+          "quizId": "powerIntroQuestions",
+          "quizRoute": "/quiz/powerIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "WorkDefinition",
+          "title": "仕事とは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WorkEnergyRelation",
+          "title": "仕事と運動エネルギーの関係",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EnergyTransformation",
+          "title": "保存力と位置エネルギー",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_5",
+          "route": "/calc/Exercise2_5"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q1-2",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問2",
+          "tags": [
+            "エネルギー保存則",
+            "運動エネルギー",
+            "位置エネルギー",
+            "鉛直投げ上げ"
+          ],
+          "route": "/explanations/phy2025-q1-2"
+        },
+        {
+          "id": "physics2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理 第2問 問2",
+          "tags": [
+            "質量",
+            "圧力",
+            "仕事",
+            "気体の仕事"
+          ],
+          "route": "/explanations/physics2024-q2-2"
+        },
+        {
+          "id": "physics2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理 第2問 問3",
+          "tags": [
+            "仕事",
+            "運動エネルギー",
+            "圧力",
+            "質量"
+          ],
+          "route": "/explanations/physics2024-q2-3"
+        },
+        {
+          "id": "phy2024-q1-2",
+          "questionRef": "共通テスト 2024年 物理基礎 第1問 問2",
+          "tags": [
+            "エネルギー保存則",
+            "運動エネルギー",
+            "位置エネルギー"
+          ],
+          "route": "/explanations/phy2024-q1-2"
+        }
+      ]
+    },
+    {
+      "id": "2.6",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "剛体運動（発展）",
+      "summary": "これまでの力学では、物体を「点」とみなして運動を考えてきました。",
+      "searchTerms": [
+        "剛体運動（発展）",
+        "剛体",
+        "rigid body",
+        "重心",
+        "center of mass",
+        "慣性モーメント",
+        "moment of inertia",
+        "回転運動",
+        "rotational motion",
+        "角速度",
+        "angular velocity",
+        "角加速度",
+        "angular acceleration",
+        "力のモーメント（トルク）",
+        "moment of force (torque)"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.6"
+      },
+      "keywords": [
+        {
+          "ja": "剛体",
+          "en": "rigid body",
+          "quizId": "rigidBodyIntroQuestions",
+          "quizRoute": "/quiz/rigidBodyIntroQuestions"
+        },
+        {
+          "ja": "重心",
+          "en": "center of mass",
+          "quizId": "centerOfMassIntroQuestions",
+          "quizRoute": "/quiz/centerOfMassIntroQuestions"
+        },
+        {
+          "ja": "慣性モーメント",
+          "en": "moment of inertia",
+          "quizId": "momentOfInertiaIntroQuestions",
+          "quizRoute": "/quiz/momentOfInertiaIntroQuestions"
+        },
+        {
+          "ja": "回転運動",
+          "en": "rotational motion",
+          "quizId": "rotationalMotionIntroQuestions",
+          "quizRoute": "/quiz/rotationalMotionIntroQuestions"
+        },
+        {
+          "ja": "角速度",
+          "en": "angular velocity",
+          "quizId": "angularVelocityIntroQuestions",
+          "quizRoute": "/quiz/angularVelocityIntroQuestions"
+        },
+        {
+          "ja": "角加速度",
+          "en": "angular acceleration",
+          "quizId": "angularAccelerationIntroQuestions",
+          "quizRoute": "/quiz/angularAccelerationIntroQuestions"
+        },
+        {
+          "ja": "力のモーメント（トルク）",
+          "en": "moment of force (torque)",
+          "quizId": "torqueIntroQuestions",
+          "quizRoute": "/quiz/torqueIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "TorqueIntro",
+          "title": "トルク（モーメント）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MomentOfInertia",
+          "title": "慣性モーメント",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "RotationLaw",
+          "title": "回転の運動方程式",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_6",
+          "route": "/calc/Exercise2_6"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q1-1",
+          "questionRef": "共通テスト 2024年 物理 第1問 問1",
+          "tags": [
+            "力のモーメント（トルク）",
+            "重心",
+            "剛体"
+          ],
+          "route": "/explanations/physics2024-q1-1"
+        }
+      ]
+    },
+    {
+      "id": "2.7",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "浮力と流体の力",
+      "summary": "水や空気のように、 自由に形を変えて流れる物質 を 流体（fluid） といいます。",
+      "searchTerms": [
+        "浮力と流体の力",
+        "浮力",
+        "buoyancy",
+        "パスカルの原理",
+        "Pascal's principle",
+        "アルキメデスの原理",
+        "Archimedes' principle",
+        "圧力",
+        "pressure",
+        "流体",
+        "fluid"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.7"
+      },
+      "keywords": [
+        {
+          "ja": "浮力",
+          "en": "buoyancy",
+          "quizId": "buoyancyIntroQuestions",
+          "quizRoute": "/quiz/buoyancyIntroQuestions"
+        },
+        {
+          "ja": "パスカルの原理",
+          "en": "Pascal's principle",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "アルキメデスの原理",
+          "en": "Archimedes' principle",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "圧力",
+          "en": "pressure",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "流体",
+          "en": "fluid",
+          "quizId": null,
+          "quizRoute": null
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "FluidAroundObject",
+          "title": "浮力と流体の力",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PressureInLiquid",
+          "title": "液体の圧力",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PascalsPrincipleForce",
+          "title": "パスカルの原理",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "BuoyancyIntro",
+          "title": "浮力（buoyancy）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PressureDifferenceBuoyancy",
+          "title": "浮力が生まれる理由",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ArchimedesPrinciple",
+          "title": "アルキメデスの原理",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "FloatSinkBalance",
+          "title": "浮く・沈む条件",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_7",
+          "route": "/calc/Exercise2_7"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q2-1",
+          "questionRef": "共通テスト 2024年 物理 第2問 問1",
+          "tags": [
+            "流体",
+            "体積"
+          ],
+          "route": "/explanations/physics2024-q2-1"
+        },
+        {
+          "id": "physics2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理 第2問 問2",
+          "tags": [
+            "質量",
+            "圧力",
+            "仕事",
+            "気体の仕事"
+          ],
+          "route": "/explanations/physics2024-q2-2"
+        },
+        {
+          "id": "physics2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理 第2問 問3",
+          "tags": [
+            "仕事",
+            "運動エネルギー",
+            "圧力",
+            "質量"
+          ],
+          "route": "/explanations/physics2024-q2-3"
+        },
+        {
+          "id": "phy2024-q2-1",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問1",
+          "tags": [
+            "浮力"
+          ],
+          "route": "/explanations/phy2024-q2-1"
+        },
+        {
+          "id": "phy2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問2",
+          "tags": [
+            "浮力",
+            "張力",
+            "重力",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-2"
+        },
+        {
+          "id": "phy2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問3",
+          "tags": [
+            "浮力",
+            "張力",
+            "作用・反作用の法則",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-3"
+        },
+        {
+          "id": "phy2024-q2-4",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問4",
+          "tags": [
+            "浮力",
+            "張力",
+            "つり合い条件"
+          ],
+          "route": "/explanations/phy2024-q2-4"
+        },
+        {
+          "id": "phy2024-q2-5",
+          "questionRef": "共通テスト 2024年 物理基礎 第2問 問5",
+          "tags": [
+            "浮力",
+            "垂直抗力",
+            "有効数字"
+          ],
+          "route": "/explanations/phy2024-q2-5"
+        }
+      ]
+    },
+    {
+      "id": "2.8",
+      "chapterId": "2",
+      "chapterTitle": "力学",
+      "title": "万有引力と天体の運動",
+      "summary": "これまでの力学では、物体に働く力として - 重力 - 垂直抗力 - 摩擦力 - 張力 - 弾性力 などを扱ってきました。",
+      "searchTerms": [
+        "万有引力と天体の運動",
+        "万有引力",
+        "universal gravitation",
+        "重力加速度",
+        "gravitational acceleration",
+        "ケプラーの法則",
+        "Kepler's laws",
+        "第一宇宙速度",
+        "first cosmic velocity",
+        "第二宇宙速度",
+        "second cosmic velocity",
+        "万有引力による位置エネルギー",
+        "gravitational potential energy"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=2.8"
+      },
+      "keywords": [
+        {
+          "ja": "万有引力",
+          "en": "universal gravitation",
+          "quizId": "universalGravitationIntroQuestions",
+          "quizRoute": "/quiz/universalGravitationIntroQuestions"
+        },
+        {
+          "ja": "重力加速度",
+          "en": "gravitational acceleration",
+          "quizId": "gravitationalAccelerationIntroQuestions",
+          "quizRoute": "/quiz/gravitationalAccelerationIntroQuestions"
+        },
+        {
+          "ja": "ケプラーの法則",
+          "en": "Kepler's laws",
+          "quizId": "keplerLawsIntroQuestions",
+          "quizRoute": "/quiz/keplerLawsIntroQuestions"
+        },
+        {
+          "ja": "第一宇宙速度",
+          "en": "first cosmic velocity",
+          "quizId": "firstCosmicVelocityIntroQuestions",
+          "quizRoute": "/quiz/firstCosmicVelocityIntroQuestions"
+        },
+        {
+          "ja": "第二宇宙速度",
+          "en": "second cosmic velocity",
+          "quizId": "secondCosmicVelocityIntroQuestions",
+          "quizRoute": "/quiz/secondCosmicVelocityIntroQuestions"
+        },
+        {
+          "ja": "万有引力による位置エネルギー",
+          "en": "gravitational potential energy",
+          "quizId": "gravitationalPotentialEnergyIntroQuestions",
+          "quizRoute": "/quiz/gravitationalPotentialEnergyIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "GravityFromEarthToUniversal",
+          "title": "万有引力と天体の運動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "UniversalGravitationLaw",
+          "title": "万有引力とは",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "GravitationalAccelerationFromEarth",
+          "title": "地上の重力 $mg$ との関係",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KeplerLawsOverview",
+          "title": "ケプラーの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KeplerFirstLaw",
+          "title": "ケプラーの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KeplerSecondLaw",
+          "title": "ケプラーの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KeplerThirdLaw",
+          "title": "ケプラーの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SatelliteCircularOrbit",
+          "title": "万有引力と円運動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "GravitationalPotentialEnergy",
+          "title": "万有引力による位置エネルギー",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CosmicVelocity",
+          "title": "第二宇宙速度",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise2_8",
+          "route": "/calc/Exercise2_8"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q2-5",
+          "questionRef": "共通テスト 2025年 物理基礎 第2問 問5",
+          "tags": [
+            "加速度",
+            "運動方程式",
+            "重力加速度",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/phy2025-q2-5"
+        }
+      ]
+    },
+    {
+      "id": "3.1",
+      "chapterId": "3",
+      "chapterTitle": "振動と波",
+      "title": "単振動とばね振り子",
+      "summary": "多くの物体は、ある位置を中心として 行ったり戻ったりする運動 をします。",
+      "searchTerms": [
+        "単振動とばね振り子",
+        "単振動",
+        "simple harmonic motion",
+        "周期",
+        "period",
+        "ばね",
+        "spring",
+        "ばね振り子",
+        "mass-spring oscillator",
+        "ばね定数",
+        "spring constant",
+        "復元力",
+        "restoring force",
+        "等速円運動",
+        "uniform circular motion",
+        "振幅",
+        "amplitude",
+        "角振動数",
+        "angular frequency",
+        "位相",
+        "phase"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=3.1"
+      },
+      "keywords": [
+        {
+          "ja": "単振動",
+          "en": "simple harmonic motion",
+          "quizId": "shmIntroQuestions",
+          "quizRoute": "/quiz/shmIntroQuestions"
+        },
+        {
+          "ja": "周期",
+          "en": "period",
+          "quizId": "periodIntroQuestions",
+          "quizRoute": "/quiz/periodIntroQuestions"
+        },
+        {
+          "ja": "ばね",
+          "en": "spring",
+          "quizId": "springIntroQuestions",
+          "quizRoute": "/quiz/springIntroQuestions"
+        },
+        {
+          "ja": "ばね振り子",
+          "en": "mass-spring oscillator",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "ばね定数",
+          "en": "spring constant",
+          "quizId": "springConstantIntroQuestions",
+          "quizRoute": "/quiz/springConstantIntroQuestions"
+        },
+        {
+          "ja": "復元力",
+          "en": "restoring force",
+          "quizId": "springRestoringForceIntroQuestions",
+          "quizRoute": "/quiz/springRestoringForceIntroQuestions"
+        },
+        {
+          "ja": "等速円運動",
+          "en": "uniform circular motion",
+          "quizId": "uniformCircularMotionIntroQuestions",
+          "quizRoute": "/quiz/uniformCircularMotionIntroQuestions"
+        },
+        {
+          "ja": "振幅",
+          "en": "amplitude",
+          "quizId": "amplitudeIntroQuestions",
+          "quizRoute": "/quiz/amplitudeIntroQuestions"
+        },
+        {
+          "ja": "角振動数",
+          "en": "angular frequency",
+          "quizId": "angularFrequencyIntroQuestions",
+          "quizRoute": "/quiz/angularFrequencyIntroQuestions"
+        },
+        {
+          "ja": "位相",
+          "en": "phase",
+          "quizId": "phaseIntroQuestions",
+          "quizRoute": "/quiz/phaseIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "OscillationExamples",
+          "title": "単振動と振り子",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "RestoringForce",
+          "title": "復元力",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SimpleHarmonicMotion",
+          "title": "単振動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "OscillationModes",
+          "title": "単振動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AmplitudePeriod",
+          "title": "振幅・周期・振動数",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PhaseShift",
+          "title": "単振動の位置",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SpringMassOscillation",
+          "title": "バネ振動",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PendulumMotion",
+          "title": "単振り子",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise3_1",
+          "route": "/calc/Exercise3_1"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "3.2",
+      "chapterId": "3",
+      "chapterTitle": "振動と波",
+      "title": "波の式と重ね合わせ",
+      "summary": "水面に石を落とすと、波紋が広がっていきます。",
+      "searchTerms": [
+        "波の式と重ね合わせ",
+        "波",
+        "wave",
+        "波の式",
+        "wave equation",
+        "横波",
+        "transverse wave",
+        "縦波",
+        "longitudinal wave",
+        "位相差",
+        "phase difference",
+        "波長",
+        "wavelength",
+        "振動数（周波数）",
+        "frequency",
+        "重ね合わせの原理",
+        "principle of superposition",
+        "干渉",
+        "interference",
+        "波の速度",
+        "wave speed"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=3.2"
+      },
+      "keywords": [
+        {
+          "ja": "波",
+          "en": "wave",
+          "quizId": "waveIntroQuestions",
+          "quizRoute": "/quiz/waveIntroQuestions"
+        },
+        {
+          "ja": "波の式",
+          "en": "wave equation",
+          "quizId": "waveEquationIntroQuestions",
+          "quizRoute": "/quiz/waveEquationIntroQuestions"
+        },
+        {
+          "ja": "横波",
+          "en": "transverse wave",
+          "quizId": "transverseWaveIntroQuestions",
+          "quizRoute": "/quiz/transverseWaveIntroQuestions"
+        },
+        {
+          "ja": "縦波",
+          "en": "longitudinal wave",
+          "quizId": "longitudinalWaveIntroQuestions",
+          "quizRoute": "/quiz/longitudinalWaveIntroQuestions"
+        },
+        {
+          "ja": "位相差",
+          "en": "phase difference",
+          "quizId": "phaseDifferenceIntroQuestions",
+          "quizRoute": "/quiz/phaseDifferenceIntroQuestions"
+        },
+        {
+          "ja": "波長",
+          "en": "wavelength",
+          "quizId": "wavelengthIntroQuestions",
+          "quizRoute": "/quiz/wavelengthIntroQuestions"
+        },
+        {
+          "ja": "振動数（周波数）",
+          "en": "frequency",
+          "quizId": "frequencyIntroQuestions",
+          "quizRoute": "/quiz/frequencyIntroQuestions"
+        },
+        {
+          "ja": "重ね合わせの原理",
+          "en": "principle of superposition",
+          "quizId": "superpositionIntroQuestions",
+          "quizRoute": "/quiz/superpositionIntroQuestions"
+        },
+        {
+          "ja": "干渉",
+          "en": "interference",
+          "quizId": "interferenceIntroQuestions",
+          "quizRoute": "/quiz/interferenceIntroQuestions"
+        },
+        {
+          "ja": "波の速度",
+          "en": "wave speed",
+          "quizId": "waveSpeedIntroQuestions",
+          "quizRoute": "/quiz/waveSpeedIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "WavePhysics",
+          "title": "波の式と重ね合わせ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WaveParticleMotion",
+          "title": "波の式と重ね合わせ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "TransverseVsLongitudinalWave",
+          "title": "波の2種類——横波と縦波",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WaveReflection",
+          "title": "波の反射",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WaveLengthAmplitude",
+          "title": "波の基本的な量",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WavePhase",
+          "title": "波の速さ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WaveSuperposition",
+          "title": "重ね合わせの原理と干渉",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise3_2",
+          "route": "/calc/Exercise3_2"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q1-4",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問4",
+          "tags": [
+            "縦波",
+            "波長",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/phy2025-q1-4"
+        },
+        {
+          "id": "phy2025-q1-3",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問3",
+          "tags": [
+            "音",
+            "うなり",
+            "振動数差",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/phy2025-q1-3"
+        },
+        {
+          "id": "physics2024-q3-2",
+          "questionRef": "共通テスト 2024年 物理 第3問 問2",
+          "tags": [
+            "定常波",
+            "節",
+            "腹",
+            "波長"
+          ],
+          "route": "/explanations/physics2024-q3-2"
+        },
+        {
+          "id": "physics2024-q3-3",
+          "questionRef": "共通テスト 2024年 物理 第3問 問3",
+          "tags": [
+            "定常波",
+            "固有振動",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/physics2024-q3-3"
+        },
+        {
+          "id": "phy2024-q3-1",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問1",
+          "tags": [
+            "音速",
+            "波長"
+          ],
+          "route": "/explanations/phy2024-q3-1"
+        },
+        {
+          "id": "phy2024-q3-4",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問4",
+          "tags": [
+            "音速",
+            "波長"
+          ],
+          "route": "/explanations/phy2024-q3-4"
+        },
+        {
+          "id": "phy2024-q3-6",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問6",
+          "tags": [
+            "波長",
+            "音速"
+          ],
+          "route": "/explanations/phy2024-q3-6"
+        },
+        {
+          "id": "physics2024-q3-4",
+          "questionRef": "共通テスト 2024年 物理 第3問 問4",
+          "tags": [
+            "固有振動",
+            "定常波",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/physics2024-q3-4"
+        },
+        {
+          "id": "physics2024-q3-5",
+          "questionRef": "共通テスト 2024年 物理 第3問 問5",
+          "tags": [
+            "固有振動",
+            "定常波",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/physics2024-q3-5"
+        }
+      ]
+    },
+    {
+      "id": "3.3",
+      "chapterId": "3",
+      "chapterTitle": "振動と波",
+      "title": "定常波と共鳴",
+      "summary": "波は通常、媒質の中を伝わりながら空間を進んでいきます。",
+      "searchTerms": [
+        "定常波と共鳴",
+        "定常波",
+        "standing wave",
+        "腹",
+        "antinode",
+        "節",
+        "node",
+        "共鳴",
+        "resonance",
+        "固有振動",
+        "natural vibration",
+        "基本振動",
+        "fundamental mode",
+        "倍音",
+        "harmonics",
+        "境界条件",
+        "boundary conditions"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=3.3"
+      },
+      "keywords": [
+        {
+          "ja": "定常波",
+          "en": "standing wave",
+          "quizId": "standingWaveIntroQuestions",
+          "quizRoute": "/quiz/standingWaveIntroQuestions"
+        },
+        {
+          "ja": "腹",
+          "en": "antinode",
+          "quizId": "antinodeIntroQuestions",
+          "quizRoute": "/quiz/antinodeIntroQuestions"
+        },
+        {
+          "ja": "節",
+          "en": "node",
+          "quizId": "nodeIntroQuestions",
+          "quizRoute": "/quiz/nodeIntroQuestions"
+        },
+        {
+          "ja": "共鳴",
+          "en": "resonance",
+          "quizId": "resonanceIntroQuestions",
+          "quizRoute": "/quiz/resonanceIntroQuestions"
+        },
+        {
+          "ja": "固有振動",
+          "en": "natural vibration",
+          "quizId": "naturalVibrationIntroQuestions",
+          "quizRoute": "/quiz/naturalVibrationIntroQuestions"
+        },
+        {
+          "ja": "基本振動",
+          "en": "fundamental mode",
+          "quizId": "fundamentalModeIntroQuestions",
+          "quizRoute": "/quiz/fundamentalModeIntroQuestions"
+        },
+        {
+          "ja": "倍音",
+          "en": "harmonics",
+          "quizId": "harmonicsIntroQuestions",
+          "quizRoute": "/quiz/harmonicsIntroQuestions"
+        },
+        {
+          "ja": "境界条件",
+          "en": "boundary conditions",
+          "quizId": "soundBoundaryConditionIntroQuestions",
+          "quizRoute": "/quiz/soundBoundaryConditionIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "StandingWave",
+          "title": "定常波と共鳴",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "StandingWaveInterval",
+          "title": "定常波の数式表現",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "StandingWaveString",
+          "title": "両端が固定された弦の定常波",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "StandingWavePipe",
+          "title": "空気柱における定常波",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "Resonance",
+          "title": "共鳴（共振）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WaveInterference",
+          "title": "波の干渉",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WaveDiffraction",
+          "title": "波の回折",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise3_3",
+          "route": "/calc/Exercise3_3"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q3-1",
+          "questionRef": "共通テスト 2024年 物理 第3問 問1",
+          "tags": [
+            "磁場",
+            "フレミング左手の法則",
+            "定常波",
+            "節",
+            "腹"
+          ],
+          "route": "/explanations/physics2024-q3-1"
+        },
+        {
+          "id": "physics2024-q3-2",
+          "questionRef": "共通テスト 2024年 物理 第3問 問2",
+          "tags": [
+            "定常波",
+            "節",
+            "腹",
+            "波長"
+          ],
+          "route": "/explanations/physics2024-q3-2"
+        },
+        {
+          "id": "physics2024-q3-3",
+          "questionRef": "共通テスト 2024年 物理 第3問 問3",
+          "tags": [
+            "定常波",
+            "固有振動",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/physics2024-q3-3"
+        },
+        {
+          "id": "phy2024-q3-5",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問5",
+          "tags": [
+            "音速",
+            "共鳴"
+          ],
+          "route": "/explanations/phy2024-q3-5"
+        },
+        {
+          "id": "physics2024-q3-4",
+          "questionRef": "共通テスト 2024年 物理 第3問 問4",
+          "tags": [
+            "固有振動",
+            "定常波",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/physics2024-q3-4"
+        },
+        {
+          "id": "physics2024-q3-5",
+          "questionRef": "共通テスト 2024年 物理 第3問 問5",
+          "tags": [
+            "固有振動",
+            "定常波",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/physics2024-q3-5"
+        }
+      ]
+    },
+    {
+      "id": "3.4",
+      "chapterId": "3",
+      "chapterTitle": "振動と波",
+      "title": "音の性質（うなり・ドップラー効果）",
+      "summary": "私たちは日常生活の中で、音を「聞く」という形で波を感じています。",
+      "searchTerms": [
+        "音の性質（うなり・ドップラー効果）",
+        "音",
+        "sound",
+        "音波",
+        "sound wave",
+        "音速",
+        "speed of sound",
+        "うなり",
+        "beat",
+        "振動数差",
+        "frequency difference",
+        "ドップラー効果",
+        "Doppler effect",
+        "音の強さ",
+        "sound intensity",
+        "周波数変化",
+        "frequency shift"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=3.4"
+      },
+      "keywords": [
+        {
+          "ja": "音",
+          "en": "sound",
+          "quizId": "soundIntroQuestions",
+          "quizRoute": "/quiz/soundIntroQuestions"
+        },
+        {
+          "ja": "音波",
+          "en": "sound wave",
+          "quizId": "soundWaveIntroQuestions",
+          "quizRoute": "/quiz/soundWaveIntroQuestions"
+        },
+        {
+          "ja": "音速",
+          "en": "speed of sound",
+          "quizId": "soundSpeedIntroQuestions",
+          "quizRoute": "/quiz/soundSpeedIntroQuestions"
+        },
+        {
+          "ja": "うなり",
+          "en": "beat",
+          "quizId": "beatIntroQuestions",
+          "quizRoute": "/quiz/beatIntroQuestions"
+        },
+        {
+          "ja": "振動数差",
+          "en": "frequency difference",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "ドップラー効果",
+          "en": "Doppler effect",
+          "quizId": "dopplerEffectIntroQuestions",
+          "quizRoute": "/quiz/dopplerEffectIntroQuestions"
+        },
+        {
+          "ja": "音の強さ",
+          "en": "sound intensity",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "周波数変化",
+          "en": "frequency shift",
+          "quizId": null,
+          "quizRoute": null
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "LongitudinalWave",
+          "title": "音の性質（うなり・ドップラー効果）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SoundProperties",
+          "title": "音の高さ・大きさ・音色",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "Beats",
+          "title": "うなり",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "DopplerEffect",
+          "title": "ドップラー効果",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise3_4",
+          "route": "/calc/Exercise3_4"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q1-3",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問3",
+          "tags": [
+            "音",
+            "うなり",
+            "振動数差",
+            "振動数（周波数）"
+          ],
+          "route": "/explanations/phy2025-q1-3"
+        },
+        {
+          "id": "phy2024-q3-1",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問1",
+          "tags": [
+            "音速",
+            "波長"
+          ],
+          "route": "/explanations/phy2024-q3-1"
+        },
+        {
+          "id": "phy2024-q3-2",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問2",
+          "tags": [
+            "音速"
+          ],
+          "route": "/explanations/phy2024-q3-2"
+        },
+        {
+          "id": "phy2024-q3-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問3",
+          "tags": [
+            "音速",
+            "測定誤差",
+            "物理量"
+          ],
+          "route": "/explanations/phy2024-q3-3"
+        },
+        {
+          "id": "phy2024-q3-4",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問4",
+          "tags": [
+            "音速",
+            "波長"
+          ],
+          "route": "/explanations/phy2024-q3-4"
+        },
+        {
+          "id": "phy2024-q3-5",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問5",
+          "tags": [
+            "音速",
+            "共鳴"
+          ],
+          "route": "/explanations/phy2024-q3-5"
+        },
+        {
+          "id": "phy2024-q3-6",
+          "questionRef": "共通テスト 2024年 物理基礎 第3問 問6",
+          "tags": [
+            "波長",
+            "音速"
+          ],
+          "route": "/explanations/phy2024-q3-6"
+        }
+      ]
+    },
+    {
+      "id": "3.5",
+      "chapterId": "3",
+      "chapterTitle": "振動と波",
+      "title": "光の性質（反射・屈折・分散）",
+      "summary": "光は電磁波の一種であり、 真空中でも伝わる波 です。",
+      "searchTerms": [
+        "光の性質（反射・屈折・分散）",
+        "屈折",
+        "refraction",
+        "スネルの法則",
+        "Snell's law",
+        "反射",
+        "reflection",
+        "全反射",
+        "total internal reflection"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=3.5"
+      },
+      "keywords": [
+        {
+          "ja": "屈折",
+          "en": "refraction",
+          "quizId": "refractionIntroQuestions",
+          "quizRoute": "/quiz/refractionIntroQuestions"
+        },
+        {
+          "ja": "スネルの法則",
+          "en": "Snell's law",
+          "quizId": "snellsLawIntroQuestions",
+          "quizRoute": "/quiz/snellsLawIntroQuestions"
+        },
+        {
+          "ja": "反射",
+          "en": "reflection",
+          "quizId": "reflectionIntroQuestions",
+          "quizRoute": "/quiz/reflectionIntroQuestions"
+        },
+        {
+          "ja": "全反射",
+          "en": "total internal reflection",
+          "quizId": "totalReflectionIntroQuestions",
+          "quizRoute": "/quiz/totalReflectionIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "LightReflection",
+          "title": "光の反射",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LightRefraction",
+          "title": "光の屈折",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "TotalInternalReflection",
+          "title": "全反射",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LightDispersion",
+          "title": "光の分散",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "RainbowRaindrop",
+          "title": "虹が見えるのは",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "YoungDoubleSlit",
+          "title": "光の干渉",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "DiffractionGrating",
+          "title": "光の回折",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise3_5",
+          "route": "/calc/Exercise3_5"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q1-3",
+          "questionRef": "共通テスト 2024年 物理 第1問 問3",
+          "tags": [
+            "屈折",
+            "スネルの法則",
+            "全反射"
+          ],
+          "route": "/explanations/physics2024-q1-3"
+        }
+      ]
+    },
+    {
+      "id": "3.6",
+      "chapterId": "3",
+      "chapterTitle": "振動と波",
+      "title": "光とレンズ",
+      "summary": "理科で、 凸レンズ や 焦点 について学んだことがあるかもしれません。",
+      "searchTerms": [
+        "光とレンズ",
+        "レンズの式",
+        "lens formula",
+        "焦点距離",
+        "focal length",
+        "実像",
+        "real image",
+        "虚像",
+        "virtual image"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=3.6"
+      },
+      "keywords": [
+        {
+          "ja": "レンズの式",
+          "en": "lens formula",
+          "quizId": "lensFormulaIntroQuestions",
+          "quizRoute": "/quiz/lensFormulaIntroQuestions"
+        },
+        {
+          "ja": "焦点距離",
+          "en": "focal length",
+          "quizId": "focalLengthIntroQuestions",
+          "quizRoute": "/quiz/focalLengthIntroQuestions"
+        },
+        {
+          "ja": "実像",
+          "en": "real image",
+          "quizId": "realImageIntroQuestions",
+          "quizRoute": "/quiz/realImageIntroQuestions"
+        },
+        {
+          "ja": "虚像",
+          "en": "virtual image",
+          "quizId": "virtualImageIntroQuestions",
+          "quizRoute": "/quiz/virtualImageIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ConvexLensFocus",
+          "title": "凸レンズと焦点",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LensRayRules",
+          "title": "像ができるしくみ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LensFormulaDistances",
+          "title": "レンズの式",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LensMagnification",
+          "title": "倍率",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LensImageFormation",
+          "title": "物体を近づけると像はどう動くか",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise3_6",
+          "route": "/calc/Exercise3_6"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "4.1",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "熱と温度・比熱",
+      "summary": "私たちは日常生活の中で、温かい、冷たいといった感覚を当たり前のように感じています。",
+      "searchTerms": [
+        "熱と温度・比熱",
+        "温度",
+        "temperature",
+        "熱量",
+        "heat quantity",
+        "比熱",
+        "specific heat",
+        "熱容量",
+        "heat capacity",
+        "温度変化",
+        "temperature change",
+        "熱平衡",
+        "thermal equilibrium"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.1"
+      },
+      "keywords": [
+        {
+          "ja": "温度",
+          "en": "temperature",
+          "quizId": "heatTemperatureIntroQuestions",
+          "quizRoute": "/quiz/heatTemperatureIntroQuestions"
+        },
+        {
+          "ja": "熱量",
+          "en": "heat quantity",
+          "quizId": "heatQuantityIntroQuestions",
+          "quizRoute": "/quiz/heatQuantityIntroQuestions"
+        },
+        {
+          "ja": "比熱",
+          "en": "specific heat",
+          "quizId": "specificHeatIntroQuestions",
+          "quizRoute": "/quiz/specificHeatIntroQuestions"
+        },
+        {
+          "ja": "熱容量",
+          "en": "heat capacity",
+          "quizId": "heatCapacityIntroQuestions",
+          "quizRoute": "/quiz/heatCapacityIntroQuestions"
+        },
+        {
+          "ja": "温度変化",
+          "en": "temperature change",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "熱平衡",
+          "en": "thermal equilibrium",
+          "quizId": "thermalEquilibriumIntroQuestions",
+          "quizRoute": "/quiz/thermalEquilibriumIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "WarmColdHeatTransfer",
+          "title": "熱と温度・比熱",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ThermalEnergyTransferIntro",
+          "title": "熱と温度・比熱",
+          "available": false,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MolecularMotionTemperature",
+          "title": "温度とは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatFlowHighToLow",
+          "title": "熱量",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SpecificHeatComparison",
+          "title": "比熱",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatCapacityConcept",
+          "title": "熱容量",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ThermalEquilibriumProcess",
+          "title": "熱平衡",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_1",
+          "route": "/calc/Exercise4_1"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q3-1",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問1",
+          "tags": [
+            "熱",
+            "温度",
+            "熱容量",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-1"
+        },
+        {
+          "id": "phy2025-q3-2",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問2",
+          "tags": [
+            "電流",
+            "電力",
+            "熱容量",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-2"
+        }
+      ]
+    },
+    {
+      "id": "4.2",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "状態変化と潜熱",
+      "summary": "私たちの身の回りの物質は、主に次の3つの状態をとります。",
+      "searchTerms": [
+        "状態変化と潜熱",
+        "状態変化",
+        "phase change",
+        "融解熱",
+        "heat of fusion",
+        "蒸発熱",
+        "heat of vaporization",
+        "潜熱",
+        "latent heat",
+        "熱量保存",
+        "conservation of heat",
+        "混合比熱",
+        "specific heat of mixture",
+        "相変化",
+        "phase transition"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.2"
+      },
+      "keywords": [
+        {
+          "ja": "状態変化",
+          "en": "phase change",
+          "quizId": "stateChangeIntroQuestions",
+          "quizRoute": "/quiz/stateChangeIntroQuestions"
+        },
+        {
+          "ja": "融解熱",
+          "en": "heat of fusion",
+          "quizId": "latentHeatOfFusionIntroQuestions",
+          "quizRoute": "/quiz/latentHeatOfFusionIntroQuestions"
+        },
+        {
+          "ja": "蒸発熱",
+          "en": "heat of vaporization",
+          "quizId": "latentHeatOfVaporizationIntroQuestions",
+          "quizRoute": "/quiz/latentHeatOfVaporizationIntroQuestions"
+        },
+        {
+          "ja": "潜熱",
+          "en": "latent heat",
+          "quizId": "latentHeatIntroQuestions",
+          "quizRoute": "/quiz/latentHeatIntroQuestions"
+        },
+        {
+          "ja": "熱量保存",
+          "en": "conservation of heat",
+          "quizId": "heatConservationIntroQuestions",
+          "quizRoute": "/quiz/heatConservationIntroQuestions"
+        },
+        {
+          "ja": "混合比熱",
+          "en": "specific heat of mixture",
+          "quizId": "mixedSpecificHeatIntroQuestions",
+          "quizRoute": "/quiz/mixedSpecificHeatIntroQuestions"
+        },
+        {
+          "ja": "相変化",
+          "en": "phase transition",
+          "quizId": null,
+          "quizRoute": null
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "PhaseChangeOverview",
+          "title": "相変化と潜熱",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LatentHeatTemperaturePlateau",
+          "title": "分子の結びつき",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatOfFusionProcess",
+          "title": "融解",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatOfVaporizationProcess",
+          "title": "蒸発",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MassConservationPhaseChange",
+          "title": "質量保存",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatConservationBalance",
+          "title": "熱量保存",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MixedSpecificHeatProcess",
+          "title": "温度の異なる物体を混ぜる",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PhaseDiagramIntro",
+          "title": "相図",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_2",
+          "route": "/calc/Exercise4_2"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2024-q1-1",
+          "questionRef": "共通テスト 2024年 物理基礎 第1問 問1",
+          "tags": [
+            "熱量保存",
+            "混合比熱"
+          ],
+          "route": "/explanations/phy2024-q1-1"
+        }
+      ]
+    },
+    {
+      "id": "4.3",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "分子運動論と内部エネルギー",
+      "summary": "私たちが感じる 温度 や 熱 は、実際には目に見えない分子の運動によって生じています。",
+      "searchTerms": [
+        "分子運動論と内部エネルギー",
+        "分子運動論",
+        "kinetic theory of gases",
+        "絶対温度",
+        "absolute temperature",
+        "内部エネルギー",
+        "internal energy",
+        "平均運動エネルギー",
+        "average kinetic energy",
+        "気体分子の運動",
+        "motion of gas molecules",
+        "等分配則",
+        "equipartition principle"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.3"
+      },
+      "keywords": [
+        {
+          "ja": "分子運動論",
+          "en": "kinetic theory of gases",
+          "quizId": "molecularKineticTheoryIntroQuestions",
+          "quizRoute": "/quiz/molecularKineticTheoryIntroQuestions"
+        },
+        {
+          "ja": "絶対温度",
+          "en": "absolute temperature",
+          "quizId": "absoluteTemperatureIntroQuestions",
+          "quizRoute": "/quiz/absoluteTemperatureIntroQuestions"
+        },
+        {
+          "ja": "内部エネルギー",
+          "en": "internal energy",
+          "quizId": "molecularEnergyIntroQuestions",
+          "quizRoute": "/quiz/molecularEnergyIntroQuestions"
+        },
+        {
+          "ja": "平均運動エネルギー",
+          "en": "average kinetic energy",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "気体分子の運動",
+          "en": "motion of gas molecules",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "等分配則",
+          "en": "equipartition principle",
+          "quizId": "equipartitionLawIntroQuestions",
+          "quizRoute": "/quiz/equipartitionLawIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "RandomMolecularMotion",
+          "title": "分子は常に運動している",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "TemperatureDistribution",
+          "title": "温度とは何を表しているのか",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AbsoluteTemperature",
+          "title": "絶対温度",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SameTemperature",
+          "title": "内部エネルギーとは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "FirstLawBalance",
+          "title": "仕事でも内部エネルギーは変わる",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_3",
+          "route": "/calc/Exercise4_3"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q1-2",
+          "questionRef": "共通テスト 2024年 物理 第1問 問2",
+          "tags": [
+            "分子運動論",
+            "絶対温度",
+            "理想気体",
+            "等分配則"
+          ],
+          "route": "/explanations/physics2024-q1-2"
+        }
+      ]
+    },
+    {
+      "id": "4.4",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "気体の状態変化と状態方程式",
+      "summary": "気体は、目に見えない無数の分子が運動している集まりです。",
+      "searchTerms": [
+        "気体の状態変化と状態方程式",
+        "状態方程式",
+        "equation of state",
+        "理想気体",
+        "ideal gas",
+        "ボイルの法則",
+        "Boyle's law",
+        "シャルルの法則",
+        "Charles's law",
+        "ボイル・シャルルの法則",
+        "Boyle-Charles law",
+        "圧力",
+        "pressure",
+        "体積",
+        "volume",
+        "物質量",
+        "amount of substance",
+        "気体定数",
+        "gas constant"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.4"
+      },
+      "keywords": [
+        {
+          "ja": "状態方程式",
+          "en": "equation of state",
+          "quizId": "equationOfStateIntroQuestions",
+          "quizRoute": "/quiz/equationOfStateIntroQuestions"
+        },
+        {
+          "ja": "理想気体",
+          "en": "ideal gas",
+          "quizId": "idealGasIntroQuestions",
+          "quizRoute": "/quiz/idealGasIntroQuestions"
+        },
+        {
+          "ja": "ボイルの法則",
+          "en": "Boyle's law",
+          "quizId": "boylesLawIntroQuestions",
+          "quizRoute": "/quiz/boylesLawIntroQuestions"
+        },
+        {
+          "ja": "シャルルの法則",
+          "en": "Charles's law",
+          "quizId": "charlessLawIntroQuestions",
+          "quizRoute": "/quiz/charlessLawIntroQuestions"
+        },
+        {
+          "ja": "ボイル・シャルルの法則",
+          "en": "Boyle-Charles law",
+          "quizId": "boyleCharlesLawIntroQuestions",
+          "quizRoute": "/quiz/boyleCharlesLawIntroQuestions"
+        },
+        {
+          "ja": "圧力",
+          "en": "pressure",
+          "quizId": "pressureIntroQuestions",
+          "quizRoute": "/quiz/pressureIntroQuestions"
+        },
+        {
+          "ja": "体積",
+          "en": "volume",
+          "quizId": "volumeIntroQuestions",
+          "quizRoute": "/quiz/volumeIntroQuestions"
+        },
+        {
+          "ja": "物質量",
+          "en": "amount of substance",
+          "quizId": "amountOfSubstanceIntroQuestions",
+          "quizRoute": "/quiz/amountOfSubstanceIntroQuestions"
+        },
+        {
+          "ja": "気体定数",
+          "en": "gas constant",
+          "quizId": "gasConstantIntroQuestions",
+          "quizRoute": "/quiz/gasConstantIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "GasStateVariables",
+          "title": "気体の状態方程式",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "BoyleLaw",
+          "title": "ボイルの法則（Boyle's law）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CharlesLaw",
+          "title": "シャルルの法則（Charles's law）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "IdealGasLaw",
+          "title": "気体の状態方程式",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "IdealVsRealGas",
+          "title": "理想気体とは",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_4",
+          "route": "/calc/Exercise4_4"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q2-1",
+          "questionRef": "共通テスト 2024年 物理 第2問 問1",
+          "tags": [
+            "流体",
+            "体積"
+          ],
+          "route": "/explanations/physics2024-q2-1"
+        },
+        {
+          "id": "physics2024-q1-2",
+          "questionRef": "共通テスト 2024年 物理 第1問 問2",
+          "tags": [
+            "分子運動論",
+            "絶対温度",
+            "理想気体",
+            "等分配則"
+          ],
+          "route": "/explanations/physics2024-q1-2"
+        },
+        {
+          "id": "physics2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理 第2問 問2",
+          "tags": [
+            "質量",
+            "圧力",
+            "仕事",
+            "気体の仕事"
+          ],
+          "route": "/explanations/physics2024-q2-2"
+        },
+        {
+          "id": "physics2024-q2-3",
+          "questionRef": "共通テスト 2024年 物理 第2問 問3",
+          "tags": [
+            "仕事",
+            "運動エネルギー",
+            "圧力",
+            "質量"
+          ],
+          "route": "/explanations/physics2024-q2-3"
+        }
+      ]
+    },
+    {
+      "id": "4.5",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "熱力学第一法則",
+      "summary": "気体に熱を加えると温度が上がります。",
+      "searchTerms": [
+        "熱力学第一法則",
+        "first law of thermodynamics",
+        "熱",
+        "heat",
+        "エネルギー保存則",
+        "law of conservation of energy",
+        "気体の仕事",
+        "work done by gas",
+        "符号規約",
+        "sign convention"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.5"
+      },
+      "keywords": [
+        {
+          "ja": "熱力学第一法則",
+          "en": "first law of thermodynamics",
+          "quizId": "firstLawOfThermodynamicsIntroQuestions",
+          "quizRoute": "/quiz/firstLawOfThermodynamicsIntroQuestions"
+        },
+        {
+          "ja": "熱",
+          "en": "heat",
+          "quizId": "heatIntroQuestions",
+          "quizRoute": "/quiz/heatIntroQuestions"
+        },
+        {
+          "ja": "エネルギー保存則",
+          "en": "law of conservation of energy",
+          "quizId": "lawOfConservationOfEnergyIntroQuestions",
+          "quizRoute": "/quiz/lawOfConservationOfEnergyIntroQuestions"
+        },
+        {
+          "ja": "気体の仕事",
+          "en": "work done by gas",
+          "quizId": "workDoneByGasIntroQuestions",
+          "quizRoute": "/quiz/workDoneByGasIntroQuestions"
+        },
+        {
+          "ja": "符号規約",
+          "en": "sign convention",
+          "quizId": "signConventionIntroQuestions",
+          "quizRoute": "/quiz/signConventionIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "FirstLawBalance",
+          "title": "仕事によるエネルギーの変化",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EnergyConservation",
+          "title": "熱力学第一法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SignConvention",
+          "title": "符号規約",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WorkDefinitionThermo",
+          "title": "気体が外部にする仕事",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WorkByGas",
+          "title": "気体が外部にする仕事",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SameTemperature",
+          "title": "内部エネルギー",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PVGraphWork",
+          "title": "p–Vグラフと仕事",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_5",
+          "route": "/calc/Exercise4_5"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q3-1",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問1",
+          "tags": [
+            "熱",
+            "温度",
+            "熱容量",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-1"
+        },
+        {
+          "id": "phy2025-q1-2",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問2",
+          "tags": [
+            "エネルギー保存則",
+            "運動エネルギー",
+            "位置エネルギー",
+            "鉛直投げ上げ"
+          ],
+          "route": "/explanations/phy2025-q1-2"
+        },
+        {
+          "id": "physics2024-q2-2",
+          "questionRef": "共通テスト 2024年 物理 第2問 問2",
+          "tags": [
+            "質量",
+            "圧力",
+            "仕事",
+            "気体の仕事"
+          ],
+          "route": "/explanations/physics2024-q2-2"
+        },
+        {
+          "id": "phy2024-q1-2",
+          "questionRef": "共通テスト 2024年 物理基礎 第1問 問2",
+          "tags": [
+            "エネルギー保存則",
+            "運動エネルギー",
+            "位置エネルギー"
+          ],
+          "route": "/explanations/phy2024-q1-2"
+        }
+      ]
+    },
+    {
+      "id": "4.6",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "気体の状態変化",
+      "summary": "気体の状態は、次の3つの量で決まります。",
+      "searchTerms": [
+        "気体の状態変化",
+        "等温変化",
+        "isothermal change",
+        "断熱変化",
+        "adiabatic change",
+        "等圧変化",
+        "isobaric change",
+        "等積変化",
+        "isochoric change",
+        "PVグラフ",
+        "PV graph",
+        "気体の法則",
+        "gas laws"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.6"
+      },
+      "keywords": [
+        {
+          "ja": "等温変化",
+          "en": "isothermal change",
+          "quizId": "isothermalIntroQuestions",
+          "quizRoute": "/quiz/isothermalIntroQuestions"
+        },
+        {
+          "ja": "断熱変化",
+          "en": "adiabatic change",
+          "quizId": "adiabaticIntroQuestions",
+          "quizRoute": "/quiz/adiabaticIntroQuestions"
+        },
+        {
+          "ja": "等圧変化",
+          "en": "isobaric change",
+          "quizId": "isobaricProcessIntroQuestions",
+          "quizRoute": "/quiz/isobaricProcessIntroQuestions"
+        },
+        {
+          "ja": "等積変化",
+          "en": "isochoric change",
+          "quizId": "isochoricProcessIntroQuestions",
+          "quizRoute": "/quiz/isochoricProcessIntroQuestions"
+        },
+        {
+          "ja": "PVグラフ",
+          "en": "PV graph",
+          "quizId": "pvGraphIntroQuestions",
+          "quizRoute": "/quiz/pvGraphIntroQuestions"
+        },
+        {
+          "ja": "気体の法則",
+          "en": "gas laws",
+          "quizId": "gasLawIntroQuestions",
+          "quizRoute": "/quiz/gasLawIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "MolecularMotionAndState",
+          "title": "分子の視点で見る状態変化",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "IsobaricExpansion",
+          "title": "等圧変化（圧力一定）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "IsochoricHeating",
+          "title": "等積変化（体積一定）",
+          "available": false,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "InternalEnergyChange",
+          "title": "等積変化（体積一定）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PVGraphWork",
+          "title": "p–V線図の役割",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_6",
+          "route": "/calc/Exercise4_6"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "4.7",
+      "chapterId": "4",
+      "chapterTitle": "熱とエネルギー",
+      "title": "熱機関と効率",
+      "summary": "私たちは、 熱を使って機械を動かしたい と考えます。",
+      "searchTerms": [
+        "熱機関と効率",
+        "熱機関",
+        "heat engine",
+        "熱効率",
+        "thermal efficiency",
+        "カルノーサイクル",
+        "Carnot cycle",
+        "熱源",
+        "heat source",
+        "排熱",
+        "waste heat"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=4.7"
+      },
+      "keywords": [
+        {
+          "ja": "熱機関",
+          "en": "heat engine",
+          "quizId": "heatEngineIntroQuestions",
+          "quizRoute": "/quiz/heatEngineIntroQuestions"
+        },
+        {
+          "ja": "熱効率",
+          "en": "thermal efficiency",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "カルノーサイクル",
+          "en": "Carnot cycle",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "熱源",
+          "en": "heat source",
+          "quizId": "heatSourceIntroQuestions",
+          "quizRoute": "/quiz/heatSourceIntroQuestions"
+        },
+        {
+          "ja": "排熱",
+          "en": "waste heat",
+          "quizId": "wasteHeatIntroQuestions",
+          "quizRoute": "/quiz/wasteHeatIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "VariousHeatEngines",
+          "title": "熱機関と効率",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatEngineOverview",
+          "title": "熱機関の基本構造",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WasteHeatNecessity",
+          "title": "熱機関の基本構造",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ThermalEfficiencyRatio",
+          "title": "熱効率（thermal efficiency）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CarnotCycleProcess",
+          "title": "カルノーサイクル",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CarnotEfficiencyLimit",
+          "title": "カルノーサイクル",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise4_7",
+          "route": "/calc/Exercise4_7"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "5.1",
+      "chapterId": "5",
+      "chapterTitle": "電気と磁気",
+      "title": "電荷と電場",
+      "summary": "冬の日にセーターを脱ぐと、パチッと音がすることがあります。",
+      "searchTerms": [
+        "電荷と電場",
+        "電荷",
+        "electric charge",
+        "クーロンの法則",
+        "Coulomb's law",
+        "電場",
+        "electric field",
+        "電場の強さ",
+        "electric field strength",
+        "点電荷",
+        "point charge",
+        "電気力線",
+        "electric field lines"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=5.1"
+      },
+      "keywords": [
+        {
+          "ja": "電荷",
+          "en": "electric charge",
+          "quizId": "electricChargeIntroQuestions",
+          "quizRoute": "/quiz/electricChargeIntroQuestions"
+        },
+        {
+          "ja": "クーロンの法則",
+          "en": "Coulomb's law",
+          "quizId": "coulombLawIntroQuestions",
+          "quizRoute": "/quiz/coulombLawIntroQuestions"
+        },
+        {
+          "ja": "電場",
+          "en": "electric field",
+          "quizId": "electricFieldIntroQuestions",
+          "quizRoute": "/quiz/electricFieldIntroQuestions"
+        },
+        {
+          "ja": "電場の強さ",
+          "en": "electric field strength",
+          "quizId": "electricFieldStrengthIntroQuestions",
+          "quizRoute": "/quiz/electricFieldStrengthIntroQuestions"
+        },
+        {
+          "ja": "点電荷",
+          "en": "point charge",
+          "quizId": "pointChargeIntroQuestions",
+          "quizRoute": "/quiz/pointChargeIntroQuestions"
+        },
+        {
+          "ja": "電気力線",
+          "en": "electric field lines",
+          "quizId": "electricFieldLineIntroQuestions",
+          "quizRoute": "/quiz/electricFieldLineIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "MagneticMotion",
+          "title": "電荷と電場",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ChargeAttractionRepulsion",
+          "title": "2種類の電気",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "CoulombLaw",
+          "title": "クーロンの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricFieldConcept",
+          "title": "電場",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricFieldStrength",
+          "title": "電場の強さ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricFieldLines",
+          "title": "電気力線",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricFieldLinesTwoSources",
+          "title": "電気力線",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise5_1",
+          "route": "/calc/Exercise5_1"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2024-q1-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第1問 問3",
+          "tags": [
+            "電荷",
+            "電流"
+          ],
+          "route": "/explanations/phy2024-q1-3"
+        },
+        {
+          "id": "physics2024-q4-1",
+          "questionRef": "共通テスト 2024年 物理 第4問 問1",
+          "tags": [
+            "電位",
+            "電場",
+            "電気力線",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-1"
+        },
+        {
+          "id": "physics2024-q4-2",
+          "questionRef": "共通テスト 2024年 物理 第4問 問2",
+          "tags": [
+            "電位",
+            "電場",
+            "電気力線",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-2"
+        },
+        {
+          "id": "physics2024-q4-3",
+          "questionRef": "共通テスト 2024年 物理 第4問 問3",
+          "tags": [
+            "電位",
+            "電場",
+            "電流",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-3"
+        },
+        {
+          "id": "physics2024-q4-4",
+          "questionRef": "共通テスト 2024年 物理 第4問 問4",
+          "tags": [
+            "電位",
+            "電場",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/physics2024-q4-4"
+        },
+        {
+          "id": "physics2024-q4-5",
+          "questionRef": "共通テスト 2024年 物理 第4問 問5",
+          "tags": [
+            "抵抗",
+            "電場",
+            "電流",
+            "オームの法則"
+          ],
+          "route": "/explanations/physics2024-q4-5"
+        }
+      ]
+    },
+    {
+      "id": "5.2",
+      "chapterId": "5",
+      "chapterTitle": "電気と磁気",
+      "title": "電位と電位差",
+      "summary": "5.1では、電荷がつくる 電場 と、電場が電荷に及ぼす 力 を学びました。",
+      "searchTerms": [
+        "電位と電位差",
+        "電位",
+        "electric potential",
+        "電位差",
+        "potential difference",
+        "等電位面",
+        "equipotential surface",
+        "電圧",
+        "voltage",
+        "仕事（電気）",
+        "work (electric)"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=5.2"
+      },
+      "keywords": [
+        {
+          "ja": "電位",
+          "en": "electric potential",
+          "quizId": "electricPotentialIntroQuestions",
+          "quizRoute": "/quiz/electricPotentialIntroQuestions"
+        },
+        {
+          "ja": "電位差",
+          "en": "potential difference",
+          "quizId": "potentialDifferenceIntroQuestions",
+          "quizRoute": "/quiz/potentialDifferenceIntroQuestions"
+        },
+        {
+          "ja": "等電位面",
+          "en": "equipotential surface",
+          "quizId": "equipotentialSurfaceIntroQuestions",
+          "quizRoute": "/quiz/equipotentialSurfaceIntroQuestions"
+        },
+        {
+          "ja": "電圧",
+          "en": "voltage",
+          "quizId": "voltageIntroQuestions",
+          "quizRoute": "/quiz/voltageIntroQuestions"
+        },
+        {
+          "ja": "仕事（電気）",
+          "en": "work (electric)",
+          "quizId": "electricWorkIntroQuestions",
+          "quizRoute": "/quiz/electricWorkIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ElectricWork",
+          "title": "電場の中で電荷が動くとき",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricFieldBalance",
+          "title": "電気の位置エネルギー",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricPotentialHeight",
+          "title": "電位とは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PotentialAndField",
+          "title": "電位と電場の関係",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PotentialDifference",
+          "title": "電位差とは何か",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise5_2",
+          "route": "/calc/Exercise5_2"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q3-3",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問3",
+          "tags": [
+            "電流",
+            "電圧",
+            "抵抗",
+            "電力"
+          ],
+          "route": "/explanations/phy2025-q3-3"
+        },
+        {
+          "id": "physics2024-q4-1",
+          "questionRef": "共通テスト 2024年 物理 第4問 問1",
+          "tags": [
+            "電位",
+            "電場",
+            "電気力線",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-1"
+        },
+        {
+          "id": "physics2024-q4-2",
+          "questionRef": "共通テスト 2024年 物理 第4問 問2",
+          "tags": [
+            "電位",
+            "電場",
+            "電気力線",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-2"
+        },
+        {
+          "id": "physics2024-q4-3",
+          "questionRef": "共通テスト 2024年 物理 第4問 問3",
+          "tags": [
+            "電位",
+            "電場",
+            "電流",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-3"
+        },
+        {
+          "id": "physics2024-q4-4",
+          "questionRef": "共通テスト 2024年 物理 第4問 問4",
+          "tags": [
+            "電位",
+            "電場",
+            "グラフの傾き"
+          ],
+          "route": "/explanations/physics2024-q4-4"
+        }
+      ]
+    },
+    {
+      "id": "5.3",
+      "chapterId": "5",
+      "chapterTitle": "電気と磁気",
+      "title": "コンデンサーと静電エネルギー",
+      "summary": "5.2では、電位や電位差を「電気力が仕事をする能力」として学びました。",
+      "searchTerms": [
+        "コンデンサーと静電エネルギー",
+        "コンデンサー",
+        "capacitor",
+        "静電容量",
+        "capacitance",
+        "極板",
+        "parallel plates",
+        "誘電体",
+        "dielectric",
+        "静電エネルギー",
+        "electrostatic energy"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=5.3"
+      },
+      "keywords": [
+        {
+          "ja": "コンデンサー",
+          "en": "capacitor",
+          "quizId": "capacitorIntroQuestions",
+          "quizRoute": "/quiz/capacitorIntroQuestions"
+        },
+        {
+          "ja": "静電容量",
+          "en": "capacitance",
+          "quizId": "staticCapacitanceIntroQuestions",
+          "quizRoute": "/quiz/staticCapacitanceIntroQuestions"
+        },
+        {
+          "ja": "極板",
+          "en": "parallel plates",
+          "quizId": "plateIntroQuestions",
+          "quizRoute": "/quiz/plateIntroQuestions"
+        },
+        {
+          "ja": "誘電体",
+          "en": "dielectric",
+          "quizId": "dielectricIntroQuestions",
+          "quizRoute": "/quiz/dielectricIntroQuestions"
+        },
+        {
+          "ja": "静電エネルギー",
+          "en": "electrostatic energy",
+          "quizId": "electrostaticEnergyIntroQuestions",
+          "quizRoute": "/quiz/electrostaticEnergyIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "CapacitorStructure",
+          "title": "電池につなぐと何が起こるか",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ChargeSeparation",
+          "title": "電池につなぐと何が起こるか",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PlateAreaDistance",
+          "title": "極板の形と静電容量",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "DielectricEffect",
+          "title": "誘電体のはたらき",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EnergyStoredInField",
+          "title": "コンデンサーに蓄えられるエネルギー",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise5_3",
+          "route": "/calc/Exercise5_3"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "5.4",
+      "chapterId": "5",
+      "chapterTitle": "電気と磁気",
+      "title": "直流回路（オームの法則・キルヒホッフ則）",
+      "summary": "私たちの身の回りには、電気を使う装置があふれています。",
+      "searchTerms": [
+        "直流回路（オームの法則・キルヒホッフ則）",
+        "電流",
+        "electric current",
+        "抵抗",
+        "resistance",
+        "オームの法則",
+        "Ohm's law",
+        "電力",
+        "electric power",
+        "キルヒホッフの法則",
+        "Kirchhoff's laws",
+        "合成抵抗",
+        "equivalent resistance"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=5.4"
+      },
+      "keywords": [
+        {
+          "ja": "電流",
+          "en": "electric current",
+          "quizId": "electricCurrentIntroQuestions",
+          "quizRoute": "/quiz/electricCurrentIntroQuestions"
+        },
+        {
+          "ja": "抵抗",
+          "en": "resistance",
+          "quizId": "electricResistanceIntroQuestions",
+          "quizRoute": "/quiz/electricResistanceIntroQuestions"
+        },
+        {
+          "ja": "オームの法則",
+          "en": "Ohm's law",
+          "quizId": "ohmsLawIntroQuestions",
+          "quizRoute": "/quiz/ohmsLawIntroQuestions"
+        },
+        {
+          "ja": "電力",
+          "en": "electric power",
+          "quizId": "electricPowerIntroQuestions",
+          "quizRoute": "/quiz/electricPowerIntroQuestions"
+        },
+        {
+          "ja": "キルヒホッフの法則",
+          "en": "Kirchhoff's laws",
+          "quizId": "kirchhoffsLawIntroQuestions",
+          "quizRoute": "/quiz/kirchhoffsLawIntroQuestions"
+        },
+        {
+          "ja": "合成抵抗",
+          "en": "equivalent resistance",
+          "quizId": "equivalentResistanceIntroQuestions",
+          "quizRoute": "/quiz/equivalentResistanceIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ElectricCurrentFlow",
+          "title": "電流とは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "OpenClosedCircuit",
+          "title": "なぜ回路を閉じる必要があるのか",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ResistanceAnalogy",
+          "title": "抵抗とは何か",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "OhmsLawGraph",
+          "title": "オームの法則",
+          "available": false,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricPower",
+          "title": "電気エネルギーと電力",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SeriesParallelResistance",
+          "title": "合成抵抗",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KirchhoffCurrentLaw",
+          "title": "キルヒホッフの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "KirchhoffVoltageLaw",
+          "title": "キルヒホッフの法則",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise5_4",
+          "route": "/calc/Exercise5_4"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "phy2025-q3-3",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問3",
+          "tags": [
+            "電流",
+            "電圧",
+            "抵抗",
+            "電力"
+          ],
+          "route": "/explanations/phy2025-q3-3"
+        },
+        {
+          "id": "phy2025-q3-2",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問2",
+          "tags": [
+            "電流",
+            "電力",
+            "熱容量",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-2"
+        },
+        {
+          "id": "phy2024-q1-3",
+          "questionRef": "共通テスト 2024年 物理基礎 第1問 問3",
+          "tags": [
+            "電荷",
+            "電流"
+          ],
+          "route": "/explanations/phy2024-q1-3"
+        },
+        {
+          "id": "phy2024-q1-4",
+          "questionRef": "共通テスト 2024年 物理基礎 第1問 問4",
+          "tags": [
+            "電力"
+          ],
+          "route": "/explanations/phy2024-q1-4"
+        },
+        {
+          "id": "physics2024-q4-3",
+          "questionRef": "共通テスト 2024年 物理 第4問 問3",
+          "tags": [
+            "電位",
+            "電場",
+            "電流",
+            "等電位面"
+          ],
+          "route": "/explanations/physics2024-q4-3"
+        },
+        {
+          "id": "physics2024-q4-5",
+          "questionRef": "共通テスト 2024年 物理 第4問 問5",
+          "tags": [
+            "抵抗",
+            "電場",
+            "電流",
+            "オームの法則"
+          ],
+          "route": "/explanations/physics2024-q4-5"
+        }
+      ]
+    },
+    {
+      "id": "5.5",
+      "chapterId": "5",
+      "chapterTitle": "電気と磁気",
+      "title": "磁場と電流・ローレンツ力",
+      "summary": "これまで電気回路では、電流は導線の中だけの現象として扱ってきました。",
+      "searchTerms": [
+        "磁場と電流・ローレンツ力",
+        "磁場",
+        "magnetic field",
+        "磁束密度",
+        "magnetic flux density",
+        "電流がつくる磁場",
+        "magnetic field due to current",
+        "ローレンツ力",
+        "Lorentz force",
+        "フレミング左手の法則",
+        "Fleming's left-hand rule"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=5.5"
+      },
+      "keywords": [
+        {
+          "ja": "磁場",
+          "en": "magnetic field",
+          "quizId": "magneticFieldIntroQuestions",
+          "quizRoute": "/quiz/magneticFieldIntroQuestions"
+        },
+        {
+          "ja": "磁束密度",
+          "en": "magnetic flux density",
+          "quizId": "magneticFluxDensityIntroQuestions",
+          "quizRoute": "/quiz/magneticFluxDensityIntroQuestions"
+        },
+        {
+          "ja": "電流がつくる磁場",
+          "en": "magnetic field due to current",
+          "quizId": "currentMagneticFieldIntroQuestions",
+          "quizRoute": "/quiz/currentMagneticFieldIntroQuestions"
+        },
+        {
+          "ja": "ローレンツ力",
+          "en": "Lorentz force",
+          "quizId": "lorentzForceIntroQuestions",
+          "quizRoute": "/quiz/lorentzForceIntroQuestions"
+        },
+        {
+          "ja": "フレミング左手の法則",
+          "en": "Fleming's left-hand rule",
+          "quizId": "flemingLeftHandIntroQuestions",
+          "quizRoute": "/quiz/flemingLeftHandIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "MagneticFieldAroundMagnet",
+          "title": "磁場",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MagneticFieldAroundCurrent",
+          "title": "電流がつくる磁場",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ForceOnCurrent",
+          "title": "磁場が電荷に及ぼす力",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "FlemingsLeftHandRule",
+          "title": "電流が受けるローレンツ力",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise5_5",
+          "route": "/calc/Exercise5_5"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q3-1",
+          "questionRef": "共通テスト 2024年 物理 第3問 問1",
+          "tags": [
+            "磁場",
+            "フレミング左手の法則",
+            "定常波",
+            "節",
+            "腹"
+          ],
+          "route": "/explanations/physics2024-q3-1"
+        },
+        {
+          "id": "physics2024-q1-4",
+          "questionRef": "共通テスト 2024年 物理 第1問 問4",
+          "tags": [
+            "ローレンツ力",
+            "磁場",
+            "円運動"
+          ],
+          "route": "/explanations/physics2024-q1-4"
+        }
+      ]
+    },
+    {
+      "id": "5.6",
+      "chapterId": "5",
+      "chapterTitle": "電気と磁気",
+      "title": "電磁誘導と交流回路",
+      "summary": "これまでに、 電流が磁場をつくる ことを学びました。",
+      "searchTerms": [
+        "電磁誘導と交流回路",
+        "電磁誘導",
+        "electromagnetic induction",
+        "誘導起電力",
+        "induced electromotive force",
+        "ファラデーの法則",
+        "Faraday's law",
+        "レンツの法則",
+        "Lenz's law",
+        "交流",
+        "alternating current",
+        "実効値",
+        "effective value (RMS)"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=5.6"
+      },
+      "keywords": [
+        {
+          "ja": "電磁誘導",
+          "en": "electromagnetic induction",
+          "quizId": "electromagneticInductionIntroQuestions",
+          "quizRoute": "/quiz/electromagneticInductionIntroQuestions"
+        },
+        {
+          "ja": "誘導起電力",
+          "en": "induced electromotive force",
+          "quizId": "inducedElectromotiveForceIntroQuestions",
+          "quizRoute": "/quiz/inducedElectromotiveForceIntroQuestions"
+        },
+        {
+          "ja": "ファラデーの法則",
+          "en": "Faraday's law",
+          "quizId": "faradaysLawIntroQuestions",
+          "quizRoute": "/quiz/faradaysLawIntroQuestions"
+        },
+        {
+          "ja": "レンツの法則",
+          "en": "Lenz's law",
+          "quizId": "lenzsLawIntroQuestions",
+          "quizRoute": "/quiz/lenzsLawIntroQuestions"
+        },
+        {
+          "ja": "交流",
+          "en": "alternating current",
+          "quizId": "alternatingCurrentIntroQuestions",
+          "quizRoute": "/quiz/alternatingCurrentIntroQuestions"
+        },
+        {
+          "ja": "実効値",
+          "en": "effective value (RMS)",
+          "quizId": "effectiveValueIntroQuestions",
+          "quizRoute": "/quiz/effectiveValueIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ElectromagneticInduction",
+          "title": "電磁誘導と交流回路",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MagneticFluxChange",
+          "title": "電磁誘導",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LenzLaw",
+          "title": "レンツの法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ACGenerator",
+          "title": "発電機と交流",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EMWavePropagation",
+          "title": "発展：アンペール・マクスウェルの法則と電磁波",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise5_6",
+          "route": "/calc/Exercise5_6"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "6.1",
+      "chapterId": "6",
+      "chapterTitle": "原子と量子",
+      "title": "量子仮説と光の粒子性",
+      "summary": "陰極線から電子へ 物質と光の関係を考える前に、まず「物質から飛び出すもの」の正体を見てみましょう。",
+      "searchTerms": [
+        "量子仮説と光の粒子性",
+        "量子仮説",
+        "quantum hypothesis",
+        "光子",
+        "photon",
+        "プランク定数",
+        "Planck constant",
+        "エネルギー量子",
+        "energy quantum",
+        "振動数（量子）",
+        "frequency (quantum)",
+        "エネルギー（量子）",
+        "energy (quantum)"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=6.1"
+      },
+      "keywords": [
+        {
+          "ja": "量子仮説",
+          "en": "quantum hypothesis",
+          "quizId": "quantumHypothesisIntroQuestions",
+          "quizRoute": "/quiz/quantumHypothesisIntroQuestions"
+        },
+        {
+          "ja": "光子",
+          "en": "photon",
+          "quizId": "photonIntroQuestions",
+          "quizRoute": "/quiz/photonIntroQuestions"
+        },
+        {
+          "ja": "プランク定数",
+          "en": "Planck constant",
+          "quizId": "planckConstantIntroQuestions",
+          "quizRoute": "/quiz/planckConstantIntroQuestions"
+        },
+        {
+          "ja": "エネルギー量子",
+          "en": "energy quantum",
+          "quizId": "energyQuantumIntroQuestions",
+          "quizRoute": "/quiz/energyQuantumIntroQuestions"
+        },
+        {
+          "ja": "振動数（量子）",
+          "en": "frequency (quantum)",
+          "quizId": "frequencyQuantumIntroQuestions",
+          "quizRoute": "/quiz/frequencyQuantumIntroQuestions"
+        },
+        {
+          "ja": "エネルギー（量子）",
+          "en": "energy (quantum)",
+          "quizId": "quantumEnergyIntroQuestions",
+          "quizRoute": "/quiz/quantumEnergyIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "CathodeRayTube",
+          "title": "陰極線から電子へ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectronVibration",
+          "title": "光を金属に当てると",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PhotonElectricExperiment",
+          "title": "光電効果の実験",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "PhotoelectricEffect",
+          "title": "光電効果の実験",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LightAsWaveAndParticle",
+          "title": "光の粒子性",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EnergyComparisonQuantumHypothesis",
+          "title": "量子仮説（quantum hypothesis）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LightFrequencyDifference",
+          "title": "振動数（量子）とエネルギー（量子）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ComptonEffect",
+          "title": "コンプトン散乱（Compton scattering）",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise6_1",
+          "route": "/calc/Exercise6_1"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "6.2",
+      "chapterId": "6",
+      "chapterTitle": "原子と量子",
+      "title": "光電効果",
+      "summary": "光に粒子としての性質があるなら、光が物質に当たったとき、エネルギーのやり取りも「粒ごと」に起こるはずです。",
+      "searchTerms": [
+        "光電効果",
+        "photoelectric effect",
+        "仕事関数",
+        "work function",
+        "最大運動エネルギー",
+        "maximum kinetic energy",
+        "しきい振動数",
+        "threshold frequency",
+        "光の強さ",
+        "light intensity"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=6.2"
+      },
+      "keywords": [
+        {
+          "ja": "光電効果",
+          "en": "photoelectric effect",
+          "quizId": "photoelectricEffectIntroQuestions",
+          "quizRoute": "/quiz/photoelectricEffectIntroQuestions"
+        },
+        {
+          "ja": "仕事関数",
+          "en": "work function",
+          "quizId": "workFunctionIntroQuestions",
+          "quizRoute": "/quiz/workFunctionIntroQuestions"
+        },
+        {
+          "ja": "最大運動エネルギー",
+          "en": "maximum kinetic energy",
+          "quizId": "maximumKineticEnergyIntroQuestions",
+          "quizRoute": "/quiz/maximumKineticEnergyIntroQuestions"
+        },
+        {
+          "ja": "しきい振動数",
+          "en": "threshold frequency",
+          "quizId": "thresholdFrequencyIntroQuestions",
+          "quizRoute": "/quiz/thresholdFrequencyIntroQuestions"
+        },
+        {
+          "ja": "光の強さ",
+          "en": "light intensity",
+          "quizId": "lightIntensityIntroQuestions",
+          "quizRoute": "/quiz/lightIntensityIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "PhotoelectricEffect",
+          "title": "光電効果（photoelectric effect）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WorkFunction",
+          "title": "仕事関数（work function）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ThresholdFrequency",
+          "title": "しきい振動数（threshold frequency）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LightIntensityEffect",
+          "title": "光の強さ（light intensity）と光電効果",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise6_2",
+          "route": "/calc/Exercise6_2"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "6.3",
+      "chapterId": "6",
+      "chapterTitle": "原子と量子",
+      "title": "原子の構造とエネルギー準位",
+      "summary": "物質の最小単位である 原子 の内部でも、エネルギーは量子的に振る舞います。",
+      "searchTerms": [
+        "原子の構造とエネルギー準位",
+        "原子",
+        "atom",
+        "原子核",
+        "atomic nucleus",
+        "電子",
+        "electron",
+        "エネルギー準位",
+        "energy level",
+        "遷移",
+        "transition",
+        "励起",
+        "excitation"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=6.3"
+      },
+      "keywords": [
+        {
+          "ja": "原子",
+          "en": "atom",
+          "quizId": "atomIntroQuestions",
+          "quizRoute": "/quiz/atomIntroQuestions"
+        },
+        {
+          "ja": "原子核",
+          "en": "atomic nucleus",
+          "quizId": "atomicNucleusIntroQuestions",
+          "quizRoute": "/quiz/atomicNucleusIntroQuestions"
+        },
+        {
+          "ja": "電子",
+          "en": "electron",
+          "quizId": "electronIntroQuestions",
+          "quizRoute": "/quiz/electronIntroQuestions"
+        },
+        {
+          "ja": "エネルギー準位",
+          "en": "energy level",
+          "quizId": "energyLevelIntroQuestions",
+          "quizRoute": "/quiz/energyLevelIntroQuestions"
+        },
+        {
+          "ja": "遷移",
+          "en": "transition",
+          "quizId": "transitionIntroQuestions",
+          "quizRoute": "/quiz/transitionIntroQuestions"
+        },
+        {
+          "ja": "励起",
+          "en": "excitation",
+          "quizId": "excitationIntroQuestions",
+          "quizRoute": "/quiz/excitationIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "AtomicStructure",
+          "title": "原子（atom）の構造",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EnergyComparisonQuantumHypothesis",
+          "title": "エネルギー準位（energy level）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "Absorption",
+          "title": "励起（excitation）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "Emission",
+          "title": "遷移（transition）",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise6_3",
+          "route": "/calc/Exercise6_3"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "6.4",
+      "chapterId": "6",
+      "chapterTitle": "原子と量子",
+      "title": "原子模型とスペクトル",
+      "summary": "6.3で見たように、電子のエネルギーはエネルギー準位としてとびとびに決まっています。",
+      "searchTerms": [
+        "原子模型とスペクトル",
+        "原子模型",
+        "atomic model",
+        "ボーア模型",
+        "Bohr model",
+        "スペクトル",
+        "spectrum",
+        "線スペクトル",
+        "line spectrum",
+        "放出",
+        "emission",
+        "吸収",
+        "absorption"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=6.4"
+      },
+      "keywords": [
+        {
+          "ja": "原子模型",
+          "en": "atomic model",
+          "quizId": "atomicModelIntroQuestions",
+          "quizRoute": "/quiz/atomicModelIntroQuestions"
+        },
+        {
+          "ja": "ボーア模型",
+          "en": "Bohr model",
+          "quizId": "bohrModelIntroQuestions",
+          "quizRoute": "/quiz/bohrModelIntroQuestions"
+        },
+        {
+          "ja": "スペクトル",
+          "en": "spectrum",
+          "quizId": "spectrumIntroQuestions",
+          "quizRoute": "/quiz/spectrumIntroQuestions"
+        },
+        {
+          "ja": "線スペクトル",
+          "en": "line spectrum",
+          "quizId": "lineSpectrumIntroQuestions",
+          "quizRoute": "/quiz/lineSpectrumIntroQuestions"
+        },
+        {
+          "ja": "放出",
+          "en": "emission",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "吸収",
+          "en": "absorption",
+          "quizId": null,
+          "quizRoute": null
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "Spectrum",
+          "title": "スペクトル（spectrum）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LineSpectrum",
+          "title": "線スペクトル（line spectrum）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "EmissionAbsorptionSpectrum",
+          "title": "放出スペクトルと吸収スペクトル",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "BohrModel",
+          "title": "ボーア模型（Bohr model）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AstrophysicsSpectrum",
+          "title": "スペクトルで宇宙を調べる（astrophysics）",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise6_4",
+          "route": "/calc/Exercise6_4"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "6.5",
+      "chapterId": "6",
+      "chapterTitle": "原子と量子",
+      "title": "物質波とド・ブロイの関係",
+      "summary": "これまでの章で、私たちは「光は波であり、同時に粒でもある」という不思議な性質を学んできました。",
+      "searchTerms": [
+        "物質波とド・ブロイの関係",
+        "ド・ブロイ波",
+        "de Broglie wave",
+        "物質波",
+        "matter wave",
+        "波長（量子）",
+        "wavelength (quantum)",
+        "運動量（量子）",
+        "momentum (quantum)"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=6.5"
+      },
+      "keywords": [
+        {
+          "ja": "ド・ブロイ波",
+          "en": "de Broglie wave",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "物質波",
+          "en": "matter wave",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "波長（量子）",
+          "en": "wavelength (quantum)",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "運動量（量子）",
+          "en": "momentum (quantum)",
+          "quizId": null,
+          "quizRoute": null
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "MatterWave",
+          "title": "物質波（matter wave）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "QuantumEntrance",
+          "title": "物質波が示す量子の世界",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise6_5",
+          "route": "/calc/Exercise6_5"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "7.1",
+      "chapterId": "7",
+      "chapterTitle": "現代物理・応用",
+      "title": "原子核と放射線",
+      "summary": "物質をさらに細かく見ていくと、原子は 原子核 とそのまわりを回る電子からできています。",
+      "searchTerms": [
+        "原子核と放射線",
+        "放射線",
+        "radiation",
+        "α線",
+        "alpha rays",
+        "β線",
+        "beta rays",
+        "γ線",
+        "gamma rays",
+        "半減期",
+        "half-life"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=7.1"
+      },
+      "keywords": [
+        {
+          "ja": "放射線",
+          "en": "radiation",
+          "quizId": "radiationIntroQuestions",
+          "quizRoute": "/quiz/radiationIntroQuestions"
+        },
+        {
+          "ja": "α線",
+          "en": "alpha rays",
+          "quizId": "alphaRayIntroQuestions",
+          "quizRoute": "/quiz/alphaRayIntroQuestions"
+        },
+        {
+          "ja": "β線",
+          "en": "beta rays",
+          "quizId": "betaRayIntroQuestions",
+          "quizRoute": "/quiz/betaRayIntroQuestions"
+        },
+        {
+          "ja": "γ線",
+          "en": "gamma rays",
+          "quizId": "gammaRayIntroQuestions",
+          "quizRoute": "/quiz/gammaRayIntroQuestions"
+        },
+        {
+          "ja": "半減期",
+          "en": "half-life",
+          "quizId": "halfLifeIntroQuestions",
+          "quizRoute": "/quiz/halfLifeIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "AtomicStructure",
+          "title": "原子核（atomic nucleus）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "AlphaRayPenetration",
+          "title": "放射線",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "BetaRayPenetration",
+          "title": "放射線",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "GammaRayPenetration",
+          "title": "放射線",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "RadiationComparison",
+          "title": "放射線",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HalfLifeDecay",
+          "title": "半減期（half-life）",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise7_1",
+          "route": "/calc/Exercise7_1"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q1-5",
+          "questionRef": "共通テスト 2024年 物理 第1問 問5",
+          "tags": [
+            "核反応",
+            "質量欠損",
+            "半減期"
+          ],
+          "route": "/explanations/physics2024-q1-5"
+        },
+        {
+          "id": "phy2025-q1-1",
+          "questionRef": "共通テスト 2025年 物理基礎 第1問 問1",
+          "tags": [
+            "放射線",
+            "β線"
+          ],
+          "route": "/explanations/phy2025-q1-1"
+        }
+      ]
+    },
+    {
+      "id": "7.2",
+      "chapterId": "7",
+      "chapterTitle": "現代物理・応用",
+      "title": "核反応とエネルギー",
+      "summary": "原子核の中では、陽子や中性子が強く結びついています。",
+      "searchTerms": [
+        "核反応とエネルギー",
+        "核反応",
+        "nuclear reaction",
+        "核分裂",
+        "nuclear fission",
+        "核融合",
+        "nuclear fusion",
+        "質量欠損",
+        "mass defect",
+        "結合エネルギー",
+        "binding energy"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=7.2"
+      },
+      "keywords": [
+        {
+          "ja": "核反応",
+          "en": "nuclear reaction",
+          "quizId": "nuclearReactionIntroQuestions",
+          "quizRoute": "/quiz/nuclearReactionIntroQuestions"
+        },
+        {
+          "ja": "核分裂",
+          "en": "nuclear fission",
+          "quizId": "nuclearFissionIntroQuestions",
+          "quizRoute": "/quiz/nuclearFissionIntroQuestions"
+        },
+        {
+          "ja": "核融合",
+          "en": "nuclear fusion",
+          "quizId": "nuclearFusionIntroQuestions",
+          "quizRoute": "/quiz/nuclearFusionIntroQuestions"
+        },
+        {
+          "ja": "質量欠損",
+          "en": "mass defect",
+          "quizId": "massDefectIntroQuestions",
+          "quizRoute": "/quiz/massDefectIntroQuestions"
+        },
+        {
+          "ja": "結合エネルギー",
+          "en": "binding energy",
+          "quizId": "bindingEnergyIntroQuestions",
+          "quizRoute": "/quiz/bindingEnergyIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "ChemicalVsNuclearReaction",
+          "title": "核反応（nuclear reaction",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "NuclearFission",
+          "title": "核反応（nuclear reaction",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "NuclearFusion",
+          "title": "核反応（nuclear reaction",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MassDefect",
+          "title": "核反応（nuclear reaction",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "BindingEnergyConcept",
+          "title": "核反応（nuclear reaction",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise7_2",
+          "route": "/calc/Exercise7_2"
+        }
+      ],
+      "explanations": [
+        {
+          "id": "physics2024-q1-5",
+          "questionRef": "共通テスト 2024年 物理 第1問 問5",
+          "tags": [
+            "核反応",
+            "質量欠損",
+            "半減期"
+          ],
+          "route": "/explanations/physics2024-q1-5"
+        }
+      ]
+    },
+    {
+      "id": "7.3",
+      "chapterId": "7",
+      "chapterTitle": "現代物理・応用",
+      "title": "特殊相対性理論",
+      "summary": "20世紀初頭、それまでの物理では説明できない現象が見つかり、物理の考え方は大きく変わりました。",
+      "searchTerms": [
+        "特殊相対性理論",
+        "相対性理論",
+        "theory of relativity",
+        "special relativity",
+        "光速度不変の原理",
+        "constancy of the speed of light",
+        "時間の遅れ",
+        "time dilation",
+        "長さ収縮",
+        "length contraction",
+        "質量エネルギー等価",
+        "mass–energy equivalence"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=7.3"
+      },
+      "keywords": [
+        {
+          "ja": "相対性理論",
+          "en": "theory of relativity",
+          "quizId": "theoryOfRelativityIntroQuestions",
+          "quizRoute": "/quiz/theoryOfRelativityIntroQuestions"
+        },
+        {
+          "ja": "特殊相対性理論",
+          "en": "special relativity",
+          "quizId": "specialRelativityIntroQuestions",
+          "quizRoute": "/quiz/specialRelativityIntroQuestions"
+        },
+        {
+          "ja": "光速度不変の原理",
+          "en": "constancy of the speed of light",
+          "quizId": "constancyOfTheSpeedOfLightIntroQuestions",
+          "quizRoute": "/quiz/constancyOfTheSpeedOfLightIntroQuestions"
+        },
+        {
+          "ja": "時間の遅れ",
+          "en": "time dilation",
+          "quizId": "timeDilationIntroQuestions",
+          "quizRoute": "/quiz/timeDilationIntroQuestions"
+        },
+        {
+          "ja": "長さ収縮",
+          "en": "length contraction",
+          "quizId": "lengthContractionIntroQuestions",
+          "quizRoute": "/quiz/lengthContractionIntroQuestions"
+        },
+        {
+          "ja": "質量エネルギー等価",
+          "en": "mass–energy equivalence",
+          "quizId": "massEnergyEquivalenceIntroQuestions",
+          "quizRoute": "/quiz/massEnergyEquivalenceIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "LightSpeedInvariance",
+          "title": "相対性理論（theory of relativity）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "TimeDilation",
+          "title": "相対性理論（theory of relativity）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "LengthContraction",
+          "title": "相対性理論（theory of relativity）",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise7_3",
+          "route": "/calc/Exercise7_3"
+        }
+      ],
+      "explanations": []
+    },
+    {
+      "id": "7.4",
+      "chapterId": "7",
+      "chapterTitle": "現代物理・応用",
+      "title": "物理学の応用分野",
+      "summary": "物理は、教科書の中だけで完結する学問ではありません。",
+      "searchTerms": [
+        "物理学の応用分野",
+        "宇宙物理",
+        "astrophysics",
+        "半導体",
+        "semiconductor",
+        "材料物理",
+        "materials physics",
+        "量子情報",
+        "quantum information",
+        "医療物理",
+        "medical physics"
+      ],
+      "textbook": {
+        "available": true,
+        "route": "/physics?section=7.4"
+      },
+      "keywords": [
+        {
+          "ja": "宇宙物理",
+          "en": "astrophysics",
+          "quizId": "astrophysicsIntroQuestions",
+          "quizRoute": "/quiz/astrophysicsIntroQuestions"
+        },
+        {
+          "ja": "半導体",
+          "en": "semiconductor",
+          "quizId": "semiconductorIntroQuestions",
+          "quizRoute": "/quiz/semiconductorIntroQuestions"
+        },
+        {
+          "ja": "材料物理",
+          "en": "materials physics",
+          "quizId": "materialsPhysicsIntroQuestions",
+          "quizRoute": "/quiz/materialsPhysicsIntroQuestions"
+        },
+        {
+          "ja": "量子情報",
+          "en": "quantum information",
+          "quizId": "quantumInformationIntroQuestions",
+          "quizRoute": "/quiz/quantumInformationIntroQuestions"
+        },
+        {
+          "ja": "医療物理",
+          "en": "medical physics",
+          "quizId": "medicalPhysicsIntroQuestions",
+          "quizRoute": "/quiz/medicalPhysicsIntroQuestions"
+        }
+      ],
+      "diagrams": [
+        {
+          "id": "MechanicsHookeAnalogy",
+          "title": "力学 → 材料・構造（materials & structures）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "StandingWaveInstrument",
+          "title": "波動 → 音・楽器・通信（waves & acoustics）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "HeatEngineCycle",
+          "title": "熱力学 → エンジン・エネルギー（thermodynamics）",
+          "available": false,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MotorGenerator",
+          "title": "電磁気学 → モーター・発電（electromagnetism）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "SemiconductorChargeFlow",
+          "title": "原子物理 × 電磁気 → 半導体（semiconductor）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ClassicalBitVsQubit",
+          "title": "原子物理 → 量子情報（quantum information）",
+          "available": true,
+          "route": "/physics-animations"
+        }
+      ],
+      "calculations": [
+        {
+          "id": "Exercise7_4",
+          "route": "/calc/Exercise7_4"
+        }
+      ],
+      "explanations": []
+    }
+  ],
   "diagnostics": {
-    "unmappedDiagrams": [],
+    "unmappedDiagrams": [
+      {
+        "sectionId": "1.1",
+        "diagramId": "DimensionalAnalysis",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      },
+      {
+        "sectionId": "2.4",
+        "diagramId": "MomentumBeforeAfterCollision",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      },
+      {
+        "sectionId": "2.4",
+        "diagramId": "ElasticCollision",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      },
+      {
+        "sectionId": "4.1",
+        "diagramId": "ThermalEnergyTransferIntro",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      },
+      {
+        "sectionId": "4.6",
+        "diagramId": "IsochoricHeating",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      },
+      {
+        "sectionId": "5.4",
+        "diagramId": "OhmsLawGraph",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      },
+      {
+        "sectionId": "7.4",
+        "diagramId": "HeatEngineCycle",
+        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
+      }
+    ],
     "unmappedExplanations": []
-  },
-  "syncStatus": "placeholder_until_first_automatic_sync"
+  }
 }
