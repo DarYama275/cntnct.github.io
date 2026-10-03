@@ -28,3 +28,34 @@
 .legal-panel strong { display: block; margin-top: .7rem; }
 @media (max-width: 800px) { .pad-hero-inner { grid-template-columns: 1fr; gap: 2rem; } .deck-visual { min-height: 390px; } .pad-grid { grid-template-columns: 1fr 1fr; } .flow { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .pad-grid, .flow, .legal-panels { grid-template-columns: 1fr; } .deck-visual { transform: scale(.85); } }
+
+
+.pad-feature-graphic {
+  position: relative;
+  padding: 0 2.5rem 4rem;
+}
+.pad-feature-graphic .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.pad-feature-figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(0,0,0,.28);
+}
+.pad-feature-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .pad-feature-graphic {
+    padding: 0 1.2rem 2.5rem;
+  }
+  .pad-feature-figure {
+    border-radius: 10px;
+  }
+}
