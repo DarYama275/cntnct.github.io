@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Containnect — コンテネクト</title>
-  <meta name="description" content="知識をコンテナとしてパッケージ化し、繋げることで学びを拡張していく。Containnect（コンテネクト）はインタラクティブな教育プロダクトを開発しています。">\n  <link rel="alternate" hreflang="ja" href="https://containnect.com/">\n  <link rel="alternate" hreflang="en" href="https://containnect.com/en/">\n  <link rel="alternate" hreflang="x-default" href="https://containnect.com/">
+  <meta name="description" content="知識をコンテナとしてパッケージ化し、繋げることで学びを拡張していく。Containnect（コンテネクト）はインタラクティブな教育プロダクトを開発しています。">
+  <link rel="alternate" hreflang="ja" href="https://containnect.com/">
+  <link rel="alternate" hreflang="en" href="https://containnect.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://containnect.com/">
 
   <!-- OGP -->
   <meta property="og:type"        content="website">
@@ -81,13 +84,16 @@
   <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">cntnct</a>
-    <ul class="nav-links">
-      <li><a href="#concept">Concept</a></li>
-      <li><a href="#product">Product</a></li>
-      <li><a href="./video.html">Videos</a></li>
-      <li><a href="./news/">News</a></li>
-      <li><a href="#contact">Contact</a></li>\n      <li><a href="./en/" aria-label="English version">EN</a></li>
-    </ul>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="./video.html">Videos</a></li>
+        <li><a href="./news/">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="lang-toggle" href="./en/" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -139,7 +145,7 @@
   <section id="product">
     <p class="section-label reveal">// product</p>
 
-    <div class="product-card reveal">
+    <div class="product-card product-card--clickable reveal" data-href="./physics.html" role="link" tabindex="0" aria-label="さわっておぼえる物理の詳細を見る">
       <div class="product-status product-status--released">NOW AVAILABLE</div>
       <h3>さわっておぼえる物理</h3>
       <p>
@@ -162,7 +168,7 @@
       </div>
     </div>
 
-    <div class="product-card reveal">
+    <div class="product-card product-card--clickable reveal" data-href="./vocab.html" role="link" tabindex="0" aria-label="つなげておぼえる英単語の詳細を見る">
       <div class="product-status product-status--released">NOW AVAILABLE</div>
       <h3>つなげておぼえる英単語</h3>
       <p>
@@ -185,7 +191,7 @@
       </div>
     </div>
 
-    <div class="product-card reveal">
+    <div class="product-card product-card--clickable reveal" data-href="./phoneappdeck.html" role="link" tabindex="0" aria-label="PhoneAppDeckの詳細を見る">
       <div class="product-status product-status--released">NOW AVAILABLE</div>
       <h3>PhoneAppDeck</h3>
       <p>
