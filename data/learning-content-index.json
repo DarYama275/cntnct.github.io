@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "purpose": "AIや共有学習が、既存教材を本文全量なしで検索・推薦するための軽量索引",
   "stats": {
     "chapters": 7,
@@ -30,7 +30,49 @@
         "SI単位系",
         "SI units",
         "次元解析",
-        "dimensional analysis"
+        "dimensional analysis",
+        "物理量の例",
+        "速さの単位って何？",
+        "速さが変わるとき ― 加速度",
+        "次元解析 ― 式が正しいか確かめる",
+        "QuantityAndUnit",
+        "DistanceTimeComparison",
+        "VelocityChange",
+        "DimensionalAnalysis"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "物理量の例",
+          "summary": "例えば、物理では次のような単位が使われます。",
+          "aliases": [
+            "物理量の例"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "速さの単位って何？",
+          "summary": "「速さ」は、 どれだけの距離を、どれだけの時間で進んだか を表す量です。",
+          "aliases": [
+            "速さの単位って何？"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "速さが変わるとき ― 加速度",
+          "summary": "発進やブレーキのように、 速さが変わる こともあります。",
+          "aliases": [
+            "速さが変わるとき ― 加速度"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "次元解析 ― 式が正しいか確かめる",
+          "summary": "物理量には、単位の組み合わせで決まる 次元 があります。",
+          "aliases": [
+            "次元解析 ― 式が正しいか確かめる"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -134,7 +176,66 @@
         "位置ベクトル",
         "position vector",
         "単位ベクトル",
-        "unit vector"
+        "unit vector",
+        "ベクトルとは何か",
+        "ベクトルの大きさ",
+        "ScalarVsVector",
+        "VectorArrowMeaning",
+        "VectorAddition",
+        "VectorDecomposition",
+        "VectorMagnitude",
+        "PositionVector",
+        "UnitVector"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "ベクトルとは何か",
+          "summary": "ベクトルは、 向きのある量を矢印で表したもの です。",
+          "aliases": [
+            "ベクトルとは何か"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "ベクトルの合成",
+          "summary": "同じ方向に働くベクトルは強め合い、逆向きなら弱め合います。",
+          "aliases": [
+            "ベクトルの合成"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "ベクトルの分解",
+          "summary": "逆に、1本のベクトルを x方向・y方向などに分けて考える ことを ベクトルの分解 といいます。",
+          "aliases": [
+            "ベクトルの分解"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "ベクトルの大きさ",
+          "summary": "ベクトルの長さ（大きさ）は、ピタゴラスの定理と同じ考え方で求められます。",
+          "aliases": [
+            "ベクトルの大きさ"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "位置ベクトル",
+          "summary": "原点からある点までの矢印 を 位置ベクトル と呼びます。",
+          "aliases": [
+            "位置ベクトル"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "単位ベクトル",
+          "summary": "向きだけを表すために、 大きさが1のベクトル を 単位ベクトル といいます。",
+          "aliases": [
+            "単位ベクトル"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -261,7 +362,66 @@
         "自由落下",
         "free fall",
         "重力",
-        "gravity"
+        "gravity",
+        "位置と変位",
+        "平均速度と瞬間速度",
+        "自由落下と重力",
+        "PositionAndDisplacement",
+        "AverageVelocity",
+        "Acceleration",
+        "InertiaMagic",
+        "AcceleratedMotion",
+        "FreeFallMotion"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "位置と変位",
+          "summary": "物体が一直線上を動くとき、その場所を 位置 で表します。",
+          "aliases": [
+            "位置と変位"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "平均速度と瞬間速度",
+          "summary": "変位が「どれだけ位置が変わったか」を表すのに対して、 速度 は「それがどれくらいの時間で起きたか」を表す量です。",
+          "aliases": [
+            "平均速度と瞬間速度"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "加速度",
+          "summary": "速度が時間とともに変わるとき、その変わり方を表す量が 加速度 です。",
+          "aliases": [
+            "加速度"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "等速直線運動",
+          "summary": "速度が一定で変わらない運動を 等速直線運動 といいます。",
+          "aliases": [
+            "等速直線運動"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "等加速度運動",
+          "summary": "加速度が一定である運動を 等加速度運動 といいます。",
+          "aliases": [
+            "等加速度運動"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "自由落下と重力",
+          "summary": "物体を手から離すと、下向きに落ちていきます。",
+          "aliases": [
+            "自由落下と重力"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -460,7 +620,48 @@
         "グラフの面積",
         "area under the graph",
         "面積と変位",
-        "area as displacement"
+        "area as displacement",
+        "位置–時間グラフ",
+        "速度–時間グラフ",
+        "グラフの面積が表すもの",
+        "微分と積分",
+        "AcceleratedMotion",
+        "UniformLinearMotionIntegral",
+        "DerivativeIntegral"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "位置–時間グラフ",
+          "summary": "位置 を縦軸、時間 を横軸にとったグラフを 位置–時間グラフ といいます。",
+          "aliases": [
+            "位置–時間グラフ"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "速度–時間グラフ",
+          "summary": "速度 を縦軸、時間 を横軸にとったグラフを 速度–時間グラフ といいます。",
+          "aliases": [
+            "速度–時間グラフ"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "グラフの面積が表すもの",
+          "summary": "速度–時間グラフでは、グラフと時間軸で囲まれた部分の 面積 がその時間における 移動距離（変位） を表します。",
+          "aliases": [
+            "グラフの面積が表すもの"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "微分と積分",
+          "summary": "数学では、 - グラフの傾き - グラフの面積 をそれぞれ 微分 と 積分 という方法で扱います。",
+          "aliases": [
+            "微分と積分"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -579,7 +780,50 @@
         "絶対誤差",
         "absolute error",
         "相対誤差",
-        "relative error"
+        "relative error",
+        "有効数字 ― 数の「確かさ」",
+        "絶対誤差 ― どれくらいズレるか",
+        "有効数字 ― 数の「確かさ」 絶対誤差 ― どれくらいズレるか",
+        "相対誤差 ― どれくらいの割合でズレるか",
+        "物理は「測って、考える」学問",
+        "SignificantFiguresMeasurement",
+        "AbsoluteError",
+        "RelativeError"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "有効数字 ― 数の「確かさ」",
+          "summary": "物理で使う数は、 どこまで正確に言えるか が重要です。",
+          "aliases": [
+            "有効数字 ― 数の「確かさ」"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "絶対誤差 ― どれくらいズレるか",
+          "summary": "測定値は、必ず多少のズレを含みます。",
+          "aliases": [
+            "絶対誤差 ― どれくらいズレるか",
+            "有効数字 ― 数の「確かさ」 絶対誤差 ― どれくらいズレるか"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "相対誤差 ― どれくらいの割合でズレるか",
+          "summary": "同じ 0.1 cm のズレでも、 - 1 cm を測ったとき - 100 cm を測ったとき では、意味が違います。",
+          "aliases": [
+            "相対誤差 ― どれくらいの割合でズレるか"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "物理は「測って、考える」学問",
+          "summary": "物理では - 単位で意味をそろえ - 数値と単位で現象を表し - 必要に応じて精度や誤差も考えながら 現実を説明していきます。",
+          "aliases": [
+            "物理は「測って、考える」学問"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -620,7 +864,7 @@
         },
         {
           "id": "AbsoluteError",
-          "title": "有効数字 ― 数の「確かさ」",
+          "title": "絶対誤差 ― どれくらいズレるか",
           "available": true,
           "route": "/physics-animations"
         },
@@ -674,7 +918,87 @@
         "合力",
         "resultant force",
         "慣性系",
-        "inertial frame"
+        "inertial frame",
+        "第一法則：慣性の法則",
+        "第一法則",
+        "宇宙ステーションを想像してみよう",
+        "第一法則 宇宙ステーションを想像してみよう",
+        "力がかかっていないとき、物はどう動く?",
+        "第一法則 力がかかっていないとき、物はどう動く?",
+        "第一法則 慣性の法則",
+        "第二法則：運動の法則",
+        "第二法則",
+        "第三法則：作用・反作用の法則",
+        "第三法則",
+        "ニュートンの3法則のまとめ",
+        "InertiaMotion",
+        "ForceMassAccelerationRelation",
+        "ForceAngleMotion",
+        "LeaningChairThirdLaw"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "第一法則：慣性の法則",
+          "summary": "",
+          "aliases": [
+            "第一法則：慣性の法則",
+            "第一法則"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "宇宙ステーションを想像してみよう",
+          "summary": "宇宙飛行士が、国際宇宙ステーションの中でボールを軽く押し出したとします。",
+          "aliases": [
+            "宇宙ステーションを想像してみよう",
+            "第一法則 宇宙ステーションを想像してみよう"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "力がかかっていないとき、物はどう動く?",
+          "summary": "ここが一番大事なところです。",
+          "aliases": [
+            "力がかかっていないとき、物はどう動く?",
+            "第一法則 力がかかっていないとき、物はどう動く?"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "慣性の法則",
+          "summary": "物体が、今の運動状態(止まっているか、一定の速さ・向きで動いているか)をそのまま保ち続けようとする性質を、 慣性(inertia) といいます。",
+          "aliases": [
+            "慣性の法則",
+            "第一法則 慣性の法則"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "第二法則：運動の法則",
+          "summary": "慣性の法則では、物体に力が働いていなければ、物体は同じ速度で進み続けることを学びました。",
+          "aliases": [
+            "第二法則：運動の法則",
+            "第二法則"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "第三法則：作用・反作用の法則",
+          "summary": "手で壁を押してみると、壁は動かなくても、手には壁から押される感覚があります。",
+          "aliases": [
+            "第三法則：作用・反作用の法則",
+            "第三法則"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "ニュートンの3法則のまとめ",
+          "summary": "ニュートンの運動の法則は、力と運動の関係を次のように説明します。",
+          "aliases": [
+            "ニュートンの3法則のまとめ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -721,7 +1045,7 @@
       "diagrams": [
         {
           "id": "InertiaMotion",
-          "title": "第一法則：慣性の法則",
+          "title": "宇宙ステーションを想像してみよう",
           "available": true,
           "route": "/physics-animations"
         },
@@ -807,7 +1131,72 @@
         "垂直抗力",
         "normal force",
         "張力",
-        "tension"
+        "tension",
+        "身の回りにある力の釣り合い",
+        "机の上の本は、なぜ落ちないのか",
+        "身の回りにある力の釣り合い 机の上の本は、なぜ落ちないのか",
+        "天井に吊り下げられた物体は、なぜ落ちないのか",
+        "身の回りにある力の釣り合い 天井に吊り下げられた物体は、なぜ落ちないのか",
+        "箱を押しているのに、なぜ動かないのか",
+        "身の回りにある力の釣り合い 箱を押しているのに、なぜ動かないのか",
+        "押し続けているのに、なぜ速くならないのか",
+        "身の回りにある力の釣り合い 押し続けているのに、なぜ速くならないのか",
+        "ForceBalanceOnObject",
+        "BookOnTable",
+        "Tension",
+        "StaticFrictionEquilibrium",
+        "MaxStaticFrictionBox",
+        "FrictionNormalForceRelation",
+        "KineticFrictionBalance",
+        "StaticVsKineticFriction",
+        "MulticopterForceBalance",
+        "ForceBalance"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "身の回りにある力の釣り合い",
+          "summary": "綱引きでは、左右のチームが同じ強さで引くと、綱はどちらにも動きませんでした。",
+          "aliases": [
+            "身の回りにある力の釣り合い"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "机の上の本は、なぜ落ちないのか",
+          "summary": "机の上に本を置くと、本はその場に止まっています。",
+          "aliases": [
+            "机の上の本は、なぜ落ちないのか",
+            "身の回りにある力の釣り合い 机の上の本は、なぜ落ちないのか"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "天井に吊り下げられた物体は、なぜ落ちないのか",
+          "summary": "机の上の本は机から力を受けているから、本の重力と垂直抗力が釣り合って、本は動かないと学びました。",
+          "aliases": [
+            "天井に吊り下げられた物体は、なぜ落ちないのか",
+            "身の回りにある力の釣り合い 天井に吊り下げられた物体は、なぜ落ちないのか"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "箱を押しているのに、なぜ動かないのか",
+          "summary": "次に、床の上にある箱を右向きに軽く押してみましょう。",
+          "aliases": [
+            "箱を押しているのに、なぜ動かないのか",
+            "身の回りにある力の釣り合い 箱を押しているのに、なぜ動かないのか"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "押し続けているのに、なぜ速くならないのか",
+          "summary": "箱が動き始めたあとも、一定の力で押し続けることを考えてみましょう。",
+          "aliases": [
+            "押し続けているのに、なぜ速くならないのか",
+            "身の回りにある力の釣り合い 押し続けているのに、なぜ速くならないのか"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -866,55 +1255,55 @@
         },
         {
           "id": "BookOnTable",
-          "title": "身の回りにある力の釣り合い",
+          "title": "机の上の本は、なぜ落ちないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "Tension",
-          "title": "身の回りにある力の釣り合い",
+          "title": "天井に吊り下げられた物体は、なぜ落ちないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "StaticFrictionEquilibrium",
-          "title": "身の回りにある力の釣り合い",
+          "title": "箱を押しているのに、なぜ動かないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "MaxStaticFrictionBox",
-          "title": "身の回りにある力の釣り合い",
+          "title": "箱を押しているのに、なぜ動かないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "FrictionNormalForceRelation",
-          "title": "身の回りにある力の釣り合い",
+          "title": "箱を押しているのに、なぜ動かないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "KineticFrictionBalance",
-          "title": "身の回りにある力の釣り合い",
+          "title": "押し続けているのに、なぜ速くならないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "StaticVsKineticFriction",
-          "title": "身の回りにある力の釣り合い",
+          "title": "押し続けているのに、なぜ速くならないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "MulticopterForceBalance",
-          "title": "身の回りにある力の釣り合い",
+          "title": "押し続けているのに、なぜ速くならないのか",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "ForceBalance",
-          "title": "身の回りにある力の釣り合い",
+          "title": "押し続けているのに、なぜ速くならないのか",
           "available": true,
           "route": "/physics-animations"
         }
@@ -1000,7 +1389,39 @@
         "運動方程式",
         "equation of motion",
         "力の分解",
-        "force decomposition"
+        "force decomposition",
+        "斜面上の運動",
+        "VerticalThrowMotion",
+        "ForceDecompositionOnIncline",
+        "CircularMotionVectors",
+        "PerpendicularForceCircularMotion",
+        "CentrifugalForce"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "鉛直投げ上げ",
+          "summary": "鉛直投げ上げでは、物体を真上に投げても、手を離した後に働く力は 重力だけ です。",
+          "aliases": [
+            "鉛直投げ上げ"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "斜面上の運動",
+          "summary": "斜面では、重力 をそのまま使うよりも、 斜面に平行な方向 と 斜面に垂直な方向 に分けて考えるのが基本です。",
+          "aliases": [
+            "斜面上の運動"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "円運動",
+          "summary": "円運動では、物体は円周に沿って動き続けます。",
+          "aliases": [
+            "円運動"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -1136,7 +1557,87 @@
         "非弾性衝突",
         "inelastic collision",
         "力積",
-        "impulse"
+        "impulse",
+        "外力が働かない系",
+        "衝突の種類",
+        "完全弾性衝突",
+        "衝突の種類 完全弾性衝突",
+        "衝突の種類 非弾性衝突",
+        "完全非弾性衝突",
+        "衝突の種類 完全非弾性衝突",
+        "MomentumBeforeAfterCollision",
+        "ImpulseMomentumRelation",
+        "RestitutionCoefficient",
+        "ElasticCollision"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "運動量",
+          "summary": "運動量は で定義されます。",
+          "aliases": [
+            "運動量"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "外力が働かない系",
+          "summary": "複数の物体をまとめて考えたとき、その全体を 系（system） と呼びます。",
+          "aliases": [
+            "外力が働かない系"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "力積",
+          "summary": "短時間だけ働く力の影響を表す量が 力積 です。",
+          "aliases": [
+            "力積"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "反発係数",
+          "summary": "衝突では、物体がどれだけ跳ね返るかが重要になります。",
+          "aliases": [
+            "反発係数"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "衝突の種類",
+          "summary": "反発係数の値によって衝突の性質が変わります。",
+          "aliases": [
+            "衝突の種類"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "完全弾性衝突",
+          "summary": "運動量だけでなく、 運動エネルギーも保存 されます。",
+          "aliases": [
+            "完全弾性衝突",
+            "衝突の種類 完全弾性衝突"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "非弾性衝突",
+          "summary": "衝突の途中で - 変形 - 熱 などにエネルギーが変わることで、運動エネルギーが減少してしまうようなパターンです。",
+          "aliases": [
+            "非弾性衝突",
+            "衝突の種類 非弾性衝突"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "完全非弾性衝突",
+          "summary": "衝突後、物体が くっついて一体となって動く 場合です。",
+          "aliases": [
+            "完全非弾性衝突",
+            "衝突の種類 完全非弾性衝突"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -1201,7 +1702,7 @@
         },
         {
           "id": "ElasticCollision",
-          "title": "衝突の種類",
+          "title": "非弾性衝突",
           "available": false,
           "route": "/physics-animations"
         }
@@ -1255,7 +1756,74 @@
         "エネルギー保存則",
         "law of conservation of energy",
         "仕事率",
-        "power"
+        "power",
+        "仕事とは何か",
+        "仕事と運動エネルギーの関係",
+        "保存力と位置エネルギー",
+        "重力による位置エネルギー",
+        "ばねの弾性力による位置エネルギー",
+        "力学的エネルギー保存則",
+        "WorkDefinition",
+        "WorkEnergyRelation",
+        "EnergyTransformation"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "仕事とは何か",
+          "summary": "仕事とは、力が物体を動かすことで 運動の状態を変えた量 のことです。",
+          "aliases": [
+            "仕事とは何か"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "仕事と運動エネルギーの関係",
+          "summary": "運動エネルギーとは、質量 、速さ の物体が持つエネルギーで、次式で表されます。",
+          "aliases": [
+            "仕事と運動エネルギーの関係"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "保存力と位置エネルギー",
+          "summary": "力の中には、 どの経路を通っても、始点と終点が同じなら仕事が等しい という特別な性質を持つものがあります。",
+          "aliases": [
+            "保存力と位置エネルギー"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "重力による位置エネルギー",
+          "summary": "高さ の位置から物体を静かに落とすと、重力 が距離 にわたって仕事をします。",
+          "aliases": [
+            "重力による位置エネルギー"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "ばねの弾性力による位置エネルギー",
+          "summary": "自然長からの伸び のとき、ばね定数 のばねが持つ位置エネルギーは次のようになります。",
+          "aliases": [
+            "ばねの弾性力による位置エネルギー"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "力学的エネルギー保存則",
+          "summary": "仕事・運動エネルギー定理 に、保存力の仕事 を代入すると、 つまり、 保存力のみが仕事をするとき、運動エネルギーと位置エネルギーの和（力学的エネルギー）は一定に保たれます 。",
+          "aliases": [
+            "力学的エネルギー保存則"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "仕事率",
+          "summary": "同じ仕事でも、短い時間でこなすほど「出力が高い」と言えます。",
+          "aliases": [
+            "仕事率"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -1398,7 +1966,65 @@
         "角加速度",
         "angular acceleration",
         "力のモーメント（トルク）",
-        "moment of force (torque)"
+        "moment of force (torque)",
+        "トルク（モーメント）",
+        "角度・角速度・角加速度",
+        "回転の運動方程式",
+        "回転の運動エネルギー",
+        "角運動量と保存則",
+        "TorqueIntro",
+        "MomentOfInertia",
+        "RotationLaw"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "トルク（モーメント）",
+          "summary": "剛体を回すとき、「どれだけ力をかけたか」だけでは不十分です。",
+          "aliases": [
+            "トルク（モーメント）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "角度・角速度・角加速度",
+          "summary": "回転運動を記述するには、距離や速度の代わりに「角度ベースの量」を使います。",
+          "aliases": [
+            "角度・角速度・角加速度"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "慣性モーメント",
+          "summary": "直線運動では、質量 が「加速しにくさ（慣性）」を表していました。",
+          "aliases": [
+            "慣性モーメント"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "回転の運動方程式",
+          "summary": "直線運動の運動方程式 と、導いた を見比べてみましょう。",
+          "aliases": [
+            "回転の運動方程式"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "回転の運動エネルギー",
+          "summary": "回転している剛体もエネルギーを持ちます。",
+          "aliases": [
+            "回転の運動エネルギー"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "角運動量と保存則",
+          "summary": "直線運動における「運動量 」に対応する量として、回転運動には 角運動量 があります。",
+          "aliases": [
+            "角運動量と保存則"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -1504,7 +2130,86 @@
         "圧力",
         "pressure",
         "流体",
-        "fluid"
+        "fluid",
+        "圧力（pressure）",
+        "液体の圧力",
+        "浮力（buoyancy）",
+        "浮力が生まれる理由",
+        "浮く・沈む条件",
+        "この単元のポイント",
+        "FluidAroundObject",
+        "PressureInLiquid",
+        "PascalsPrincipleForce",
+        "BuoyancyIntro",
+        "PressureDifferenceBuoyancy",
+        "ArchimedesPrinciple",
+        "FloatSinkBalance"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "圧力（pressure）",
+          "summary": "流体が物体を押す強さを表す量を 圧力 といいます。",
+          "aliases": [
+            "圧力（pressure）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "液体の圧力",
+          "summary": "液体では、 深いほど上にある液体の重さが増えるため、圧力が大きくなります。",
+          "aliases": [
+            "液体の圧力"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "パスカルの原理",
+          "summary": "流体は、外から加えた圧力を 全体に均等に伝える 性質を持っています。",
+          "aliases": [
+            "パスカルの原理"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "浮力（buoyancy）",
+          "summary": "水中に物体を入れると、物体は 上向きの力 を受けます。",
+          "aliases": [
+            "浮力（buoyancy）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "浮力が生まれる理由",
+          "summary": "液体の中では、 深いほど圧力が大きい ことを思い出してください。",
+          "aliases": [
+            "浮力が生まれる理由"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "アルキメデスの原理",
+          "summary": "浮力の大きさは、次の法則で表されます。",
+          "aliases": [
+            "アルキメデスの原理"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "浮く・沈む条件",
+          "summary": "物体には次の2つの力が働きます。",
+          "aliases": [
+            "浮く・沈む条件"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "この単元のポイント",
+          "summary": "浮力は特別な力ではありません。",
+          "aliases": [
+            "この単元のポイント"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -1695,7 +2400,150 @@
         "第二宇宙速度",
         "second cosmic velocity",
         "万有引力による位置エネルギー",
-        "gravitational potential energy"
+        "gravitational potential energy",
+        "万有引力とは",
+        "地上の重力 $mg$ との関係",
+        "高い場所では重力は少し弱くなる",
+        "第一法則：楕円軌道の法則",
+        "第一法則",
+        "ケプラーの法則 第一法則",
+        "ケプラーの第一法則",
+        "第二法則：面積速度一定の法則",
+        "第二法則",
+        "ケプラーの法則 第二法則",
+        "ケプラーの第二法則",
+        "第三法則：調和の法則",
+        "第三法則",
+        "ケプラーの法則 第三法則",
+        "ケプラーの第三法則",
+        "万有引力と円運動",
+        "ケプラーの第三法則の導出",
+        "この単元のまとめ",
+        "GravityFromEarthToUniversal",
+        "UniversalGravitationLaw",
+        "GravitationalAccelerationFromEarth",
+        "KeplerLawsOverview",
+        "KeplerFirstLaw",
+        "KeplerSecondLaw",
+        "KeplerThirdLaw",
+        "SatelliteCircularOrbit",
+        "GravitationalPotentialEnergy",
+        "CosmicVelocity"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "万有引力とは",
+          "summary": "万有引力とは、 質量をもつすべての物体の間に働く引力 です。",
+          "aliases": [
+            "万有引力とは"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "地上の重力 $mg$ との関係",
+          "summary": "これまで、地上の物体には重力 が働くとしてきました。",
+          "aliases": [
+            "地上の重力 $mg$ との関係"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "高い場所では重力は少し弱くなる",
+          "summary": "地球の中心からの距離が大きくなると、万有引力は小さくなります。",
+          "aliases": [
+            "高い場所では重力は少し弱くなる"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "ケプラーの法則",
+          "summary": "惑星の運動には、古くから知られている規則性があります。",
+          "aliases": [
+            "ケプラーの法則"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "第一法則：楕円軌道の法則",
+          "summary": "惑星は、太陽を1つの焦点とする 楕円軌道 を描いて運動します。",
+          "aliases": [
+            "第一法則：楕円軌道の法則",
+            "第一法則",
+            "ケプラーの法則 第一法則",
+            "ケプラーの第一法則"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "第二法則：面積速度一定の法則",
+          "summary": "惑星と太陽を結ぶ線分が、一定時間に掃く面積は一定です。",
+          "aliases": [
+            "第二法則：面積速度一定の法則",
+            "第二法則",
+            "ケプラーの法則 第二法則",
+            "ケプラーの第二法則"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "第三法則：調和の法則",
+          "summary": "惑星の公転周期を 、軌道の大きさを とすると、 という関係が成り立ちます。",
+          "aliases": [
+            "第三法則：調和の法則",
+            "第三法則",
+            "ケプラーの法則 第三法則",
+            "ケプラーの第三法則"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "万有引力と円運動",
+          "summary": "月や人工衛星は、地球のまわりを回っています。",
+          "aliases": [
+            "万有引力と円運動"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "ケプラーの第三法則の導出",
+          "summary": "円運動では、速さ と周期 の間に という関係がありました。",
+          "aliases": [
+            "ケプラーの第三法則の導出"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "第一宇宙速度",
+          "summary": "人工衛星が地球のまわりを円軌道で回るためには、地球の重力が向心力として働く必要があります。",
+          "aliases": [
+            "第一宇宙速度"
+          ]
+        },
+        {
+          "id": "heading-11",
+          "title": "万有引力による位置エネルギー",
+          "summary": "2.5では、地表付近での重力による位置エネルギーを と表しました。",
+          "aliases": [
+            "万有引力による位置エネルギー"
+          ]
+        },
+        {
+          "id": "heading-12",
+          "title": "第二宇宙速度",
+          "summary": "地球の重力を振り切って、無限に遠くまで離れていくために必要な最小の速さを 第二宇宙速度 といいます。",
+          "aliases": [
+            "第二宇宙速度"
+          ]
+        },
+        {
+          "id": "heading-13",
+          "title": "この単元のまとめ",
+          "summary": "万有引力は、地上の落下運動と天体の運動をつなぐ力です。",
+          "aliases": [
+            "この単元のまとめ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -1766,19 +2614,19 @@
         },
         {
           "id": "KeplerFirstLaw",
-          "title": "ケプラーの法則",
+          "title": "第一法則：楕円軌道の法則",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "KeplerSecondLaw",
-          "title": "ケプラーの法則",
+          "title": "第二法則：面積速度一定の法則",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "KeplerThirdLaw",
-          "title": "ケプラーの法則",
+          "title": "第三法則：調和の法則",
           "available": true,
           "route": "/physics-animations"
         },
@@ -1848,7 +2696,70 @@
         "角振動数",
         "angular frequency",
         "位相",
-        "phase"
+        "phase",
+        "振幅・周期・振動数",
+        "単振動の位置",
+        "バネ振動",
+        "単振り子",
+        "OscillationExamples",
+        "単振動と振り子",
+        "RestoringForce",
+        "SimpleHarmonicMotion",
+        "OscillationModes",
+        "AmplitudePeriod",
+        "PhaseShift",
+        "SpringMassOscillation",
+        "PendulumMotion"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "復元力",
+          "summary": "振動が起こるためには、物体を 元の位置に戻そうとする力 が必要です。",
+          "aliases": [
+            "復元力"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "単振動",
+          "summary": "復元力が 変位に比例して平衡位置に向かう とき、その振動を 単振動（単純調和運動） といいます。",
+          "aliases": [
+            "単振動"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "振幅・周期・振動数",
+          "summary": "振動にはいくつかの重要な量があります。",
+          "aliases": [
+            "振幅・周期・振動数"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "単振動の位置",
+          "summary": "単振動では、位置は時間とともに滑らかな周期運動になります。",
+          "aliases": [
+            "単振動の位置"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "バネ振動",
+          "summary": "バネにつながれた物体では、バネの復元力は フックの法則 で表されます。",
+          "aliases": [
+            "バネ振動"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "単振り子",
+          "summary": "糸の先につけた物体を揺らすと、振り子の運動になります。",
+          "aliases": [
+            "単振り子"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2001,7 +2912,78 @@
         "干渉",
         "interference",
         "波の速度",
-        "wave speed"
+        "wave speed",
+        "波の2種類——横波と縦波",
+        "波の反射",
+        "波の基本的な量",
+        "波の速さ",
+        "波の速さと式",
+        "重ね合わせの原理と干渉",
+        "WavePhysics",
+        "WaveParticleMotion",
+        "TransverseVsLongitudinalWave",
+        "WaveReflection",
+        "WaveLengthAmplitude",
+        "WavePhase",
+        "WaveSuperposition"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "波の2種類——横波と縦波",
+          "summary": "波には、粒子の振動の向きによって2種類があります。",
+          "aliases": [
+            "波の2種類——横波と縦波"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "波の反射",
+          "summary": "波が壁などの境界に当たると、 反射 して戻ってきます。",
+          "aliases": [
+            "波の反射"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "波の基本的な量",
+          "summary": "波にはいくつかの基本的な量があります。",
+          "aliases": [
+            "波の基本的な量"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "波の速さ",
+          "summary": "波は空間を一定の速さで伝わります。",
+          "aliases": [
+            "波の速さ"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "波の式",
+          "summary": "波の形を数式で表すと、 となります。",
+          "aliases": [
+            "波の式"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "波の速さと式",
+          "summary": "波の式から、波の速さは と表されます。",
+          "aliases": [
+            "波の速さと式"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "重ね合わせの原理と干渉",
+          "summary": "波には、他の波と重なったときに 互いに影響を与えずに重なり合う という特徴があります。",
+          "aliases": [
+            "重ね合わせの原理と干渉"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2234,7 +3216,88 @@
         "倍音",
         "harmonics",
         "境界条件",
-        "boundary conditions"
+        "boundary conditions",
+        "定常波の数式表現",
+        "両端が固定された弦の定常波",
+        "定常波の振動数",
+        "空気柱における定常波",
+        "共鳴（共振）",
+        "波の干渉",
+        "波の回折",
+        "まとめ",
+        "StandingWave",
+        "StandingWaveInterval",
+        "StandingWaveString",
+        "StandingWavePipe",
+        "Resonance",
+        "WaveInterference",
+        "WaveDiffraction"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "定常波の数式表現",
+          "summary": "振幅と振動数が同じで、互いに反対方向へ進む2つの波 - 右向きの波 - 左向きの波 が重なると、変位は と表されます。",
+          "aliases": [
+            "定常波の数式表現"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "両端が固定された弦の定常波",
+          "summary": "ギターやバイオリンの弦のように、両端が固定されている場合、端点では変位が常に になります。",
+          "aliases": [
+            "両端が固定された弦の定常波"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "定常波の振動数",
+          "summary": "波の速さ 、振動数 、波長 の関係 を用いると、 ですから、 となります。",
+          "aliases": [
+            "定常波の振動数"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "空気柱における定常波",
+          "summary": "定常波は弦だけでなく、管の内部の空気でも生じます。",
+          "aliases": [
+            "空気柱における定常波"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "共鳴（共振）",
+          "summary": "物体には、それぞれ振動しやすい固有の振動数があります。",
+          "aliases": [
+            "共鳴（共振）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "波の干渉",
+          "summary": "2つの波が同じ場所に重なるとき、変位が足し合わさります（重ね合わせの原理）。",
+          "aliases": [
+            "波の干渉"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "波の回折",
+          "summary": "波は障害物の端や、障害物にあいた隙間を通るとき、影の部分にも回り込んで伝わります。",
+          "aliases": [
+            "波の回折"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "まとめ",
+          "summary": "- 定常波は、互いに反対方向へ進む2つの進行波の重ね合わせによって生じます - 定常波では節と腹が空間内に固定されます - 弦や空気柱では特定の波長・振動数のみが成立します - 固有振動数と一致すると共鳴が起こり振幅が大きくなります 定常波と共鳴は、楽器の音の発生だけでなく、建築構造や電子回路など、多くの物理現象の理解に重要な概念です。",
+          "aliases": [
+            "まとめ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2428,7 +3491,80 @@
         "音の強さ",
         "sound intensity",
         "周波数変化",
-        "frequency shift"
+        "frequency shift",
+        "音の高さ・大きさ・音色",
+        "音の高さ（ピッチ）",
+        "音の高さ・大きさ・音色 音の高さ（ピッチ）",
+        "音の大きさ",
+        "音の高さ・大きさ・音色 音の大きさ",
+        "音色",
+        "音の高さ・大きさ・音色 音色",
+        "ドップラー効果の式",
+        "LongitudinalWave",
+        "SoundProperties",
+        "Beats",
+        "DopplerEffect"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "音の高さ・大きさ・音色",
+          "summary": "音の感じ方にはいくつかの要素があります。",
+          "aliases": [
+            "音の高さ・大きさ・音色"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "音の高さ（ピッチ）",
+          "summary": "波の 振動数 によって決まります。",
+          "aliases": [
+            "音の高さ（ピッチ）",
+            "音の高さ・大きさ・音色 音の高さ（ピッチ）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "音の大きさ",
+          "summary": "波の 振幅 によって決まります。",
+          "aliases": [
+            "音の大きさ",
+            "音の高さ・大きさ・音色 音の大きさ"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "音色",
+          "summary": "同じ高さ・大きさでも楽器によって音が違って聞こえるのは、波形の違い（倍音の構成）が異なるためです。",
+          "aliases": [
+            "音色",
+            "音の高さ・大きさ・音色 音色"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "うなり",
+          "summary": "2つの音を同時に鳴らしたとき、その振動数が少しだけ異なっていると、音が 強くなったり弱くなったり と周期的に変化して聞こえることがあります。",
+          "aliases": [
+            "うなり"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "ドップラー効果",
+          "summary": "音源や観測者が動いていると、聞こえる音の高さが変化します。",
+          "aliases": [
+            "ドップラー効果"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "ドップラー効果の式",
+          "summary": "音速を 、音源の振動数を とすると、観測者が音源に向かって動く場合、 となります。",
+          "aliases": [
+            "ドップラー効果の式"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2493,7 +3629,7 @@
         },
         {
           "id": "SoundProperties",
-          "title": "音の高さ・大きさ・音色",
+          "title": "音色",
           "available": true,
           "route": "/physics-animations"
         },
@@ -2599,7 +3735,78 @@
         "反射",
         "reflection",
         "全反射",
-        "total internal reflection"
+        "total internal reflection",
+        "光の反射",
+        "光の屈折",
+        "光の分散",
+        "虹が見えるのは",
+        "光の干渉",
+        "光の回折",
+        "LightReflection",
+        "LightRefraction",
+        "TotalInternalReflection",
+        "LightDispersion",
+        "RainbowRaindrop",
+        "YoungDoubleSlit",
+        "DiffractionGrating"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "光の反射",
+          "summary": "光が物体の表面に当たると、光の一部は跳ね返ります。",
+          "aliases": [
+            "光の反射"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "光の屈折",
+          "summary": "光が空気から水やガラスなど、異なる物質に進むとき、光の進む方向が変わります。",
+          "aliases": [
+            "光の屈折"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "全反射",
+          "summary": "光が 屈折率の大きい媒質 → 小さい媒質 へ進むとき、入射角を大きくしていくと、ある角度以上では光が外へ出なくなります。",
+          "aliases": [
+            "全反射"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "光の分散",
+          "summary": "白色光をプリズムに通すと、光は赤から紫までの色に分かれます。",
+          "aliases": [
+            "光の分散"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "虹が見えるのは",
+          "summary": "虹が見えるのは、雨粒の中で - 屈折 - 反射 - 分散 が組み合わさって起こるためです。",
+          "aliases": [
+            "虹が見えるのは"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "光の干渉",
+          "summary": "光も波なので、2つの光が重なると干渉が起こります。",
+          "aliases": [
+            "光の干渉"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "光の回折",
+          "summary": "光は非常に波長が短い（可視光で約 400〜700 nm）ため、 日常の障害物では回折がほぼ見えません。",
+          "aliases": [
+            "光の回折"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2709,7 +3916,67 @@
         "実像",
         "real image",
         "虚像",
-        "virtual image"
+        "virtual image",
+        "凸レンズと焦点",
+        "像ができるしくみ",
+        "倍率",
+        "物体を近づけると像はどう動くか",
+        "レンズから光の本質へ",
+        "ConvexLensFocus",
+        "LensRayRules",
+        "LensFormulaDistances",
+        "LensMagnification",
+        "LensImageFormation"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "凸レンズと焦点",
+          "summary": "凸レンズ は、中央が厚く、まわりが薄いレンズです。",
+          "aliases": [
+            "凸レンズと焦点"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "像ができるしくみ",
+          "summary": "物体から出た光は、いろいろな方向へ進みます。",
+          "aliases": [
+            "像ができるしくみ"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "レンズの式",
+          "summary": "凸レンズでは、物体の位置、像の位置、焦点距離の間に関係があります。",
+          "aliases": [
+            "レンズの式"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "倍率",
+          "summary": "レンズでできる像は、物体より大きくなったり小さくなったりします。",
+          "aliases": [
+            "倍率"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "物体を近づけると像はどう動くか",
+          "summary": "凸レンズでは、物体の位置によって像のでき方が変わります。",
+          "aliases": [
+            "物体を近づけると像はどう動くか"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "レンズから光の本質へ",
+          "summary": "ここまで見てきたように、レンズは光の屈折を利用して像を作ります。",
+          "aliases": [
+            "レンズから光の本質へ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2800,7 +4067,74 @@
         "温度変化",
         "temperature change",
         "熱平衡",
-        "thermal equilibrium"
+        "thermal equilibrium",
+        "温度とは何か",
+        "温度が変わらない場合",
+        "WarmColdHeatTransfer",
+        "ThermalEnergyTransferIntro",
+        "MolecularMotionTemperature",
+        "HeatFlowHighToLow",
+        "SpecificHeatComparison",
+        "HeatCapacityConcept",
+        "ThermalEquilibriumProcess"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "温度とは何か",
+          "summary": "温度は、物体の 熱的な状態 を表す量です。",
+          "aliases": [
+            "温度とは何か"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "熱量",
+          "summary": "温度差によって移動するエネルギーの量を 熱量 といいます。",
+          "aliases": [
+            "熱量"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "温度変化",
+          "summary": "物体が熱を受け取ったり放出したりすると、温度が変化します。",
+          "aliases": [
+            "温度変化"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "比熱",
+          "summary": "同じ質量の物体に同じ熱量を加えても、物質によって温度の変わりやすさは異なります。",
+          "aliases": [
+            "比熱"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "熱容量",
+          "summary": "比熱は「物質そのものの性質」ですが、実際の物体では 質量 も重要になります。",
+          "aliases": [
+            "熱容量"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "熱平衡",
+          "summary": "温度の異なる物体を接触させると、熱は高温の物体から低温の物体へ移動します。",
+          "aliases": [
+            "熱平衡"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "温度が変わらない場合",
+          "summary": "ここまででは、熱が加わると温度が変わると考えてきました。",
+          "aliases": [
+            "温度が変わらない場合"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -2940,7 +4274,117 @@
         "混合比熱",
         "specific heat of mixture",
         "相変化",
-        "phase transition"
+        "phase transition",
+        "身近な不思議：氷はなぜ0℃で溶けるのか",
+        "身近な不思議",
+        "温度とは何か",
+        "分子の結びつき",
+        "融解",
+        "蒸発",
+        "質量保存",
+        "温度の異なる物体を混ぜる",
+        "相図",
+        "この単元のポイント",
+        "PhaseChangeOverview",
+        "相変化と潜熱",
+        "LatentHeatTemperaturePlateau",
+        "HeatOfFusionProcess",
+        "HeatOfVaporizationProcess",
+        "MassConservationPhaseChange",
+        "HeatConservationBalance",
+        "MixedSpecificHeatProcess",
+        "PhaseDiagramIntro"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "身近な不思議：氷はなぜ0℃で溶けるのか",
+          "summary": "氷を加熱すると、温度はだんだん上がっていきます。",
+          "aliases": [
+            "身近な不思議：氷はなぜ0℃で溶けるのか",
+            "身近な不思議"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "温度とは何か",
+          "summary": "ここで思い出してほしいのが前の単元で学んだ 温度の意味 です。",
+          "aliases": [
+            "温度とは何か"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "分子の結びつき",
+          "summary": "固体では、分子は規則正しい位置に並び、その周りで振動しています。",
+          "aliases": [
+            "分子の結びつき"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "潜熱",
+          "summary": "温度を変えずに状態を変えるために必要な熱を 潜熱（latent heat） といいます。",
+          "aliases": [
+            "潜熱"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "融解",
+          "summary": "固体が液体に変わることを 融解（melting） といいます。",
+          "aliases": [
+            "融解"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "蒸発",
+          "summary": "液体が気体に変わることを 蒸発（vaporization） または 沸騰 といいます。",
+          "aliases": [
+            "蒸発"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "質量保存",
+          "summary": "状態変化が起こっても、物質そのものが消えるわけではありません。",
+          "aliases": [
+            "質量保存"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "熱量保存",
+          "summary": "断熱された系では、エネルギーは保存されます。",
+          "aliases": [
+            "熱量保存"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "温度の異なる物体を混ぜる",
+          "summary": "温度の異なる物体を混ぜると、熱は高温の物体から低温の物体へ移動し、最終的に 共通の温度（平衡温度） になります。",
+          "aliases": [
+            "温度の異なる物体を混ぜる"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "相図",
+          "summary": "物質の状態は - 温度 - 圧力 の組み合わせによって決まります。",
+          "aliases": [
+            "相図"
+          ]
+        },
+        {
+          "id": "heading-11",
+          "title": "この単元のポイント",
+          "summary": "相変化では、 - 温度が変わらないのに熱が出入りする - エネルギーは分子の結びつきに使われる という特徴があります。",
+          "aliases": [
+            "この単元のポイント"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3077,7 +4521,85 @@
         "気体分子の運動",
         "motion of gas molecules",
         "等分配則",
-        "equipartition principle"
+        "equipartition principle",
+        "分子は常に運動している",
+        "圧力は分子の衝突で生まれる",
+        "温度とは何を表しているのか",
+        "内部エネルギーとは何か",
+        "内部エネルギーと分子運動",
+        "仕事でも内部エネルギーは変わる",
+        "分子運動論の意味",
+        "RandomMolecularMotion",
+        "TemperatureDistribution",
+        "AbsoluteTemperature",
+        "SameTemperature",
+        "FirstLawBalance"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "分子は常に運動している",
+          "summary": "気体を構成する分子は、止まることなくランダムに運動しています。",
+          "aliases": [
+            "分子は常に運動している"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "圧力は分子の衝突で生まれる",
+          "summary": "分子が壁に衝突すると、壁に力を与えます。",
+          "aliases": [
+            "圧力は分子の衝突で生まれる"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "温度とは何を表しているのか",
+          "summary": "温度は、分子の 平均的な運動エネルギーの大きさ を表しています。",
+          "aliases": [
+            "温度とは何を表しているのか"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "絶対温度",
+          "summary": "分子の運動エネルギーは絶対温度に比例します。",
+          "aliases": [
+            "絶対温度"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "内部エネルギーとは何か",
+          "summary": "物体の内部に蓄えられているすべてのエネルギーの総和を 内部エネルギー（internal energy） といいます。",
+          "aliases": [
+            "内部エネルギーとは何か"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "内部エネルギーと分子運動",
+          "summary": "この式を分子の数で書くと となります。",
+          "aliases": [
+            "内部エネルギーと分子運動"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "仕事でも内部エネルギーは変わる",
+          "summary": "内部エネルギーは熱だけでなく 仕事 によっても変化します。",
+          "aliases": [
+            "仕事でも内部エネルギーは変わる"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "分子運動論の意味",
+          "summary": "分子運動論を使うと、 - 温度 - 圧力 - 内部エネルギー といった物理量が、とても小さい分子の運動によって説明できることがわかります。",
+          "aliases": [
+            "分子運動論の意味"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3198,7 +4720,86 @@
         "物質量",
         "amount of substance",
         "気体定数",
-        "gas constant"
+        "gas constant",
+        "ボイルの法則（Boyle's law）",
+        "シャルルの法則（Charles's law）",
+        "2つの法則をまとめる",
+        "気体の状態方程式",
+        "分子の数で書く",
+        "状態方程式の使い方",
+        "理想気体とは",
+        "状態方程式の意味",
+        "GasStateVariables",
+        "BoyleLaw",
+        "CharlesLaw",
+        "IdealGasLaw",
+        "IdealVsRealGas"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "ボイルの法則（Boyle's law）",
+          "summary": "17世紀、ロバート・ボイルはピストン付きの容器で気体を圧縮する実験を行いました。",
+          "aliases": [
+            "ボイルの法則（Boyle's law）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "シャルルの法則（Charles's law）",
+          "summary": "次に、圧力を一定に保った状態で温度を変える実験を行うと、次の関係が見つかります。",
+          "aliases": [
+            "シャルルの法則（Charles's law）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "2つの法則をまとめる",
+          "summary": "ボイルの法則とシャルルの法則をまとめると、 となります。",
+          "aliases": [
+            "2つの法則をまとめる"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "気体の状態方程式",
+          "summary": "以上をすべてまとめると、 という式が得られます。",
+          "aliases": [
+            "気体の状態方程式"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "分子の数で書く",
+          "summary": "物質量 は、分子の数を表す量です。",
+          "aliases": [
+            "分子の数で書く"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "状態方程式の使い方",
+          "summary": "同じ量の気体が状態1から状態2へ変化するとき、 が成り立ちます。",
+          "aliases": [
+            "状態方程式の使い方"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "理想気体とは",
+          "summary": "状態方程式 が成り立つ気体を 理想気体（ideal gas） と呼びます。",
+          "aliases": [
+            "理想気体とは"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "状態方程式の意味",
+          "summary": "気体の状態方程式は、単なる公式ではありません。",
+          "aliases": [
+            "状態方程式の意味"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3359,7 +4960,97 @@
         "気体の仕事",
         "work done by gas",
         "符号規約",
-        "sign convention"
+        "sign convention",
+        "仕事によるエネルギーの変化",
+        "熱と仕事の共通点",
+        "もう一つの書き方",
+        "熱力学第一法則 もう一つの書き方",
+        "気体が外部にする仕事",
+        "内部エネルギー",
+        "p–Vグラフと仕事",
+        "熱力学第一法則の意味",
+        "FirstLawBalance",
+        "EnergyConservation",
+        "SignConvention",
+        "WorkDefinitionThermo",
+        "WorkByGas",
+        "SameTemperature",
+        "PVGraphWork"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "仕事によるエネルギーの変化",
+          "summary": "例えばピストン付きの容器を考えます。",
+          "aliases": [
+            "仕事によるエネルギーの変化"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "熱と仕事の共通点",
+          "summary": "ここで重要なポイントがあります。",
+          "aliases": [
+            "熱と仕事の共通点"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "熱力学第一法則",
+          "summary": "熱力学第一法則は、エネルギー保存則を熱現象に適用したものです。",
+          "aliases": [
+            "熱力学第一法則"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "もう一つの書き方",
+          "summary": "気体が 外部にした仕事 を とすると と書くこともできます。",
+          "aliases": [
+            "もう一つの書き方",
+            "熱力学第一法則 もう一つの書き方"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "符号規約",
+          "summary": "熱力学では、符号の扱いがとても重要です。",
+          "aliases": [
+            "符号規約"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "気体が外部にする仕事",
+          "summary": "気体が膨張するとき、ピストンを押して外部に仕事をします。",
+          "aliases": [
+            "気体が外部にする仕事"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "内部エネルギー",
+          "summary": "内部エネルギーとは、分子の運動エネルギーの総和です。",
+          "aliases": [
+            "内部エネルギー"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "p–Vグラフと仕事",
+          "summary": "気体の状態変化は p–Vグラフ で表すことができます。",
+          "aliases": [
+            "p–Vグラフと仕事"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "熱力学第一法則の意味",
+          "summary": "熱力学第一法則は、熱現象におけるエネルギー保存則です。",
+          "aliases": [
+            "熱力学第一法則の意味"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3406,7 +5097,7 @@
         },
         {
           "id": "EnergyConservation",
-          "title": "熱力学第一法則",
+          "title": "もう一つの書き方",
           "available": true,
           "route": "/physics-animations"
         },
@@ -3512,7 +5203,108 @@
         "PVグラフ",
         "PV graph",
         "気体の法則",
-        "gas laws"
+        "gas laws",
+        "分子の視点で見る状態変化",
+        "気体に熱を与えると何が起きる？",
+        "なぜ圧力×体積で仕事になるのか",
+        "体積が変化すると仕事が生まれる",
+        "等圧変化（圧力一定）",
+        "等積変化（体積一定）",
+        "内部エネルギーの変化",
+        "等積変化（体積一定） 内部エネルギーの変化",
+        "p–V線図の役割",
+        "p–V線図の面積が仕事になる",
+        "p–V線図の役割 p–V線図の面積が仕事になる",
+        "状態変化を理解するコツ",
+        "MolecularMotionAndState",
+        "IsobaricExpansion",
+        "IsochoricHeating",
+        "InternalEnergyChange",
+        "PVGraphWork"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "分子の視点で見る状態変化",
+          "summary": "気体は、無数の分子が高速で運動している集まりです。",
+          "aliases": [
+            "分子の視点で見る状態変化"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "気体に熱を与えると何が起きる？",
+          "summary": "気体に熱 を与えると、そのエネルギーは大きく2つの使われ方をします。",
+          "aliases": [
+            "気体に熱を与えると何が起きる？"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "なぜ圧力×体積で仕事になるのか",
+          "summary": "断面積 のピストンを考えます。",
+          "aliases": [
+            "なぜ圧力×体積で仕事になるのか"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "体積が変化すると仕事が生まれる",
+          "summary": "気体が膨張してピストンを押すと、外部に仕事をします。",
+          "aliases": [
+            "体積が変化すると仕事が生まれる"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "等圧変化（圧力一定）",
+          "summary": "圧力を一定に保ったまま温度を上げると、気体は膨張します。",
+          "aliases": [
+            "等圧変化（圧力一定）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "等積変化（体積一定）",
+          "summary": "体積を固定した容器で気体を加熱すると、分子の運動は激しくなります。",
+          "aliases": [
+            "等積変化（体積一定）"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "内部エネルギーの変化",
+          "summary": "気体の内部エネルギーとは、分子の運動エネルギーの総和です。",
+          "aliases": [
+            "内部エネルギーの変化",
+            "等積変化（体積一定） 内部エネルギーの変化"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "p–V線図の役割",
+          "summary": "気体の状態変化は、横軸に体積 、縦軸に圧力 をとった p–V線図 で表すことができます。",
+          "aliases": [
+            "p–V線図の役割"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "p–V線図の面積が仕事になる",
+          "summary": "等圧変化では気体のした仕事は でした。",
+          "aliases": [
+            "p–V線図の面積が仕事になる",
+            "p–V線図の役割 p–V線図の面積が仕事になる"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "状態変化を理解するコツ",
+          "summary": "気体の状態変化を考えるときは、次の順番で整理するとわかりやすくなります。",
+          "aliases": [
+            "状態変化を理解するコツ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3577,13 +5369,13 @@
         },
         {
           "id": "InternalEnergyChange",
-          "title": "等積変化（体積一定）",
+          "title": "内部エネルギーの変化",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "PVGraphWork",
-          "title": "p–V線図の役割",
+          "title": "p–V線図の面積が仕事になる",
           "available": true,
           "route": "/physics-animations"
         }
@@ -3613,7 +5405,74 @@
         "熱源",
         "heat source",
         "排熱",
-        "waste heat"
+        "waste heat",
+        "熱機関の基本構造",
+        "サイクルとは",
+        "熱機関の基本構造 サイクルとは",
+        "同じ道を戻ると仕事はゼロ",
+        "熱機関の基本構造 同じ道を戻ると仕事はゼロ",
+        "排熱が必要になる理由",
+        "熱機関の基本構造 排熱が必要になる理由",
+        "熱効率（thermal efficiency）",
+        "VariousHeatEngines",
+        "HeatEngineOverview",
+        "WasteHeatNecessity",
+        "ThermalEfficiencyRatio",
+        "CarnotCycleProcess",
+        "CarnotEfficiencyLimit"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "熱機関の基本構造",
+          "summary": "熱機関には必ず次の3つが存在します。",
+          "aliases": [
+            "熱機関の基本構造"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "サイクルとは",
+          "summary": "例えばピストンの中の気体が膨張すると、ピストンを押して 仕事 をします。",
+          "aliases": [
+            "サイクルとは",
+            "熱機関の基本構造 サイクルとは"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "同じ道を戻ると仕事はゼロ",
+          "summary": "ここで重要な点があります。",
+          "aliases": [
+            "同じ道を戻ると仕事はゼロ",
+            "熱機関の基本構造 同じ道を戻ると仕事はゼロ"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "排熱が必要になる理由",
+          "summary": "排熱の本質は、 膨張後の気体を冷やして圧力を下げ、圧縮して元の体積へ戻すときに必要な仕事を小さくすること です。",
+          "aliases": [
+            "排熱が必要になる理由",
+            "熱機関の基本構造 排熱が必要になる理由"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "熱効率（thermal efficiency）",
+          "summary": "受け取った熱のうち、どれだけが仕事になったかを表す量を 熱効率 といいます。",
+          "aliases": [
+            "熱効率（thermal efficiency）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "カルノーサイクル",
+          "summary": "理論的に考えられる 最も効率のよい理想的な熱機関 を カルノーサイクル（Carnot cycle） といいます。",
+          "aliases": [
+            "カルノーサイクル"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3666,7 +5525,7 @@
         },
         {
           "id": "WasteHeatNecessity",
-          "title": "熱機関の基本構造",
+          "title": "排熱が必要になる理由",
           "available": true,
           "route": "/physics-animations"
         },
@@ -3716,7 +5575,65 @@
         "点電荷",
         "point charge",
         "電気力線",
-        "electric field lines"
+        "electric field lines",
+        "2種類の電気",
+        "MagneticMotion",
+        "ChargeAttractionRepulsion",
+        "CoulombLaw",
+        "ElectricFieldConcept",
+        "ElectricFieldStrength",
+        "ElectricFieldLines",
+        "ElectricFieldLinesTwoSources"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "2種類の電気",
+          "summary": "その後、18世紀になるとフランスの科学者 デュ・フェ が重要な発見をしました。",
+          "aliases": [
+            "2種類の電気"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "電荷",
+          "summary": "電荷は、物体が持つ 電気的な性質の大きさ を表します。",
+          "aliases": [
+            "電荷"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "クーロンの法則",
+          "summary": "18世紀の終わり、フランスの物理学者 クーロン は精密な実験装置（ねじりばかり）を使って電荷の間に働く力を測定しました。",
+          "aliases": [
+            "クーロンの法則"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "電場",
+          "summary": "しかし、この法則には一つの疑問が残ります。",
+          "aliases": [
+            "電場"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "電場の強さ",
+          "summary": "電場の強さは、正の電荷 Cを置いたときに受ける力で定義されます。",
+          "aliases": [
+            "電場の強さ"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "電気力線",
+          "summary": "ファラデーはさらに、電場を目に見える形で表す方法を考えました。",
+          "aliases": [
+            "電気力線"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -3893,7 +5810,95 @@
         "電圧",
         "voltage",
         "仕事（電気）",
-        "work (electric)"
+        "work (electric)",
+        "電場の中で電荷が動くとき",
+        "電気の位置エネルギー",
+        "電位とは何か",
+        "電位と電場の関係",
+        "電位差とは何か",
+        "電場と電位の2つの見方",
+        "力学と電磁気の対応",
+        "電場と電位の2つの見方 力学と電磁気の対応",
+        "ElectricWork",
+        "ElectricFieldBalance",
+        "ElectricPotentialHeight",
+        "PotentialAndField",
+        "PotentialDifference"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "電場の中で電荷が動くとき",
+          "summary": "電場の中に電荷を置くと、電気力がはたらきます。",
+          "aliases": [
+            "電場の中で電荷が動くとき"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "電気の位置エネルギー",
+          "summary": "重力の世界では、高い場所にある物体は 位置エネルギー を持っています。",
+          "aliases": [
+            "電気の位置エネルギー"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "電位とは何か",
+          "summary": "電位とは 単位電荷あたりの電気的な位置エネルギー を表す量です。",
+          "aliases": [
+            "電位とは何か"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "電位と電場の関係",
+          "summary": "電場は、 電位が高い場所から低い場所へ 向かっています。",
+          "aliases": [
+            "電位と電場の関係"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "電位差とは何か",
+          "summary": "2つの点の電位の差を 電位差 といいます。",
+          "aliases": [
+            "電位差とは何か"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "電圧",
+          "summary": "回路の世界では電位差のことを 電圧 と呼びます。",
+          "aliases": [
+            "電圧"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "等電位面",
+          "summary": "電位が同じ点をつないでできる面を 等電位面 といいます。",
+          "aliases": [
+            "等電位面"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "電場と電位の2つの見方",
+          "summary": "電気の現象は、2つの視点で見ることができます。",
+          "aliases": [
+            "電場と電位の2つの見方"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "力学と電磁気の対応",
+          "summary": "電磁気で登場する概念の多くは、力学で学んだ考え方と対応しています。",
+          "aliases": [
+            "力学と電磁気の対応",
+            "電場と電位の2つの見方 力学と電磁気の対応"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4043,7 +6048,86 @@
         "誘電体",
         "dielectric",
         "静電エネルギー",
-        "electrostatic energy"
+        "electrostatic energy",
+        "電池につなぐと何が起こるか",
+        "なぜ電流が止まるのか",
+        "極板の間に電場ができる",
+        "静電容量とは何か",
+        "極板の形と静電容量",
+        "誘電体のはたらき",
+        "コンデンサーに蓄えられるエネルギー",
+        "コンデンサーの本質",
+        "CapacitorStructure",
+        "ChargeSeparation",
+        "PlateAreaDistance",
+        "DielectricEffect",
+        "EnergyStoredInField"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "電池につなぐと何が起こるか",
+          "summary": "まず、2枚の金属板を向かい合わせた装置を考えます。",
+          "aliases": [
+            "電池につなぐと何が起こるか"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "なぜ電流が止まるのか",
+          "summary": "ここで重要なことがあります。",
+          "aliases": [
+            "なぜ電流が止まるのか"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "極板の間に電場ができる",
+          "summary": "極板に正負の電荷が分かれると、その間には 電場 が生まれます。",
+          "aliases": [
+            "極板の間に電場ができる"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "静電容量とは何か",
+          "summary": "コンデンサーによって、同じ電圧でも多くの電荷を蓄えられるものと少ししか蓄えられないものがあります。",
+          "aliases": [
+            "静電容量とは何か"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "極板の形と静電容量",
+          "summary": "平行な2枚の極板でできたコンデンサーでは、 - 極板の面積が大きいほど - 極板の距離が小さいほど 静電容量は大きくなります。",
+          "aliases": [
+            "極板の形と静電容量"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "誘電体のはたらき",
+          "summary": "極板の間に、空気ではなく - ガラス - プラスチック - セラミック などの物質を入れることがあります。",
+          "aliases": [
+            "誘電体のはたらき"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "コンデンサーに蓄えられるエネルギー",
+          "summary": "極板の間にできた電場にはエネルギーが蓄えられています。",
+          "aliases": [
+            "コンデンサーに蓄えられるエネルギー"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "コンデンサーの本質",
+          "summary": "コンデンサーを理解するポイントは次の流れです。",
+          "aliases": [
+            "コンデンサーの本質"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4140,7 +6224,128 @@
         "キルヒホッフの法則",
         "Kirchhoff's laws",
         "合成抵抗",
-        "equivalent resistance"
+        "equivalent resistance",
+        "なぜ電池が必要なのか",
+        "電流とは何か",
+        "なぜ回路を閉じる必要があるのか",
+        "スイッチは何をしているのか",
+        "抵抗とは何か",
+        "電気エネルギーと電力",
+        "電流の法則（第1法則）",
+        "キルヒホッフの法則 電流の法則（第1法則）",
+        "電圧の法則（第2法則）",
+        "キルヒホッフの法則 電圧の法則（第2法則）",
+        "回路の理解に向けて",
+        "キルヒホッフの法則 回路の理解に向けて",
+        "ElectricCurrentFlow",
+        "OpenClosedCircuit",
+        "ResistanceAnalogy",
+        "OhmsLawGraph",
+        "ElectricPower",
+        "SeriesParallelResistance",
+        "KirchhoffCurrentLaw",
+        "KirchhoffVoltageLaw"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "なぜ電池が必要なのか",
+          "summary": "まず懐中電灯を考えてみましょう。",
+          "aliases": [
+            "なぜ電池が必要なのか"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "電流とは何か",
+          "summary": "電荷が一方向に流れる現象を 電流 といいます。",
+          "aliases": [
+            "電流とは何か"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "なぜ回路を閉じる必要があるのか",
+          "summary": "電流が流れるためには、電荷が動き続けられる道が必要です。",
+          "aliases": [
+            "なぜ回路を閉じる必要があるのか"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "スイッチは何をしているのか",
+          "summary": "身近な例で考えてみましょう。",
+          "aliases": [
+            "スイッチは何をしているのか"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "抵抗とは何か",
+          "summary": "導線や電子部品の中では、電荷は自由に動けるわけではありません。",
+          "aliases": [
+            "抵抗とは何か"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "オームの法則",
+          "summary": "多くの物質では、電流・電圧・抵抗の間に次の関係が成り立ちます。",
+          "aliases": [
+            "オームの法則"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "電気エネルギーと電力",
+          "summary": "回路の中では、電気エネルギーが様々な形に変換されます。",
+          "aliases": [
+            "電気エネルギーと電力"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "合成抵抗",
+          "summary": "複数の抵抗がある回路では、それらをまとめて 合成抵抗 として考えることができます。",
+          "aliases": [
+            "合成抵抗"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "キルヒホッフの法則",
+          "summary": "回路が複雑になると、電流や電圧の関係を体系的に整理する必要があります。",
+          "aliases": [
+            "キルヒホッフの法則"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "電流の法則（第1法則）",
+          "summary": "回路の分岐点では 流れ込む電流の和 = 流れ出る電流の和 が成り立ちます。",
+          "aliases": [
+            "電流の法則（第1法則）",
+            "キルヒホッフの法則 電流の法則（第1法則）"
+          ]
+        },
+        {
+          "id": "heading-11",
+          "title": "電圧の法則（第2法則）",
+          "summary": "回路を一周すると 電位の上昇と下降の和は0 になります。",
+          "aliases": [
+            "電圧の法則（第2法則）",
+            "キルヒホッフの法則 電圧の法則（第2法則）"
+          ]
+        },
+        {
+          "id": "heading-12",
+          "title": "回路の理解に向けて",
+          "summary": "直流回路では、次の流れを意識すると理解しやすくなります。",
+          "aliases": [
+            "回路の理解に向けて",
+            "キルヒホッフの法則 回路の理解に向けて"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4223,13 +6428,13 @@
         },
         {
           "id": "KirchhoffCurrentLaw",
-          "title": "キルヒホッフの法則",
+          "title": "電流の法則（第1法則）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "KirchhoffVoltageLaw",
-          "title": "キルヒホッフの法則",
+          "title": "電圧の法則（第2法則）",
           "available": true,
           "route": "/physics-animations"
         }
@@ -4321,7 +6526,89 @@
         "ローレンツ力",
         "Lorentz force",
         "フレミング左手の法則",
-        "Fleming's left-hand rule"
+        "Fleming's left-hand rule",
+        "磁場 磁束密度",
+        "磁場が電荷に及ぼす力",
+        "電流が受けるローレンツ力",
+        "電流が受けるローレンツ力 フレミング左手の法則",
+        "ローレンツ力の本質",
+        "電流が受けるローレンツ力 ローレンツ力の本質",
+        "電流と磁場の深い関係",
+        "電流が受けるローレンツ力 電流と磁場の深い関係",
+        "MagneticFieldAroundMagnet",
+        "MagneticFieldAroundCurrent",
+        "ForceOnCurrent",
+        "FlemingsLeftHandRule"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "磁場",
+          "summary": "デンマークの物理学者 エルステッド は、ある授業中に偶然おもしろい現象に気づきました。",
+          "aliases": [
+            "磁場"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "磁束密度",
+          "summary": "磁場の強さと向きを表す量を 磁束密度 といいます。",
+          "aliases": [
+            "磁束密度",
+            "磁場 磁束密度"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "電流がつくる磁場",
+          "summary": "エルステッドの発見から分かったことは 電流が磁場を作る ということでした。",
+          "aliases": [
+            "電流がつくる磁場"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "磁場が電荷に及ぼす力",
+          "summary": "次に考えるのは逆の関係です。",
+          "aliases": [
+            "磁場が電荷に及ぼす力"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "電流が受けるローレンツ力",
+          "summary": "長さ の導線に電流 が流れ、磁束密度 の磁場の中に置かれているとき、導線には の大きさの力が働きます。",
+          "aliases": [
+            "電流が受けるローレンツ力"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "フレミング左手の法則",
+          "summary": "ローレンツ力の向きは、 フレミング左手の法則 で調べます。",
+          "aliases": [
+            "フレミング左手の法則",
+            "電流が受けるローレンツ力 フレミング左手の法則"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "ローレンツ力の本質",
+          "summary": "電流とは、実際には 電荷が動いている状態 です。",
+          "aliases": [
+            "ローレンツ力の本質",
+            "電流が受けるローレンツ力 ローレンツ力の本質"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "電流と磁場の深い関係",
+          "summary": "ここまでの内容を整理すると、次の関係が見えてきます。",
+          "aliases": [
+            "電流と磁場の深い関係",
+            "電流が受けるローレンツ力 電流と磁場の深い関係"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4380,7 +6667,7 @@
         },
         {
           "id": "FlemingsLeftHandRule",
-          "title": "電流が受けるローレンツ力",
+          "title": "フレミング左手の法則",
           "available": true,
           "route": "/physics-animations"
         }
@@ -4435,7 +6722,89 @@
         "交流",
         "alternating current",
         "実効値",
-        "effective value (RMS)"
+        "effective value (RMS)",
+        "磁束の変え方",
+        "レンツの法則 磁束の変え方",
+        "発電機と交流",
+        "発電機と交流 実効値",
+        "発電機と交流 電磁誘導と交流回路",
+        "発展：アンペール・マクスウェルの法則と電磁波",
+        "発展",
+        "ElectromagneticInduction",
+        "MagneticFluxChange",
+        "LenzLaw",
+        "ACGenerator",
+        "EMWavePropagation"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "電磁誘導",
+          "summary": "磁場があるだけでは電磁誘導は起こりません。",
+          "aliases": [
+            "電磁誘導"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "誘導起電力",
+          "summary": "磁束が時間とともに変化すると、回路に電圧が生じます。",
+          "aliases": [
+            "誘導起電力"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "レンツの法則",
+          "summary": "のマイナスは、誘導起電力の向きが 磁束の変化を打ち消す向き になることを表しています。",
+          "aliases": [
+            "レンツの法則"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "磁束の変え方",
+          "summary": "磁束 を見ると、磁束を変える方法は大きく3つあります。",
+          "aliases": [
+            "磁束の変え方",
+            "レンツの法則 磁束の変え方"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "発電機と交流",
+          "summary": "発電機では、コイルを磁場の中で回転させます。",
+          "aliases": [
+            "発電機と交流"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "実効値",
+          "summary": "交流では、電圧や電流の値が常に変化しています。",
+          "aliases": [
+            "実効値",
+            "発電機と交流 実効値"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "電磁誘導と交流回路",
+          "summary": "ここまでの流れを整理すると、電磁誘導は次のようにつながっています。",
+          "aliases": [
+            "電磁誘導と交流回路",
+            "発電機と交流 電磁誘導と交流回路"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "発展：アンペール・マクスウェルの法則と電磁波",
+          "summary": "ここからは発展的な内容です。",
+          "aliases": [
+            "発展：アンペール・マクスウェルの法則と電磁波",
+            "発展"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4538,7 +6907,107 @@
         "振動数（量子）",
         "frequency (quantum)",
         "エネルギー（量子）",
-        "energy (quantum)"
+        "energy (quantum)",
+        "陰極線から電子へ",
+        "光を金属に当てると",
+        "光電効果の実験",
+        "光の粒子性",
+        "量子仮説（quantum hypothesis）",
+        "振動数（量子）とエネルギー（量子）",
+        "プランク定数（Planck constant）",
+        "波長とエネルギーの関係",
+        "コンプトン散乱（Compton scattering）",
+        "量子仮説が意味すること",
+        "CathodeRayTube",
+        "ElectronVibration",
+        "PhotonElectricExperiment",
+        "PhotoelectricEffect",
+        "LightAsWaveAndParticle",
+        "EnergyComparisonQuantumHypothesis",
+        "LightFrequencyDifference",
+        "ComptonEffect"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "陰極線から電子へ",
+          "summary": "物質と光の関係を考える前に、まず「物質から飛び出すもの」の正体を見てみましょう。",
+          "aliases": [
+            "陰極線から電子へ"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "光を金属に当てると",
+          "summary": "陰極線の実験では、真空に近いガラス管に高い電圧をかけることで、陰極から電子の流れが生じました。",
+          "aliases": [
+            "光を金属に当てると"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "光電効果の実験",
+          "summary": "光と金属の関係は、一人の実験だけで明らかになったわけではありません。",
+          "aliases": [
+            "光電効果の実験"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "光の粒子性",
+          "summary": "1905年、アインシュタインはこの現象を説明するために、 光はエネルギーをもった粒として振る舞う という考えを提案しました。",
+          "aliases": [
+            "光の粒子性"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "量子仮説（quantum hypothesis）",
+          "summary": "この考え方を一般的にしたものを 量子仮説 といいます。",
+          "aliases": [
+            "量子仮説（quantum hypothesis）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "振動数（量子）とエネルギー（量子）",
+          "summary": "光子1個がもつエネルギーは、光の 振動数 によって決まります。",
+          "aliases": [
+            "振動数（量子）とエネルギー（量子）"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "プランク定数（Planck constant）",
+          "summary": "式 に現れる を プランク定数 といいます。",
+          "aliases": [
+            "プランク定数（Planck constant）"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "波長とエネルギーの関係",
+          "summary": "光の振動数 は、波長 と光速 を用いて と表されます。",
+          "aliases": [
+            "波長とエネルギーの関係"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "コンプトン散乱（Compton scattering）",
+          "summary": "光の粒子性を示すもう一つの重要な現象が コンプトン散乱 です。",
+          "aliases": [
+            "コンプトン散乱（Compton scattering）"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "量子仮説が意味すること",
+          "summary": "古典的な波の考えでは、光のエネルギーは 強さ（振幅） で決まると考えられていました。",
+          "aliases": [
+            "量子仮説が意味すること"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4656,7 +7125,67 @@
         "しきい振動数",
         "threshold frequency",
         "光の強さ",
-        "light intensity"
+        "light intensity",
+        "光電効果（photoelectric effect）",
+        "仕事関数（work function）",
+        "しきい振動数（threshold frequency）",
+        "最大運動エネルギー（maximum kinetic energy）",
+        "光の強さ（light intensity）と光電効果",
+        "光電効果が示すこと",
+        "PhotoelectricEffect",
+        "WorkFunction",
+        "ThresholdFrequency",
+        "LightIntensityEffect"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "光電効果（photoelectric effect）",
+          "summary": "光電効果 は、 金属に光を当てると、電子が金属の表面から飛び出す現象 のことでした。",
+          "aliases": [
+            "光電効果（photoelectric effect）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "仕事関数（work function）",
+          "summary": "電子が金属の外へ飛び出すためには、最低限必要なエネルギーがあります。",
+          "aliases": [
+            "仕事関数（work function）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "しきい振動数（threshold frequency）",
+          "summary": "光子1個のエネルギーは で表されます。",
+          "aliases": [
+            "しきい振動数（threshold frequency）"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "最大運動エネルギー（maximum kinetic energy）",
+          "summary": "光子のエネルギーが仕事関数より大きいとき、余ったエネルギーは飛び出した電子の 運動エネルギー になります。",
+          "aliases": [
+            "最大運動エネルギー（maximum kinetic energy）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "光の強さ（light intensity）と光電効果",
+          "summary": "光の 強さ は、単位時間あたりに届く 光子の数 に対応します。",
+          "aliases": [
+            "光の強さ（light intensity）と光電効果"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "光電効果が示すこと",
+          "summary": "光電効果から、次のことがわかります。",
+          "aliases": [
+            "光電効果が示すこと"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4747,7 +7276,67 @@
         "遷移",
         "transition",
         "励起",
-        "excitation"
+        "excitation",
+        "原子（atom）の構造",
+        "エネルギー準位（energy level）",
+        "励起（excitation）",
+        "遷移（transition）",
+        "エネルギー準位と光の振動数・波長",
+        "まとめ",
+        "AtomicStructure",
+        "EnergyComparisonQuantumHypothesis",
+        "Absorption",
+        "Emission"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "原子（atom）の構造",
+          "summary": "原子は、 - 中心にある 原子核 - そのまわりを運動する 電子 からできています。",
+          "aliases": [
+            "原子（atom）の構造"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "エネルギー準位（energy level）",
+          "summary": "電子は、原子核のまわりを どんなエネルギーでも自由に運動できる わけではありません。",
+          "aliases": [
+            "エネルギー準位（energy level）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "励起（excitation）",
+          "summary": "電子が、より高いエネルギー準位へ移ることを 励起 といいます。",
+          "aliases": [
+            "励起（excitation）"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "遷移（transition）",
+          "summary": "電子がエネルギー準位の間を移動することを 遷移 といいます。",
+          "aliases": [
+            "遷移（transition）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "エネルギー準位と光の振動数・波長",
+          "summary": "エネルギー準位の差を とすると、吸収・放出される光子のエネルギーは で表されます。",
+          "aliases": [
+            "エネルギー準位と光の振動数・波長"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "まとめ",
+          "summary": "この単元で重要なのは、次の考え方です。",
+          "aliases": [
+            "まとめ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4844,7 +7433,115 @@
         "放出",
         "emission",
         "吸収",
-        "absorption"
+        "absorption",
+        "スペクトル（spectrum）",
+        "線スペクトル（line spectrum）",
+        "放出スペクトルと吸収スペクトル",
+        "エネルギー準位との関係",
+        "ボーア模型（Bohr model）",
+        "スペクトルが示すこと",
+        "スペクトルで宇宙を調べる（astrophysics）",
+        "発展：ボーア模型と水素原子のエネルギー",
+        "発展",
+        "軌道半径",
+        "スペクトルとの関係（リュードベリ式）",
+        "発展内容の位置づけ",
+        "Spectrum",
+        "LineSpectrum",
+        "EmissionAbsorptionSpectrum",
+        "BohrModel",
+        "AstrophysicsSpectrum"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "スペクトル（spectrum）",
+          "summary": "光をプリズムや回折格子で分けると、振動数（波長）ごとの成分に分かれます。",
+          "aliases": [
+            "スペクトル（spectrum）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "線スペクトル（line spectrum）",
+          "summary": "一方、励起された原子が光を 放出 するときは、 特定の波長だけが明るい線として現れる 輝線スペクトル（線スペクトル） になります。",
+          "aliases": [
+            "線スペクトル（line spectrum）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "放出スペクトルと吸収スペクトル",
+          "summary": "電子が高いエネルギー準位から低い準位へ遷移するとき、エネルギー差に対応する光子が 放出 されます。",
+          "aliases": [
+            "放出スペクトルと吸収スペクトル"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "エネルギー準位との関係",
+          "summary": "これらの現象は、6.3で学んだ関係 によって説明されます。",
+          "aliases": [
+            "エネルギー準位との関係"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "ボーア模型（Bohr model）",
+          "summary": "このような線スペクトルを説明するために提案されたのが ボーア模型 です。",
+          "aliases": [
+            "ボーア模型（Bohr model）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "スペクトルが示すこと",
+          "summary": "原子の線スペクトルは、 - 電子がエネルギー準位をもつこと - エネルギーが量子的にやり取りされること を直接示す証拠です。",
+          "aliases": [
+            "スペクトルが示すこと"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "スペクトルで宇宙を調べる（astrophysics）",
+          "summary": "私たちは、遠くの星や銀河に直接行くことはできません。",
+          "aliases": [
+            "スペクトルで宇宙を調べる（astrophysics）"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "発展：ボーア模型と水素原子のエネルギー",
+          "summary": "ここからは発展的な内容です。",
+          "aliases": [
+            "発展：ボーア模型と水素原子のエネルギー",
+            "発展"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "軌道半径",
+          "summary": "電子の軌道半径も、次のように決まっています。",
+          "aliases": [
+            "軌道半径"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "スペクトルとの関係（リュードベリ式）",
+          "summary": "電子が から （ ）へ遷移するときに放出される光の波長は、 で表されます。",
+          "aliases": [
+            "スペクトルとの関係（リュードベリ式）"
+          ]
+        },
+        {
+          "id": "heading-11",
+          "title": "発展内容の位置づけ",
+          "summary": "これらの式は、原子の構造をより詳しく説明するためのモデルですが、高校物理では - エネルギー準位はとびとび - 遷移によって光が出る という考え方を理解していれば十分です。",
+          "aliases": [
+            "発展内容の位置づけ"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -4943,7 +7640,49 @@
         "波長（量子）",
         "wavelength (quantum)",
         "運動量（量子）",
-        "momentum (quantum)"
+        "momentum (quantum)",
+        "物質波（matter wave）",
+        "ド・ブロイ波（de Broglie wave）",
+        "なぜ日常では物質波を感じないのか",
+        "ド・ブロイ波（de Broglie wave） なぜ日常では物質波を感じないのか",
+        "物質波が示す量子の世界",
+        "MatterWave",
+        "QuantumEntrance"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "物質波（matter wave）",
+          "summary": "物質波 とは、電子や原子などの物質がもつ、波としての性質のことです。",
+          "aliases": [
+            "物質波（matter wave）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "ド・ブロイ波（de Broglie wave）",
+          "summary": "フランスの物理学者ド・ブロイは、運動量をもつ粒子には、対応する波があると考えました。",
+          "aliases": [
+            "ド・ブロイ波（de Broglie wave）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "なぜ日常では物質波を感じないのか",
+          "summary": "日常的な物体は質量が大きく、速度もそれほど小さくないため、運動量 が非常に大きくなります。",
+          "aliases": [
+            "なぜ日常では物質波を感じないのか",
+            "ド・ブロイ波（de Broglie wave） なぜ日常では物質波を感じないのか"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "物質波が示す量子の世界",
+          "summary": "物質波の考え方により、 - 光は粒であり、波でもある - 粒子も波として振る舞う という、 波と粒の区別があいまいな世界 が 量子の世界であることがわかります。",
+          "aliases": [
+            "物質波が示す量子の世界"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -5014,7 +7753,105 @@
         "γ線",
         "gamma rays",
         "半減期",
-        "half-life"
+        "half-life",
+        "原子核（atomic nucleus）",
+        "α線（alpha rays）",
+        "放射線 α線（alpha rays）",
+        "β線（beta rays）",
+        "放射線 β線（beta rays）",
+        "γ線（gamma rays）",
+        "放射線 γ線（gamma rays）",
+        "放射線の透過力の比較",
+        "放射線 放射線の透過力の比較",
+        "半減期（half-life）",
+        "半分になるということ",
+        "半減期（half-life） 半分になるということ",
+        "原子核と放射線の利用",
+        "AtomicStructure",
+        "AlphaRayPenetration",
+        "BetaRayPenetration",
+        "GammaRayPenetration",
+        "RadiationComparison",
+        "HalfLifeDecay"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "原子核（atomic nucleus）",
+          "summary": "原子核は、 - 正の電荷をもつ 陽子 - 電荷をもたない 中性子 からできています。",
+          "aliases": [
+            "原子核（atomic nucleus）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "放射線",
+          "summary": "すべての原子核が安定とは限りません。",
+          "aliases": [
+            "放射線"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "α線（alpha rays）",
+          "summary": "α線は、 ヘリウム原子核（陽子2個＋中性子2個） が飛び出したものです。",
+          "aliases": [
+            "α線（alpha rays）",
+            "放射線 α線（alpha rays）"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "β線（beta rays）",
+          "summary": "β線は、 電子（または陽電子） が高速で飛び出したものです。",
+          "aliases": [
+            "β線（beta rays）",
+            "放射線 β線（beta rays）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "γ線（gamma rays）",
+          "summary": "γ線は、 高エネルギーの電磁波 です。",
+          "aliases": [
+            "γ線（gamma rays）",
+            "放射線 γ線（gamma rays）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "放射線の透過力の比較",
+          "summary": "一般に、透過力は α線 ＜ β線 ＜ γ線 の順で大きくなります。",
+          "aliases": [
+            "放射線の透過力の比較",
+            "放射線 放射線の透過力の比較"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "半減期（half-life）",
+          "summary": "放射性物質は、時間とともに減少していきます。",
+          "aliases": [
+            "半減期（half-life）"
+          ]
+        },
+        {
+          "id": "heading-8",
+          "title": "半分になるということ",
+          "summary": "ある時刻に原子の数が 個あったとします。",
+          "aliases": [
+            "半分になるということ",
+            "半減期（half-life） 半分になるということ"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "原子核と放射線の利用",
+          "summary": "放射線は、 - 医療（検査・治療） - 工業（検査・測定） など、正しく管理されれば私たちの生活に役立っています。",
+          "aliases": [
+            "原子核と放射線の利用"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -5061,31 +7898,31 @@
         },
         {
           "id": "AlphaRayPenetration",
-          "title": "放射線",
+          "title": "α線（alpha rays）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "BetaRayPenetration",
-          "title": "放射線",
+          "title": "β線（beta rays）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "GammaRayPenetration",
-          "title": "放射線",
+          "title": "γ線（gamma rays）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "RadiationComparison",
-          "title": "放射線",
+          "title": "放射線の透過力の比較",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "HalfLifeDecay",
-          "title": "半減期（half-life）",
+          "title": "半分になるということ",
           "available": true,
           "route": "/physics-animations"
         }
@@ -5135,7 +7972,89 @@
         "質量欠損",
         "mass defect",
         "結合エネルギー",
-        "binding energy"
+        "binding energy",
+        "核反応（nuclear reaction",
+        "核分裂（nuclear fission）",
+        "核反応（nuclear reaction 核分裂（nuclear fission）",
+        "核融合（nuclear fusion）",
+        "核反応（nuclear reaction 核融合（nuclear fusion）",
+        "質量欠損（mass defect）",
+        "核反応（nuclear reaction 質量欠損（mass defect）",
+        "結合エネルギー（binding energy）",
+        "核反応（nuclear reaction 結合エネルギー（binding energy）",
+        "エネルギーと質量の関係",
+        "核反応（nuclear reaction エネルギーと質量の関係",
+        "核反応がもたらすもの",
+        "核反応（nuclear reaction 核反応がもたらすもの",
+        "ChemicalVsNuclearReaction",
+        "NuclearFission",
+        "NuclearFusion",
+        "MassDefect",
+        "BindingEnergyConcept"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "核反応（nuclear reaction",
+          "summary": "核反応とは、 原子核そのものが別の原子核に変化する反応 です。",
+          "aliases": [
+            "核反応（nuclear reaction"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "核分裂（nuclear fission）",
+          "summary": "核分裂は、 重い原子核が2つ以上に分かれる反応 です。",
+          "aliases": [
+            "核分裂（nuclear fission）",
+            "核反応（nuclear reaction 核分裂（nuclear fission）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "核融合（nuclear fusion）",
+          "summary": "核融合は、 軽い原子核どうしが結びつく反応 です。",
+          "aliases": [
+            "核融合（nuclear fusion）",
+            "核反応（nuclear reaction 核融合（nuclear fusion）"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "質量欠損（mass defect）",
+          "summary": "核反応では、反応の前後で 質量がわずかに減る ことがあります。",
+          "aliases": [
+            "質量欠損（mass defect）",
+            "核反応（nuclear reaction 質量欠損（mass defect）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "結合エネルギー（binding energy）",
+          "summary": "原子核を陽子と中性子に完全に分けるために 必要なエネルギーを 結合エネルギー といいます。",
+          "aliases": [
+            "結合エネルギー（binding energy）",
+            "核反応（nuclear reaction 結合エネルギー（binding energy）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "エネルギーと質量の関係",
+          "summary": "質量とエネルギーの関係は、次の式で表されます。",
+          "aliases": [
+            "エネルギーと質量の関係",
+            "核反応（nuclear reaction エネルギーと質量の関係"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "核反応がもたらすもの",
+          "summary": "核反応は、 - 発電 - 医療 - 宇宙のエネルギー源 など、さまざまな場面に関わっています。",
+          "aliases": [
+            "核反応がもたらすもの",
+            "核反応（nuclear reaction 核反応がもたらすもの"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -5182,25 +8101,25 @@
         },
         {
           "id": "NuclearFission",
-          "title": "核反応（nuclear reaction",
+          "title": "核分裂（nuclear fission）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "NuclearFusion",
-          "title": "核反応（nuclear reaction",
+          "title": "核融合（nuclear fusion）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "MassDefect",
-          "title": "核反応（nuclear reaction",
+          "title": "質量欠損（mass defect）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "BindingEnergyConcept",
-          "title": "核反応（nuclear reaction",
+          "title": "結合エネルギー（binding energy）",
           "available": true,
           "route": "/physics-animations"
         }
@@ -5242,7 +8161,87 @@
         "長さ収縮",
         "length contraction",
         "質量エネルギー等価",
-        "mass–energy equivalence"
+        "mass–energy equivalence",
+        "相対性理論（theory of relativity）",
+        "特殊相対性理論（special relativity）",
+        "相対性理論（theory of relativity） 特殊相対性理論（special relativity）",
+        "光速度不変の原理（constancy of the speed of light）",
+        "相対性理論（theory of relativity） 光速度不変の原理（constancy of the speed of light）",
+        "時間の遅れ（time dilation）",
+        "相対性理論（theory of relativity） 時間の遅れ（time dilation）",
+        "長さ収縮（length contraction）",
+        "相対性理論（theory of relativity） 長さ収縮（length contraction）",
+        "質量エネルギー等価（mass–energy equivalence）",
+        "相対性理論（theory of relativity） 質量エネルギー等価（mass–energy equivalence）",
+        "相対性理論が示す世界観",
+        "相対性理論（theory of relativity） 相対性理論が示す世界観",
+        "LightSpeedInvariance",
+        "TimeDilation",
+        "LengthContraction"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "相対性理論（theory of relativity）",
+          "summary": "相対性理論は、 運動している観測者によって、時間や空間の測られ方が変わる ことを扱う理論です。",
+          "aliases": [
+            "相対性理論（theory of relativity）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "特殊相対性理論（special relativity）",
+          "summary": "特殊相対性理論は、次の2つの原理に基づいています。",
+          "aliases": [
+            "特殊相対性理論（special relativity）",
+            "相対性理論（theory of relativity） 特殊相対性理論（special relativity）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "光速度不変の原理（constancy of the speed of light）",
+          "summary": "光は、光源が動いていても、観測者が動いていても、 常に同じ速さ で進みます。",
+          "aliases": [
+            "光速度不変の原理（constancy of the speed of light）",
+            "相対性理論（theory of relativity） 光速度不変の原理（constancy of the speed of light）"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "時間の遅れ（time dilation）",
+          "summary": "高速で運動している物体では、 時間の進み方が遅く なります。",
+          "aliases": [
+            "時間の遅れ（time dilation）",
+            "相対性理論（theory of relativity） 時間の遅れ（time dilation）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "長さ収縮（length contraction）",
+          "summary": "運動方向の長さは、 速く動くほど短く 測られます。",
+          "aliases": [
+            "長さ収縮（length contraction）",
+            "相対性理論（theory of relativity） 長さ収縮（length contraction）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "質量エネルギー等価（mass–energy equivalence）",
+          "summary": "特殊相対性理論の結果として、 質量とエネルギーは同じもの であることが分かります。",
+          "aliases": [
+            "質量エネルギー等価（mass–energy equivalence）",
+            "相対性理論（theory of relativity） 質量エネルギー等価（mass–energy equivalence）"
+          ]
+        },
+        {
+          "id": "heading-7",
+          "title": "相対性理論が示す世界観",
+          "summary": "特殊相対性理論によって、 - 時間は絶対ではない - 長さも観測者によって変わる ことが分かりました。",
+          "aliases": [
+            "相対性理論が示す世界観",
+            "相対性理論（theory of relativity） 相対性理論が示す世界観"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
@@ -5289,19 +8288,19 @@
       "diagrams": [
         {
           "id": "LightSpeedInvariance",
-          "title": "相対性理論（theory of relativity）",
+          "title": "光速度不変の原理（constancy of the speed of light）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "TimeDilation",
-          "title": "相対性理論（theory of relativity）",
+          "title": "時間の遅れ（time dilation）",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "LengthContraction",
-          "title": "相対性理論（theory of relativity）",
+          "title": "長さ収縮（length contraction）",
           "available": true,
           "route": "/physics-animations"
         }
@@ -5331,7 +8330,69 @@
         "量子情報",
         "quantum information",
         "医療物理",
-        "medical physics"
+        "medical physics",
+        "力学 → 材料・構造（materials & structures）",
+        "波動 → 音・楽器・通信（waves & acoustics）",
+        "熱力学 → エンジン・エネルギー（thermodynamics）",
+        "電磁気学 → モーター・発電（electromagnetism）",
+        "原子物理 × 電磁気 → 半導体（semiconductor）",
+        "原子物理 → 量子情報（quantum information）",
+        "MechanicsHookeAnalogy",
+        "StandingWaveInstrument",
+        "HeatEngineCycle",
+        "MotorGenerator",
+        "SemiconductorChargeFlow",
+        "ClassicalBitVsQubit"
+      ],
+      "subtopics": [
+        {
+          "id": "heading-1",
+          "title": "力学 → 材料・構造（materials & structures）",
+          "summary": "物体に力を加えると、どのように変形し、どこで壊れるか。",
+          "aliases": [
+            "力学 → 材料・構造（materials & structures）"
+          ]
+        },
+        {
+          "id": "heading-2",
+          "title": "波動 → 音・楽器・通信（waves & acoustics）",
+          "summary": "音や光の性質は、波として理解されます。",
+          "aliases": [
+            "波動 → 音・楽器・通信（waves & acoustics）"
+          ]
+        },
+        {
+          "id": "heading-3",
+          "title": "熱力学 → エンジン・エネルギー（thermodynamics）",
+          "summary": "熱と仕事の関係は、エネルギー変換の基本です。",
+          "aliases": [
+            "熱力学 → エンジン・エネルギー（thermodynamics）"
+          ]
+        },
+        {
+          "id": "heading-4",
+          "title": "電磁気学 → モーター・発電（electromagnetism）",
+          "summary": "電流と磁場の関係は、エネルギーの変換に利用されます。",
+          "aliases": [
+            "電磁気学 → モーター・発電（electromagnetism）"
+          ]
+        },
+        {
+          "id": "heading-5",
+          "title": "原子物理 × 電磁気 → 半導体（semiconductor）",
+          "summary": "原子の構造や電子のエネルギー準位の理解は、半導体技術につながります。",
+          "aliases": [
+            "原子物理 × 電磁気 → 半導体（semiconductor）"
+          ]
+        },
+        {
+          "id": "heading-6",
+          "title": "原子物理 → 量子情報（quantum information）",
+          "summary": "量子力学では、粒子は「0」か「1」ではなく、その 重ね合わせ の状態をとることができます。",
+          "aliases": [
+            "原子物理 → 量子情報（quantum information）"
+          ]
+        }
       ],
       "textbook": {
         "available": true,
