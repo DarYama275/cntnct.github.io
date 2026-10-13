@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhoneAppDeck Privacy Policy — Containnect</title>
+<link rel="canonical" href="https://containnect.com/en/privacy_phoneappdeck.html">
+<link rel="alternate" hreflang="en" href="https://containnect.com/en/privacy_phoneappdeck.html">
+<link rel="alternate" hreflang="ja" href="https://containnect.com/privacy_phoneappdeck.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0f;
+      --surface:   #111118;
+      --border:    #1e1e2e;
+      --accent:    #4af0c4;
+      --accent2:   #7b6fff;
+      --text:      #e8e8f0;
+      --muted:     #6b6b88;
+      --mono:      'DM Mono', monospace;
+      --sans:      'Noto Sans', sans-serif;
+      --title:     'Space Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,240,196,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,240,196,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: var(--title);
+      font-size: 1.05rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    main {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 8rem 2.5rem 6rem;
+    }
+
+    .page-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .page-title {
+      font-family: var(--title);
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s forwards;
+    }
+
+    .page-meta {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+      line-height: 1.8;
+    }
+
+    .content {
+      opacity: 0;
+      animation: fadeUp 0.8s 0.65s forwards;
+    }
+
+    .app-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--accent2);
+      background: rgba(123,111,255,0.08);
+      border: 1px solid rgba(123,111,255,0.2);
+      border-radius: 4px;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-section { margin-bottom: 2.8rem; }
+
+    .policy-section h2 {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .policy-section h2::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .policy-section p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 2;
+      margin-bottom: 0.8rem;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 2;
+      padding-left: 1.4em;
+      margin: 0.6rem 0 0.8rem;
+    }
+
+    .policy-section ul li { margin-bottom: 0.4rem; }
+
+    .policy-section ul small {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      opacity: 0.7;
+      display: block;
+      line-height: 1.6;
+    }
+
+    .policy-section a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(74,240,196,0.3);
+      transition: border-color 0.2s;
+    }
+    .policy-section a:hover { border-color: var(--accent); }
+
+    .revision-history {
+      margin-top: 3rem;
+      padding: 1.4rem 1.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .revision-history h3 {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .revision-history ul { list-style: none; padding: 0; }
+
+    .revision-history ul li {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.9;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .revision-history .rev-ver { color: var(--accent2); flex-shrink: 0; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-logo {
+      font-family: var(--title);
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
+
+    .footer-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      opacity: 0.5;
+      width: 100%;
+      text-align: right;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.2rem; }
+      .nav-links { gap: 1.2rem; }
+      main { padding: 7rem 1.2rem 4rem; }
+      footer { padding: 2rem 1.2rem; flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head><body>
+<nav><a href="./" class="nav-logo">cntnct</a><ul class="nav-links"><li><a href="./">Home</a></li><li><a href="./phoneappdeck.html">PhoneAppDeck</a></li><li><a href="./#contact">Contact</a></li></ul></nav>
+<main><p class="page-eyebrow">// legal</p><h1 class="page-title">Privacy Policy</h1><p class="page-meta">App: PhoneAppDeck<br>Provider: Containnect<br>Based on Japanese policy v1.2 (September 26, 2026); English edition October 13, 2026</p><div class="content"><p style="margin-bottom:1.5rem"><a href="../privacy_phoneappdeck.html" style="color:var(--accent)">日本語版 →</a></p><div class="app-label">PhoneAppDeck</div><section class="policy-section"><h2>1. Overview</h2><p>This policy describes data handling in PhoneAppDeck, a development support app provided by Containnect. The App connects to GitHub and may open external AI development services. It does not require a separate PhoneAppDeck user account. Data processed by independent services is also subject to their policies.</p></section>
+<section class="policy-section"><h2>2. GitHub authorization</h2><p>When you connect GitHub, the App processes the authorization flow and uses your GitHub credentials to access permitted repositories, pull requests, workflow information and related resources. A Containnect-operated Cloudflare Worker processes authorization codes, PKCE verifiers and token-refresh requests without intentionally storing those credentials permanently on our server.</p></section>
+<section class="policy-section"><h2>3. Repository and code data</h2><p>Based on your permissions and actions, the App may retrieve repository metadata, branches, pull requests, code diffs, build logs and related GitHub data for display and workflow operations. User repository content is not collected into a Containnect-hosted permanent code database as part of these functions. GitHub and any other selected providers process data under their own policies.</p></section>
+<section class="policy-section"><h2>4. Data stored on your device</h2><p>The App locally stores GitHub access and refresh tokens and temporary authentication information in platform secure storage (Android Keystore or iOS Keychain, as supported), selected repositories and branches, display preferences, advertising frequency or timing indicators in Capacitor Preferences, and local preview/workflow state. Data may be removed through disconnect or app settings, device app-data deletion or uninstall, subject to OS backup behavior.</p></section>
+<section class="policy-section"><h2>5. Advertising</h2><p>The App uses Google AdMob (Google Mobile Ads SDK) for ads. The SDK may collect or transmit data to Google and other partners independently of the App’s core GitHub functions. According to the App’s Google Play Data Safety disclosures, relevant categories include approximate location derived from IP address, app interactions, diagnostics, and device or advertising identifiers such as advertising ID or App Set ID.</p><p>These categories may be processed for advertising, measurement, fraud prevention, security or compliance. SDK transmissions are encrypted in transit. The App does not intentionally feed your name, email, telephone number, precise location, messages, photos, contacts or sensitive files into the advertising SDK. Advertising consent or privacy choices, where required, are separate from agreement to the Terms; actual prompts and SDK behavior depend on the deployed App version and jurisdiction.</p><p>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s Privacy Policy</a>. The Data Safety disclosure and this policy should be reviewed when the SDK or configuration changes.</p></section>
+<section class="policy-section"><h2>6. Build and store workflows</h2><p>With your authorization, the App can view or trigger GitHub Actions workflows and inspect their status, logs and artifacts. Workflow name, target branch, inputs and other requested actions are transmitted to GitHub. Store management links may open Google Play Console, App Store Connect, TestFlight or similar external services, which govern information submitted there.</p></section>
+<section class="policy-section"><h2>7. Analytics and user posts</h2><p>We do not use Firebase Analytics or an equivalent SDK to build an independent user behavior profile inside the App. Google Mobile Ads may perform analytics or fraud prevention related to ads as described above. PhoneAppDeck has no proprietary social network or public profile feed; when you choose to share to another service, that provider handles the shared content.</p></section>
+<section class="policy-section"><h2>8. Third-party services and disclosure</h2><p>Information processed for the App’s features is distinguished from data collected directly by external SDKs or service providers. We do not sell personal information that we obtain for unrelated third-party use. Required disclosures under law, necessary protection of people or property, and disclosures with user consent may apply. Connected providers’ own privacy policies govern their processing.</p></section>
+<section class="policy-section"><h2>9. Storage and deletion</h2><p>There is no separate PhoneAppDeck account to delete. You may remove locally saved App data through device settings or uninstalling, subject to backups. For data and accounts held by GitHub, AI providers, Google or Apple, use those services’ deletion procedures. If Containnect introduces server-side persistent user storage in the future, we will describe purposes, categories, retention, security and deletion methods before introduction.</p></section>
+<section class="policy-section"><h2>10. Contact</h2><p>Use our <a href="https://forms.gle/xLJMrN7GDd4kz5ki6" target="_blank" rel="noopener">support form</a> for privacy questions. The form is provided by Google; any information and optional email address submitted is used for support and product improvement in accordance with the form provider’s policy. A reply is not guaranteed.</p></section>
+<section class="policy-section"><h2>11. Scope and updates</h2><p>This policy applies only to PhoneAppDeck. External services remain subject to their own terms and policies. We may update this policy in response to feature, SDK, API or legal changes and will provide notice of material changes on this page or appropriately in the App.</p></section></div></main>
+<footer><span class="footer-logo">Containnect</span><ul class="footer-links"><li><a href="./phoneappdeck.html">App</a></li><li><a href="./privacy_phoneappdeck.html">Privacy Policy</a></li><li><a href="./terms_phoneappdeck.html">Terms</a></li><li><a href="./phoneappdeck-support.html">Support</a></li></ul><p class="footer-copy">© 2026 Containnect. All rights reserved.</p></footer>
+</body></html>
