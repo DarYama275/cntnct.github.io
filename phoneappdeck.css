@@ -59,3 +59,9 @@
     border-radius: 10px;
   }
 }
+
+/* Store download links in the hero match the Physics product-page hierarchy. */
+.pad-hero-badges { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2rem; }
+.pad-badge { border: 1px solid var(--border); border-radius: 999px; padding: .35rem .8rem; color: var(--muted); font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; }
+.pad-badge-free { border-color: rgba(74,240,196,.4); color: var(--accent); background: rgba(74,240,196,.06); }
+.pad-hero-cta { margin-top: 2.5rem; }
