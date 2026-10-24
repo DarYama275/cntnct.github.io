@@ -8,7 +8,7 @@
     "introQuizzes": 230,
     "diagrams": 220,
     "calculations": 40,
-    "explanations": 47,
+    "explanations": 48,
     "unmappedDiagrams": 7,
     "unmappedExplanations": 0
   },
@@ -2299,6 +2299,17 @@
       ],
       "explanations": [
         {
+          "id": "physics2025-q1-1",
+          "questionRef": "共通テスト 2025年 物理 第1問 問1",
+          "tags": [
+            "状態方程式",
+            "圧力",
+            "体積",
+            "温度"
+          ],
+          "route": "/explanations/physics2025-q1-1"
+        },
+        {
           "id": "physics2024-q2-1",
           "questionRef": "共通テスト 2024年 物理 第2問 問1",
           "tags": [
@@ -4222,6 +4233,17 @@
       ],
       "explanations": [
         {
+          "id": "physics2025-q1-1",
+          "questionRef": "共通テスト 2025年 物理 第1問 問1",
+          "tags": [
+            "状態方程式",
+            "圧力",
+            "体積",
+            "温度"
+          ],
+          "route": "/explanations/physics2025-q1-1"
+        },
+        {
           "id": "phy2025-q3-1",
           "questionRef": "共通テスト 2025年 物理基礎 第3問 問1",
           "tags": [
@@ -4892,6 +4914,17 @@
         }
       ],
       "explanations": [
+        {
+          "id": "physics2025-q1-1",
+          "questionRef": "共通テスト 2025年 物理 第1問 問1",
+          "tags": [
+            "状態方程式",
+            "圧力",
+            "体積",
+            "温度"
+          ],
+          "route": "/explanations/physics2025-q1-1"
+        },
         {
           "id": "physics2024-q2-1",
           "questionRef": "共通テスト 2024年 物理 第2問 問1",
