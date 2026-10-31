@@ -6,9 +6,9 @@
     "sections": 41,
     "keywords": 249,
     "introQuizzes": 230,
-    "diagrams": 220,
+    "diagrams": 222,
     "calculations": 40,
-    "explanations": 48,
+    "explanations": 50,
     "unmappedDiagrams": 7,
     "unmappedExplanations": 0
   },
@@ -4244,6 +4244,26 @@
           "route": "/explanations/physics2025-q1-1"
         },
         {
+          "id": "phy2025-q3-4",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問4",
+          "tags": [
+            "電力",
+            "比熱",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-4"
+        },
+        {
+          "id": "phy2025-q3-5",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問5",
+          "tags": [
+            "比熱",
+            "熱容量",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-5"
+        },
+        {
           "id": "phy2025-q3-1",
           "questionRef": "共通テスト 2025年 物理基礎 第3問 問1",
           "tags": [
@@ -5602,11 +5622,14 @@
         "電気力線",
         "electric field lines",
         "2種類の電気",
+        "電場に入った荷電粒子の運動",
+        "電場の強さ 電場に入った荷電粒子の運動",
         "MagneticMotion",
         "ChargeAttractionRepulsion",
         "CoulombLaw",
         "ElectricFieldConcept",
         "ElectricFieldStrength",
+        "ElectricFieldChargedParticle",
         "ElectricFieldLines",
         "ElectricFieldLinesTwoSources"
       ],
@@ -5653,6 +5676,15 @@
         },
         {
           "id": "heading-6",
+          "title": "電場に入った荷電粒子の運動",
+          "summary": "一様な電場では荷電粒子に の力がはたらきます。",
+          "aliases": [
+            "電場に入った荷電粒子の運動",
+            "電場の強さ 電場に入った荷電粒子の運動"
+          ]
+        },
+        {
+          "id": "heading-7",
           "title": "電気力線",
           "summary": "ファラデーはさらに、電場を目に見える形で表す方法を考えました。",
           "aliases": [
@@ -5730,6 +5762,12 @@
         {
           "id": "ElectricFieldStrength",
           "title": "電場の強さ",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "ElectricFieldChargedParticle",
+          "title": "電場に入った荷電粒子の運動",
           "available": true,
           "route": "/physics-animations"
         },
@@ -6472,6 +6510,16 @@
       ],
       "explanations": [
         {
+          "id": "phy2025-q3-4",
+          "questionRef": "共通テスト 2025年 物理基礎 第3問 問4",
+          "tags": [
+            "電力",
+            "比熱",
+            "温度変化"
+          ],
+          "route": "/explanations/phy2025-q3-4"
+        },
+        {
           "id": "phy2025-q3-3",
           "questionRef": "共通テスト 2025年 物理基礎 第3問 問3",
           "tags": [
@@ -6563,7 +6611,8 @@
         "MagneticFieldAroundMagnet",
         "MagneticFieldAroundCurrent",
         "ForceOnCurrent",
-        "FlemingsLeftHandRule"
+        "FlemingsLeftHandRule",
+        "MagneticFieldChargedParticle"
       ],
       "subtopics": [
         {
@@ -6693,6 +6742,12 @@
         {
           "id": "FlemingsLeftHandRule",
           "title": "フレミング左手の法則",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "MagneticFieldChargedParticle",
+          "title": "ローレンツ力の本質",
           "available": true,
           "route": "/physics-animations"
         }
