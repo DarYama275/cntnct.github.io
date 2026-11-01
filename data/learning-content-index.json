@@ -7,10 +7,10 @@
     "keywords": 249,
     "introQuizzes": 230,
     "diagrams": 222,
-    "calculations": 40,
-    "explanations": 50,
+    "calculations": 41,
+    "explanations": 51,
     "unmappedDiagrams": 7,
-    "unmappedExplanations": 0
+    "unmappedExplanations": 3
   },
   "sections": [
     {
@@ -875,7 +875,12 @@
           "route": "/physics-animations"
         }
       ],
-      "calculations": [],
+      "calculations": [
+        {
+          "id": "Exercise1_5",
+          "route": "/calc/Exercise1_5"
+        }
+      ],
       "explanations": [
         {
           "id": "phy2024-q2-5",
@@ -2667,6 +2672,15 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-3",
+          "questionRef": "",
+          "tags": [
+            "万有引力",
+            "重力加速度"
+          ],
+          "route": "/explanations/step-3"
+        },
         {
           "id": "phy2025-q2-5",
           "questionRef": "共通テスト 2025年 物理基礎 第2問 問5",
@@ -8595,6 +8609,25 @@
         "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
       }
     ],
-    "unmappedExplanations": []
+    "unmappedExplanations": [
+      {
+        "id": "physics2025-q1-2",
+        "questionRef": "共通テスト 2025年 物理 第1問 問2",
+        "tags": [],
+        "route": "/explanations/physics2025-q1-2"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      }
+    ]
   }
 }
