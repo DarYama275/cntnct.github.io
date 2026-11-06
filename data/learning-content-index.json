@@ -4,13 +4,13 @@
   "stats": {
     "chapters": 7,
     "sections": 41,
-    "keywords": 249,
+    "keywords": 251,
     "introQuizzes": 230,
-    "diagrams": 222,
+    "diagrams": 223,
     "calculations": 41,
-    "explanations": 51,
-    "unmappedDiagrams": 7,
-    "unmappedExplanations": 3
+    "explanations": 53,
+    "unmappedDiagrams": 6,
+    "unmappedExplanations": 31
   },
   "sections": [
     {
@@ -335,7 +335,19 @@
           "route": "/calc/Exercise1_2"
         }
       ],
-      "explanations": []
+      "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "ベクトルの合成",
+            "ベクトルの分解",
+            "合力",
+            "力"
+          ],
+          "route": "/explanations/step-6"
+        }
+      ]
     },
     {
       "id": "1.3",
@@ -1081,6 +1093,17 @@
       ],
       "explanations": [
         {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "ベクトルの合成",
+            "ベクトルの分解",
+            "合力",
+            "力"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
           "id": "physics2024-q2-2",
           "questionRef": "共通テスト 2024年 物理 第2問 問2",
           "tags": [
@@ -1321,6 +1344,17 @@
       ],
       "explanations": [
         {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "復元力",
+            "張力",
+            "力の分解"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
           "id": "phy2025-q2-1",
           "questionRef": "共通テスト 2025年 物理基礎 第2問 問1",
           "tags": [
@@ -1509,6 +1543,17 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "復元力",
+            "張力",
+            "力の分解"
+          ],
+          "route": "/explanations/step-5"
+        },
         {
           "id": "phy2025-q2-5",
           "questionRef": "共通テスト 2025年 物理基礎 第2問 問5",
@@ -1708,7 +1753,7 @@
         {
           "id": "ElasticCollision",
           "title": "非弾性衝突",
-          "available": false,
+          "available": true,
           "route": "/physics-animations"
         }
       ],
@@ -1905,6 +1950,18 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "電場",
+            "磁場",
+            "ローレンツ力",
+            "仕事",
+            "運動エネルギー"
+          ],
+          "route": "/explanations/step-5"
+        },
         {
           "id": "phy2025-q1-2",
           "questionRef": "共通テスト 2025年 物理基礎 第1問 問2",
@@ -2908,7 +2965,28 @@
           "route": "/calc/Exercise3_1"
         }
       ],
-      "explanations": []
+      "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "復元力"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "復元力",
+            "張力",
+            "力の分解"
+          ],
+          "route": "/explanations/step-5"
+        }
+      ]
     },
     {
       "id": "3.2",
@@ -5806,6 +5884,18 @@
       ],
       "explanations": [
         {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "電場",
+            "磁場",
+            "ローレンツ力",
+            "仕事",
+            "運動エネルギー"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
           "id": "phy2024-q1-3",
           "questionRef": "共通テスト 2024年 物理基礎 第1問 問3",
           "tags": [
@@ -6774,6 +6864,18 @@
       ],
       "explanations": [
         {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "電場",
+            "磁場",
+            "ローレンツ力",
+            "仕事",
+            "運動エネルギー"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
           "id": "physics2024-q3-1",
           "questionRef": "共通テスト 2024年 物理 第3問 問1",
           "tags": [
@@ -7739,6 +7841,10 @@
         "de Broglie wave",
         "物質波",
         "matter wave",
+        "ブラッグ反射",
+        "Bragg diffraction",
+        "ブラッグの条件",
+        "Bragg condition",
         "波長（量子）",
         "wavelength (quantum)",
         "運動量（量子）",
@@ -7748,6 +7854,7 @@
         "なぜ日常では物質波を感じないのか",
         "ド・ブロイ波（de Broglie wave） なぜ日常では物質波を感じないのか",
         "物質波が示す量子の世界",
+        "ブラッグ反射と電子の回折",
         "MatterWave",
         "QuantumEntrance"
       ],
@@ -7784,6 +7891,14 @@
           "aliases": [
             "物質波が示す量子の世界"
           ]
+        },
+        {
+          "id": "heading-5",
+          "title": "ブラッグ反射と電子の回折",
+          "summary": "電子を結晶に当てると、規則正しく並んだ原子の面で散乱された 物質波が干渉 し、特定の方向で強め合います。",
+          "aliases": [
+            "ブラッグ反射と電子の回折"
+          ]
         }
       ],
       "textbook": {
@@ -7800,6 +7915,18 @@
         {
           "ja": "物質波",
           "en": "matter wave",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "ブラッグ反射",
+          "en": "Bragg diffraction",
+          "quizId": null,
+          "quizRoute": null
+        },
+        {
+          "ja": "ブラッグの条件",
+          "en": "Bragg condition",
           "quizId": null,
           "quizRoute": null
         },
@@ -7825,7 +7952,7 @@
         },
         {
           "id": "QuantumEntrance",
-          "title": "物質波が示す量子の世界",
+          "title": "ブラッグ反射と電子の回折",
           "available": true,
           "route": "/physics-animations"
         }
@@ -7836,7 +7963,19 @@
           "route": "/calc/Exercise6_5"
         }
       ],
-      "explanations": []
+      "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "物質波",
+            "ド・ブロイ波",
+            "ブラッグ反射",
+            "ブラッグの条件"
+          ],
+          "route": "/explanations/step-6"
+        }
+      ]
     },
     {
       "id": "7.1",
@@ -8584,11 +8723,6 @@
         "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
       },
       {
-        "sectionId": "2.4",
-        "diagramId": "ElasticCollision",
-        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
-      },
-      {
         "sectionId": "4.1",
         "diagramId": "ThermalEnergyTransferIntro",
         "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
@@ -8610,6 +8744,174 @@
       }
     ],
     "unmappedExplanations": [
+      {
+        "id": "physics2025-q2-2",
+        "questionRef": "共通テスト 2025年 物理 第2問 問2",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-2"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q2-1",
+        "questionRef": "共通テスト 2025年 物理 第2問 問1",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-1"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q1-5",
+        "questionRef": "共通テスト 2025年 物理 第1問 問5",
+        "tags": [],
+        "route": "/explanations/physics2025-q1-5"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q1-4",
+        "questionRef": "共通テスト 2025年 物理 第1問 問4",
+        "tags": [],
+        "route": "/explanations/physics2025-q1-4"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q1-3",
+        "questionRef": "共通テスト 2025年 物理 第1問 問3",
+        "tags": [],
+        "route": "/explanations/physics2025-q1-3"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
       {
         "id": "physics2025-q1-2",
         "questionRef": "共通テスト 2025年 物理 第1問 問2",
