@@ -10,7 +10,7 @@
     "calculations": 41,
     "explanations": 53,
     "unmappedDiagrams": 6,
-    "unmappedExplanations": 31
+    "unmappedExplanations": 41
   },
   "sections": [
     {
@@ -894,6 +894,26 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
         {
           "id": "phy2024-q2-5",
           "questionRef": "共通テスト 2024年 物理基礎 第2問 問5",
@@ -2966,6 +2986,26 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
         {
           "id": "step-6",
           "questionRef": "",
@@ -8744,6 +8784,66 @@
       }
     ],
     "unmappedExplanations": [
+      {
+        "id": "physics2025-q2-4",
+        "questionRef": "共通テスト 2025年 物理 第2問 問4",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-4"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q2-3",
+        "questionRef": "共通テスト 2025年 物理 第2問 問3",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-3"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
       {
         "id": "physics2025-q2-2",
         "questionRef": "共通テスト 2025年 物理 第2問 問2",
