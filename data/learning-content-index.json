@@ -4,13 +4,13 @@
   "stats": {
     "chapters": 7,
     "sections": 41,
-    "keywords": 251,
-    "introQuizzes": 230,
+    "keywords": 257,
+    "introQuizzes": 236,
     "diagrams": 223,
     "calculations": 41,
     "explanations": 53,
     "unmappedDiagrams": 6,
-    "unmappedExplanations": 31
+    "unmappedExplanations": 113
   },
   "sections": [
     {
@@ -895,6 +895,26 @@
       ],
       "explanations": [
         {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
           "id": "phy2024-q2-5",
           "questionRef": "共通テスト 2024年 物理基礎 第2問 問5",
           "tags": [
@@ -1543,6 +1563,16 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "円運動",
+            "万有引力",
+            "重力加速度"
+          ],
+          "route": "/explanations/step-5"
+        },
         {
           "id": "step-5",
           "questionRef": "",
@@ -2361,6 +2391,28 @@
       ],
       "explanations": [
         {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "状態方程式",
+            "圧力",
+            "体積",
+            "絶対温度"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "気体の仕事",
+            "圧力",
+            "体積",
+            "状態方程式"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
           "id": "physics2025-q1-1",
           "questionRef": "共通テスト 2025年 物理 第1問 問1",
           "tags": [
@@ -2730,6 +2782,16 @@
       ],
       "explanations": [
         {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "円運動",
+            "万有引力",
+            "重力加速度"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
           "id": "step-3",
           "questionRef": "",
           "tags": [
@@ -2970,6 +3032,60 @@
           "id": "step-6",
           "questionRef": "",
           "tags": [
+            "干渉",
+            "位相差",
+            "波長",
+            "振動数（周波数）",
+            "周期"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "周期",
+            "振幅",
+            "振動数（周波数）",
+            "波"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "重ね合わせの原理",
+            "振幅",
+            "位相差",
+            "波"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "単振動",
+            "周期",
+            "測定誤差"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
             "単振動",
             "復元力"
           ],
@@ -3205,6 +3321,40 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "干渉",
+            "位相差",
+            "波長",
+            "振動数（周波数）",
+            "周期"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "周期",
+            "振幅",
+            "振動数（周波数）",
+            "波"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "重ね合わせの原理",
+            "振幅",
+            "位相差",
+            "波"
+          ],
+          "route": "/explanations/step-5"
+        },
         {
           "id": "phy2025-q1-4",
           "questionRef": "共通テスト 2025年 物理基礎 第1問 問4",
@@ -4809,6 +4959,28 @@
       ],
       "explanations": [
         {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "熱力学第一法則",
+            "気体の仕事",
+            "内部エネルギー",
+            "状態方程式"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "状態方程式",
+            "圧力",
+            "体積",
+            "絶対温度"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
           "id": "physics2024-q1-2",
           "questionRef": "共通テスト 2024年 物理 第1問 問2",
           "tags": [
@@ -5026,6 +5198,39 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "熱力学第一法則",
+            "気体の仕事",
+            "内部エネルギー",
+            "状態方程式"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "状態方程式",
+            "圧力",
+            "体積",
+            "絶対温度"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "気体の仕事",
+            "圧力",
+            "体積",
+            "状態方程式"
+          ],
+          "route": "/explanations/step-6"
+        },
         {
           "id": "physics2025-q1-1",
           "questionRef": "共通テスト 2025年 物理 第1問 問1",
@@ -5276,6 +5481,28 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "熱力学第一法則",
+            "気体の仕事",
+            "内部エネルギー",
+            "状態方程式"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "気体の仕事",
+            "圧力",
+            "体積",
+            "状態方程式"
+          ],
+          "route": "/explanations/step-6"
+        },
         {
           "id": "phy2025-q3-1",
           "questionRef": "共通テスト 2025年 物理基礎 第3問 問1",
@@ -6216,6 +6443,12 @@
         "dielectric",
         "静電エネルギー",
         "electrostatic energy",
+        "時定数",
+        "time constant",
+        "RC回路",
+        "RC circuit",
+        "充電・放電",
+        "charging and discharging",
         "電池につなぐと何が起こるか",
         "なぜ電流が止まるのか",
         "極板の間に電場ができる",
@@ -6330,6 +6563,24 @@
           "en": "electrostatic energy",
           "quizId": "electrostaticEnergyIntroQuestions",
           "quizRoute": "/quiz/electrostaticEnergyIntroQuestions"
+        },
+        {
+          "ja": "時定数",
+          "en": "time constant",
+          "quizId": "timeConstantIntroQuestions",
+          "quizRoute": "/quiz/timeConstantIntroQuestions"
+        },
+        {
+          "ja": "RC回路",
+          "en": "RC circuit",
+          "quizId": "rcCircuitIntroQuestions",
+          "quizRoute": "/quiz/rcCircuitIntroQuestions"
+        },
+        {
+          "ja": "充電・放電",
+          "en": "charging and discharging",
+          "quizId": "chargingDischargingIntroQuestions",
+          "quizRoute": "/quiz/chargingDischargingIntroQuestions"
         }
       ],
       "diagrams": [
@@ -6370,7 +6621,41 @@
           "route": "/calc/Exercise5_3"
         }
       ],
-      "explanations": []
+      "explanations": [
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "充電・放電",
+            "コンデンサー",
+            "ローレンツ力",
+            "RC回路"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "RC回路",
+            "充電・放電",
+            "ローレンツ力",
+            "電流"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "電磁誘導",
+            "誘導起電力",
+            "ローレンツ力",
+            "コンデンサー"
+          ],
+          "route": "/explanations/step-5"
+        }
+      ]
     },
     {
       "id": "5.4",
@@ -6613,6 +6898,39 @@
         }
       ],
       "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "RL回路",
+            "ローレンツ力",
+            "電流",
+            "自己誘導"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "RL回路",
+            "自己インダクタンス",
+            "自己誘導",
+            "キルヒホッフの法則"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "RC回路",
+            "充電・放電",
+            "ローレンツ力",
+            "電流"
+          ],
+          "route": "/explanations/step-6"
+        },
         {
           "id": "phy2025-q3-4",
           "questionRef": "共通テスト 2025年 物理基礎 第3問 問4",
@@ -6864,6 +7182,50 @@
       ],
       "explanations": [
         {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "充電・放電",
+            "コンデンサー",
+            "ローレンツ力",
+            "RC回路"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "RL回路",
+            "ローレンツ力",
+            "電流",
+            "自己誘導"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-6",
+          "questionRef": "",
+          "tags": [
+            "RC回路",
+            "充電・放電",
+            "ローレンツ力",
+            "電流"
+          ],
+          "route": "/explanations/step-6"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "電磁誘導",
+            "誘導起電力",
+            "ローレンツ力",
+            "コンデンサー"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
           "id": "step-5",
           "questionRef": "",
           "tags": [
@@ -6919,6 +7281,12 @@
         "alternating current",
         "実効値",
         "effective value (RMS)",
+        "RL回路",
+        "RL circuit",
+        "自己インダクタンス",
+        "self-inductance",
+        "自己誘導",
+        "self-induction",
         "磁束の変え方",
         "レンツの法則 磁束の変え方",
         "発電機と交流",
@@ -7042,6 +7410,24 @@
           "en": "effective value (RMS)",
           "quizId": "effectiveValueIntroQuestions",
           "quizRoute": "/quiz/effectiveValueIntroQuestions"
+        },
+        {
+          "ja": "RL回路",
+          "en": "RL circuit",
+          "quizId": "rlCircuitIntroQuestions",
+          "quizRoute": "/quiz/rlCircuitIntroQuestions"
+        },
+        {
+          "ja": "自己インダクタンス",
+          "en": "self-inductance",
+          "quizId": "selfInductanceIntroQuestions",
+          "quizRoute": "/quiz/selfInductanceIntroQuestions"
+        },
+        {
+          "ja": "自己誘導",
+          "en": "self-induction",
+          "quizId": "selfInductionIntroQuestions",
+          "quizRoute": "/quiz/selfInductionIntroQuestions"
         }
       ],
       "diagrams": [
@@ -7082,7 +7468,52 @@
           "route": "/calc/Exercise5_6"
         }
       ],
-      "explanations": []
+      "explanations": [
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "RL回路",
+            "自己誘導",
+            "自己インダクタンス",
+            "誘導起電力"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "RL回路",
+            "ローレンツ力",
+            "電流",
+            "自己誘導"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "RL回路",
+            "自己インダクタンス",
+            "自己誘導",
+            "キルヒホッフの法則"
+          ],
+          "route": "/explanations/step-5"
+        },
+        {
+          "id": "step-5",
+          "questionRef": "",
+          "tags": [
+            "電磁誘導",
+            "誘導起電力",
+            "ローレンツ力",
+            "コンデンサー"
+          ],
+          "route": "/explanations/step-5"
+        }
+      ]
     },
     {
       "id": "6.1",
@@ -8744,6 +9175,498 @@
       }
     ],
     "unmappedExplanations": [
+      {
+        "id": "physics2025-q4-4",
+        "questionRef": "共通テスト 2025年 物理 第4問 問4",
+        "tags": [],
+        "route": "/explanations/physics2025-q4-4"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q4-5",
+        "questionRef": "共通テスト 2025年 物理 第4問 問5",
+        "tags": [],
+        "route": "/explanations/physics2025-q4-5"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q4-6",
+        "questionRef": "共通テスト 2025年 物理 第4問 問6",
+        "tags": [],
+        "route": "/explanations/physics2025-q4-6"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q4-7",
+        "questionRef": "共通テスト 2025年 物理 第4問 問7",
+        "tags": [],
+        "route": "/explanations/physics2025-q4-7"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q2-5",
+        "questionRef": "共通テスト 2025年 物理 第2問 問5",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-5"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q4-2",
+        "questionRef": "共通テスト 2025年 物理 第4問 問2",
+        "tags": [],
+        "route": "/explanations/physics2025-q4-2"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q4-1",
+        "questionRef": "共通テスト 2025年 物理 第4問 問1",
+        "tags": [],
+        "route": "/explanations/physics2025-q4-1"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q3-6",
+        "questionRef": "共通テスト 2025年 物理 第3問 問6",
+        "tags": [],
+        "route": "/explanations/physics2025-q3-6"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q3-4",
+        "questionRef": "共通テスト 2025年 物理 第3問 問4",
+        "tags": [],
+        "route": "/explanations/physics2025-q3-4"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q3-5",
+        "questionRef": "共通テスト 2025年 物理 第3問 問5",
+        "tags": [],
+        "route": "/explanations/physics2025-q3-5"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q3-3",
+        "questionRef": "共通テスト 2025年 物理 第3問 問3",
+        "tags": [],
+        "route": "/explanations/physics2025-q3-3"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q3-2",
+        "questionRef": "共通テスト 2025年 物理 第3問 問2",
+        "tags": [],
+        "route": "/explanations/physics2025-q3-2"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q3-1",
+        "questionRef": "共通テスト 2025年 物理 第3問 問1",
+        "tags": [],
+        "route": "/explanations/physics2025-q3-1"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "step-5",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-5"
+      },
+      {
+        "id": "physics2025-q2-4",
+        "questionRef": "共通テスト 2025年 物理 第2問 問4",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-4"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
+      {
+        "id": "physics2025-q2-3",
+        "questionRef": "共通テスト 2025年 物理 第2問 問3",
+        "tags": [],
+        "route": "/explanations/physics2025-q2-3"
+      },
+      {
+        "id": "step-1",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-1"
+      },
+      {
+        "id": "step-2",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-2"
+      },
+      {
+        "id": "step-3",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-3"
+      },
+      {
+        "id": "step-4",
+        "questionRef": "",
+        "tags": [],
+        "route": "/explanations/step-4"
+      },
       {
         "id": "physics2025-q2-2",
         "questionRef": "共通テスト 2025年 物理 第2問 問2",
