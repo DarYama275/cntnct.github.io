@@ -4,12 +4,12 @@
   "stats": {
     "chapters": 7,
     "sections": 41,
-    "keywords": 257,
-    "introQuizzes": 236,
-    "diagrams": 223,
+    "keywords": 258,
+    "introQuizzes": 237,
+    "diagrams": 225,
     "calculations": 41,
     "explanations": 53,
-    "unmappedDiagrams": 6,
+    "unmappedDiagrams": 5,
     "unmappedExplanations": 113
   },
   "sections": [
@@ -2055,6 +2055,8 @@
         "rotational motion",
         "角速度",
         "angular velocity",
+        "角運動量",
+        "angular momentum",
         "角加速度",
         "angular acceleration",
         "力のモーメント（トルク）",
@@ -2152,6 +2154,12 @@
           "en": "angular velocity",
           "quizId": "angularVelocityIntroQuestions",
           "quizRoute": "/quiz/angularVelocityIntroQuestions"
+        },
+        {
+          "ja": "角運動量",
+          "en": "angular momentum",
+          "quizId": "angularMomentumIntroQuestions",
+          "quizRoute": "/quiz/angularMomentumIntroQuestions"
         },
         {
           "ja": "角加速度",
@@ -3483,6 +3491,7 @@
         "StandingWaveString",
         "StandingWavePipe",
         "Resonance",
+        "WavePathDifference",
         "WaveInterference",
         "WaveDiffraction"
       ],
@@ -3634,6 +3643,12 @@
         {
           "id": "Resonance",
           "title": "共鳴（共振）",
+          "available": true,
+          "route": "/physics-animations"
+        },
+        {
+          "id": "WavePathDifference",
+          "title": "波の干渉",
           "available": true,
           "route": "/physics-animations"
         },
@@ -5307,7 +5322,6 @@
         "熱と仕事の共通点",
         "もう一つの書き方",
         "熱力学第一法則 もう一つの書き方",
-        "気体が外部にする仕事",
         "内部エネルギー",
         "p–Vグラフと仕事",
         "熱力学第一法則の意味",
@@ -5363,10 +5377,10 @@
         },
         {
           "id": "heading-6",
-          "title": "気体が外部にする仕事",
+          "title": "気体の仕事",
           "summary": "気体が膨張するとき、ピストンを押して外部に仕事をします。",
           "aliases": [
-            "気体が外部にする仕事"
+            "気体の仕事"
           ]
         },
         {
@@ -5451,13 +5465,13 @@
         },
         {
           "id": "WorkDefinitionThermo",
-          "title": "気体が外部にする仕事",
+          "title": "気体の仕事",
           "available": true,
           "route": "/physics-animations"
         },
         {
           "id": "WorkByGas",
-          "title": "気体が外部にする仕事",
+          "title": "気体の仕事",
           "available": true,
           "route": "/physics-animations"
         },
@@ -5576,6 +5590,8 @@
         "等積変化（体積一定）",
         "内部エネルギーの変化",
         "等積変化（体積一定） 内部エネルギーの変化",
+        "等温変化（温度一定）",
+        "断熱変化（熱の出入りなし）",
         "p–V線図の役割",
         "p–V線図の面積が仕事になる",
         "p–V線図の役割 p–V線図の面積が仕事になる",
@@ -5646,6 +5662,22 @@
         },
         {
           "id": "heading-8",
+          "title": "等温変化（温度一定）",
+          "summary": "ピストンをゆっくり動かし、外部と熱をやり取りして気体の温度を一定に保つ変化を 等温変化 といいます。",
+          "aliases": [
+            "等温変化（温度一定）"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "断熱変化（熱の出入りなし）",
+          "summary": "外部との熱のやり取りがない状態で気体が膨張・圧縮する変化を 断熱変化 といいます。",
+          "aliases": [
+            "断熱変化（熱の出入りなし）"
+          ]
+        },
+        {
+          "id": "heading-10",
           "title": "p–V線図の役割",
           "summary": "気体の状態変化は、横軸に体積 、縦軸に圧力 をとった p–V線図 で表すことができます。",
           "aliases": [
@@ -5653,7 +5685,7 @@
           ]
         },
         {
-          "id": "heading-9",
+          "id": "heading-11",
           "title": "p–V線図の面積が仕事になる",
           "summary": "等圧変化では気体のした仕事は でした。",
           "aliases": [
@@ -5662,7 +5694,7 @@
           ]
         },
         {
-          "id": "heading-10",
+          "id": "heading-12",
           "title": "状態変化を理解するコツ",
           "summary": "気体の状態変化を考えるときは、次の順番で整理するとわかりやすくなります。",
           "aliases": [
@@ -6456,6 +6488,10 @@
         "極板の形と静電容量",
         "誘電体のはたらき",
         "コンデンサーに蓄えられるエネルギー",
+        "RC回路 ― 電流はなぜ止まるのか",
+        "充電・放電 ― 電流の向きと大きさ",
+        "時定数 ― 変化にかかる時間",
+        "充電に使ったエネルギーはどこへ行く？",
         "コンデンサーの本質",
         "CapacitorStructure",
         "ChargeSeparation",
@@ -6522,6 +6558,38 @@
         },
         {
           "id": "heading-8",
+          "title": "RC回路 ― 電流はなぜ止まるのか",
+          "summary": "これまではコンデンサーに電荷が蓄えられる仕組みを見てきました。",
+          "aliases": [
+            "RC回路 ― 電流はなぜ止まるのか"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "充電・放電 ― 電流の向きと大きさ",
+          "summary": "コンデンサーに電荷を蓄える過程を 充電 、蓄えた電荷を回路に流し出す過程を 放電 といいます。",
+          "aliases": [
+            "充電・放電 ― 電流の向きと大きさ"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "時定数 ― 変化にかかる時間",
+          "summary": "充電・放電の速さは、抵抗 と静電容量 によって決まります。",
+          "aliases": [
+            "時定数 ― 変化にかかる時間"
+          ]
+        },
+        {
+          "id": "heading-11",
+          "title": "充電に使ったエネルギーはどこへ行く？",
+          "summary": "抵抗を通してコンデンサーを充電すると、電池が供給したエネルギーはすべてコンデンサーに残るのでしょうか。",
+          "aliases": [
+            "充電に使ったエネルギーはどこへ行く？"
+          ]
+        },
+        {
+          "id": "heading-12",
           "title": "コンデンサーの本質",
           "summary": "コンデンサーを理解するポイントは次の流れです。",
           "aliases": [
@@ -7292,6 +7360,10 @@
         "発電機と交流",
         "発電機と交流 実効値",
         "発電機と交流 電磁誘導と交流回路",
+        "自己誘導 ― 電流の変化を妨げる",
+        "自己インダクタンス ― 変化を妨げる強さ",
+        "RL回路 ― 電流はなぜ徐々に増えるのか",
+        "電流グラフの傾きと自己インダクタンス",
         "発展：アンペール・マクスウェルの法則と電磁波",
         "発展",
         "ElectromagneticInduction",
@@ -7362,6 +7434,38 @@
         },
         {
           "id": "heading-8",
+          "title": "自己誘導 ― 電流の変化を妨げる",
+          "summary": "磁石を動かすとコイルに電磁誘導が起こることを学びました。",
+          "aliases": [
+            "自己誘導 ― 電流の変化を妨げる"
+          ]
+        },
+        {
+          "id": "heading-9",
+          "title": "自己インダクタンス ― 変化を妨げる強さ",
+          "summary": "コイルによって、同じ速さで電流を変えようとしても、発生する自己誘導起電力の大きさは異なります。",
+          "aliases": [
+            "自己インダクタンス ― 変化を妨げる強さ"
+          ]
+        },
+        {
+          "id": "heading-10",
+          "title": "RL回路 ― 電流はなぜ徐々に増えるのか",
+          "summary": "抵抗 と自己インダクタンス のコイルを直列につないだ回路を RL回路 といいます。",
+          "aliases": [
+            "RL回路 ― 電流はなぜ徐々に増えるのか"
+          ]
+        },
+        {
+          "id": "heading-11",
+          "title": "電流グラフの傾きと自己インダクタンス",
+          "summary": "電流と時間のグラフでは、曲線の接線の傾きが、電流の変化率 を表します。",
+          "aliases": [
+            "電流グラフの傾きと自己インダクタンス"
+          ]
+        },
+        {
+          "id": "heading-12",
           "title": "発展：アンペール・マクスウェルの法則と電磁波",
           "summary": "ここからは発展的な内容です。",
           "aliases": [
@@ -8117,7 +8221,7 @@
         {
           "id": "heading-5",
           "title": "ボーア模型（Bohr model）",
-          "summary": "このような線スペクトルを説明するために提案されたのが ボーア模型 です。",
+          "summary": "このような線スペクトルを説明するために提案された 原子模型 の一つが、 ボーア模型 です。",
           "aliases": [
             "ボーア模型（Bohr model）"
           ]
@@ -9009,7 +9113,7 @@
         "原子物理 → 量子情報（quantum information）",
         "MechanicsHookeAnalogy",
         "StandingWaveInstrument",
-        "HeatEngineCycle",
+        "TurbofanEngine",
         "MotorGenerator",
         "SemiconductorChargeFlow",
         "ClassicalBitVsQubit"
@@ -9108,9 +9212,9 @@
           "route": "/physics-animations"
         },
         {
-          "id": "HeatEngineCycle",
+          "id": "TurbofanEngine",
           "title": "熱力学 → エンジン・エネルギー（thermodynamics）",
-          "available": false,
+          "available": true,
           "route": "/physics-animations"
         },
         {
@@ -9166,11 +9270,6 @@
       {
         "sectionId": "5.4",
         "diagramId": "OhmsLawGraph",
-        "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
-      },
-      {
-        "sectionId": "7.4",
-        "diagramId": "HeatEngineCycle",
         "reason": "教科書にDiagramマーカーはあるが、src/components/diagrams に対応コンポーネントが見つからない"
       }
     ],
