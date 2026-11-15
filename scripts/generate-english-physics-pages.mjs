@@ -92,17 +92,17 @@ export async function generateEnglishPhysicsPages(index, root) {
   for (const page of pages) {
     await writeFile(path.join(directory, page.filename), page.html, 'utf8');
   }
-  const links = pages.map((page) => '<li><a href="./' + escapeHtml(page.filename) +
-    '">' + escapeHtml(page.title) + '</a></li>').join('');
-  const indexHtml = '<!doctype html>\n<html lang="en"><head><meta charset="utf-8">' +
+  // Legacy catalog URL remains reachable, but all visitors use the shared
+  // interactive catalog instead of a second, separately styled link list.
+  const target = BASE + '/en/physics-catalog.html';
+  const indexHtml = '<!doctype html>\\n<html lang="en"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-    '<title>Physics Topics | Containnect</title>' +
-    '<meta name="description" content="Explore high school physics topics, concepts and learning resources.">' +
-    '<link rel="canonical" href="' + BASE + '/en/physics-topics/">' + styles +
-    '</head><body><header><a href="/en/">Containnect</a></header>' +
-    '<main><h1>Physics Topics</h1><p>Explore physics concepts in English. ' +
-    'Interactive learning resources are available in the physics app.</p><ul>' +
-    links + '</ul></main><footer><a href="/en/">Containnect</a></footer></body></html>\n';
+    '<meta name="robots" content="noindex,follow">' +
+    '<meta http-equiv="refresh" content="0; url=' + target + '">' +
+    '<link rel="canonical" href="' + target + '">' +
+    '<title>Physics Topic Catalog | Containnect</title></head>' +
+    '<body><main><p>The physics catalog has moved to ' +
+    '<a href="' + target + '">the English Physics Learning Catalog</a>.</p></main></body></html>\\n';
   await writeFile(path.join(directory, 'index.html'), indexHtml, 'utf8');
   console.log('[English catalog] Generated ' + pages.length + ' topic pages.');
   return pages.map((page) => page.url);
