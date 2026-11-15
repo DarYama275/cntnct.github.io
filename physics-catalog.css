@@ -269,3 +269,7 @@ body { min-height: 100vh; }
   .catalog-hero-inner, .catalog-shell { width: min(100% - 1.2rem, 1120px); }
   .catalog-card-head { display: block; }
 }
+
+.catalog-detail-link { margin: 1rem 0 0; font-size: .83rem; }
+.catalog-detail-link a { color: var(--accent); }
+.catalog-detail-link a:hover { text-decoration: underline; }
