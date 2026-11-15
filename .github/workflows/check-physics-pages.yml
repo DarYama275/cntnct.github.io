@@ -15,6 +15,7 @@ on:
       - 'scripts/test-bilingual-physics-catalog.mjs'
       - 'en/index.html'
       - 'physics.html'
+      - 'physics-catalog.html'
       - 'data/learning-content-index.json'
       - 'sitemap.xml'
       - '.github/workflows/check-physics-pages.yml'
@@ -81,4 +82,25 @@ jobs:
             assert.ok(fs.existsSync('en/' + relative), 'Missing English product page asset: ' + relative);
           }
           console.log('English physics landing page validated');
+          NODE
+      - name: Validate mobile-visible language switches
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import fs from 'node:fs';
+          for (const [file, destination] of [
+            ['physics.html', './en/physics.html'],
+            ['physics-catalog.html', './en/physics-catalog.html'],
+          ]) {
+            const html = fs.readFileSync(file, 'utf8');
+            const nav = html.match(/<nav>[\s\S]*?<\/nav>/)?.[0] || '';
+            assert.match(nav, /<div class="nav-actions">/);
+            const switchLink = nav.match(/<a class="lang-toggle"[^>]*>EN<\/a>/)?.[0];
+            assert.ok(switchLink, 'Visible language toggle missing in ' + file);
+            assert.ok(switchLink.includes('href="' + destination + '"'));
+            assert.ok(nav.indexOf(switchLink) > nav.indexOf('</ul>'),
+              'Language toggle must be outside hidden mobile nav-links');
+            assert.doesNotMatch(nav, /\\n/);
+          }
+          console.log('Japanese physics pages have persistent English toggles');
           NODE
