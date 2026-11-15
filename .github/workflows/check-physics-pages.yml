@@ -7,6 +7,9 @@ on:
       - 'scripts/generate-english-physics-pages.mjs'
       - 'scripts/test-english-physics-pages.mjs'
       - '.github/workflows/generate-sitemap.yml'
+      - 'en/physics.html'
+      - 'en/index.html'
+      - 'physics.html'
       - 'data/learning-content-index.json'
       - 'sitemap.xml'
       - '.github/workflows/check-physics-pages.yml'
@@ -53,4 +56,23 @@ jobs:
             if(!html.includes('<html lang="en">') || !html.includes('hreflang="ja"') || !html.includes('rel="canonical"') || !sitemap.includes(url) || !ja.includes('hreflang="en"')) throw Error('Invalid English topic page: '+section.id);
           }
           console.log('Validated '+index.sections.length+' Japanese and '+ready.length+' English topic pages');
+          NODE
+      - name: Validate English physics landing-page links
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import assert from 'node:assert/strict';
+          const en = fs.readFileSync('en/physics.html', 'utf8');
+          const home = fs.readFileSync('en/index.html', 'utf8');
+          const ja = fs.readFileSync('physics.html', 'utf8');
+          assert.match(en, /<html lang="en">/);
+          assert.match(en, /rel="canonical" href="https:\/\/containnect\.com\/en\/physics\.html"/);
+          assert.match(en, /hreflang="ja"/);
+          assert.match(ja, /hreflang="en"/);
+          assert.match(home, /href="\.\/physics\.html"/);
+          assert.ok(fs.existsSync('en/physics-topics/index.html'), 'English catalog index must be generated');
+          for (const relative of ['../style.css', '../physics.css', '../assets/feature_graphic.png']) {
+            assert.ok(fs.existsSync('en/' + relative), 'Missing English product page asset: ' + relative);
+          }
+          console.log('English physics landing page validated');
           NODE

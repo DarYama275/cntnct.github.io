@@ -17,6 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # Some older content-sync PRs updated the JSON before creating the English
+      # HTML pages. Rebuild the static catalog before enumerating sitemap URLs.
+      - name: Generate static physics topic pages
+        run: node scripts/generate-physics-pages.mjs
+
       - name: Generate sitemap.xml
         shell: bash
         run: |
@@ -110,6 +119,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add sitemap.xml
+          git add sitemap.xml physics-topics en/physics-topics
           git diff --cached --quiet || git commit -m "chore: auto-update sitemap.xml [skip ci]"
           git push
