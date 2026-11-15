@@ -4,6 +4,9 @@ on:
   pull_request:
     paths:
       - 'scripts/generate-physics-pages.mjs'
+      - 'scripts/generate-english-physics-pages.mjs'
+      - 'scripts/test-english-physics-pages.mjs'
+      - '.github/workflows/generate-sitemap.yml'
       - 'data/learning-content-index.json'
       - 'sitemap.xml'
       - '.github/workflows/check-physics-pages.yml'
@@ -21,7 +24,10 @@ jobs:
         with:
           node-version: '24'
       - name: Check script syntax
-        run: node --check scripts/generate-physics-pages.mjs
+        run: |
+          node --check scripts/generate-physics-pages.mjs
+          node --check scripts/generate-english-physics-pages.mjs
+          node --test scripts/test-english-physics-pages.mjs
       - name: Generate HTML from catalog index
         run: node scripts/generate-physics-pages.mjs
       - name: Validate output count, HTML metadata, and sitemap entries
@@ -38,5 +44,13 @@ jobs:
               throw Error('Invalid static topic page: '+section.id);
             }
           }
-          console.log('Validated '+index.sections.length+' topic pages');
+          const ready=index.sections.filter(s=>s.english?.metadataComplete && s.english.title?.trim() && s.english.summary?.trim() && s.english.chapterTitle?.trim());
+          for(const section of ready){
+            const id=section.id.replaceAll('.','-');
+            const url='https://containnect.com/en/physics-topics/'+id+'.html';
+            const html=fs.readFileSync('en/physics-topics/'+id+'.html','utf8');
+            const ja=fs.readFileSync('physics-topics/'+id+'.html','utf8');
+            if(!html.includes('<html lang="en">') || !html.includes('hreflang="ja"') || !html.includes('rel="canonical"') || !sitemap.includes(url) || !ja.includes('hreflang="en"')) throw Error('Invalid English topic page: '+section.id);
+          }
+          console.log('Validated '+index.sections.length+' Japanese and '+ready.length+' English topic pages');
           NODE
