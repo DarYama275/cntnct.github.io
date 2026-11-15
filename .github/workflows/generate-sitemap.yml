@@ -35,7 +35,7 @@ jobs:
           # Root pages plus the generated physics topic pages.
           # Do not scan the entire repository, which can include tooling/tests.
           shopt -s nullglob
-          files=( *.html physics-topics/*.html )
+          files=( *.html physics-topics/*.html en/*.html en/news/*.html en/physics-topics/*.html )
           if (( ${#files[@]} == 0 )); then
             echo "No HTML pages found" >&2
             exit 1
@@ -49,6 +49,9 @@ jobs:
             if [[ "$file" == "index.html" ]]; then
               loc="${BASE_URL}/"
               priority="1.0"
+            elif [[ "$file" == */index.html ]]; then
+              loc="${BASE_URL}/${file%index.html}"
+              priority="0.9"
             else
               loc="${BASE_URL}/${file}"
               priority="0.9"
@@ -83,10 +86,24 @@ jobs:
               'https://containnect.com/physics-topics/' + str(section['id']).replace('.', '-') + '.html'
               for section in index['sections']
           }
-          actual = {url for url in urls if '/physics-topics/' in url}
+          actual = {url for url in urls if '/physics-topics/' in url and '/en/' not in url}
           if actual != expected:
               raise SystemExit(f'Topic URL mismatch: missing={sorted(expected-actual)} extra={sorted(actual-expected)}')
-          print(f'Validated {len(actual)} topic URLs and {len(urls)} total URLs')
+          english_expected = {
+              'https://containnect.com/en/physics-topics/' + str(section['id']).replace('.', '-') + '.html'
+              for section in index['sections']
+              if section.get('english', {}).get('metadataComplete') is True
+              and section['english'].get('title') and section['english'].get('summary')
+              and section['english'].get('chapterTitle')
+          }
+          english_actual = {
+              url for url in urls
+              if url.startswith('https://containnect.com/en/physics-topics/')
+              and url.endswith('.html')
+          }
+          if english_actual != english_expected:
+              raise SystemExit(f'English topic URL mismatch: missing={sorted(english_expected-english_actual)} extra={sorted(english_actual-english_expected)}')
+          print(f'Validated {len(actual)} Japanese and {len(english_actual)} English topic URLs, {len(urls)} total URLs')
           PY
 
       - name: Commit sitemap.xml
