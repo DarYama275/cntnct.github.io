@@ -1,6 +1,7 @@
 import {readFile,writeFile,mkdir,readdir,rm} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {generateEnglishPhysicsPages,isEnglishTopicReady} from './generate-english-physics-pages.mjs';
 
 // Run from any directory: node scripts/generate-physics-pages.mjs
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -26,6 +27,8 @@ function page(section){
   +'<h2>動く図解</h2>'+list(diagrams,d=>'<li>'+esc(d.title||d.id)+'</li>')
   +'<h2>アプリでできること</h2><ul><li>動く図解：'+diagrams.length+'件</li><li>直感クイズ：'+((section.keywords||[]).some(k=>k.quizId)?'あり':'登録なし')+'</li><li>計算問題：'+((section.calculations||[]).length?'あり':'登録なし')+'</li><li>共通テスト解説：'+((section.explanations||[]).length?'あり':'登録なし')+'</li></ul><p>図解の操作や演習はAndroid・iOS対応アプリで利用できます。</p><p>'+action+'</p>';
   const schema={'@context':'https://schema.org','@type':'LearningResource',name:title,url,description,inLanguage:'ja',educationalLevel:'高校',about:kws,provider:{'@type':'Organization',name:'Containnect',url:base}};
+  const englishUrl=base+'/en/physics-topics/'+filename;
+  const alternatives=isEnglishTopicReady(section)?'<link rel="alternate" hreflang="ja" href="'+esc(url)+'"><link rel="alternate" hreflang="en" href="'+esc(englishUrl)+'">':'';
   const html='<!doctype html>\n<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(title)+'</title><meta name="description" content="'+esc(description)+'"><link rel="canonical" href="'+esc(url)+'"><meta property="og:type" content="article"><meta property="og:title" content="'+esc(title)+'"><meta property="og:description" content="'+esc(description)+'"><meta property="og:url" content="'+esc(url)+'">'+stylesheet+'<script type="application/ld+json">'+JSON.stringify(schema).replace(/</g,'\\u003c')+'</script></head><body><header><nav><a href="/">Containnect</a> / <a href="/physics-catalog.html">教材カタログ</a></nav></header><main>'+body+'</main><footer><a href="/physics-catalog.html">教材一覧へ戻る</a></footer></body></html>\n';
   return {filename,url,html};
 }
@@ -36,9 +39,10 @@ if(new Set(pages.map(p=>p.filename)).size!==pages.length)throw Error('Duplicate 
 const out=path.join(root,'physics-topics');await mkdir(out,{recursive:true});
 for(const file of await readdir(out))if(/^\d+(?:-\d+)+\.html$/.test(file)&&!pages.some(p=>p.filename===file))await rm(path.join(out,file));
 for(const p of pages)await writeFile(path.join(out,p.filename),p.html);
+const englishUrls=await generateEnglishPhysicsPages(index,root);
 const sitemap=path.join(root,'sitemap.xml'),xml=await readFile(sitemap,'utf8');
 if(!/<urlset\b/.test(xml))throw Error('Invalid sitemap format');
-const original=[...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>/g)].filter(m=>!m[1].startsWith(base+'/physics-topics/')).map(m=>m[0]);
-const generated=pages.map(p=>'  <url><loc>'+p.url+'</loc><changefreq>monthly</changefreq></url>');
+const original=[...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>/g)].filter(m=>!m[1].startsWith(base+'/physics-topics/')&&!m[1].startsWith(base+'/en/physics-topics/')).map(m=>m[0]);
+const generated=[...pages.map(p=>p.url),...englishUrls].map(url=>'  <url><loc>'+url+'</loc><changefreq>monthly</changefreq></url>');
 await writeFile(sitemap,'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+[...original,...generated].join('\n')+'\n</urlset>\n');
-console.log('Generated '+pages.length+' topic pages and updated sitemap');
+console.log('Generated '+pages.length+' Japanese and '+englishUrls.length+' English topic pages and updated sitemap');
