@@ -33,7 +33,7 @@ function makePage(section) {
   const diagramCount = (section.diagrams || []).filter((item) => item.available !== false).length;
   const hasQuizzes = (section.keywords || []).some((item) => item.quizId);
   const hasExercises = (section.calculations || []).length > 0;
-  const cta = '<a class="cta" href="/physics.html">Explore the Physics App</a>';
+  const cta = '<a class="cta" href="/en/physics.html">Explore the Physics App</a>';
   const data = {
     '@context': 'https://schema.org', '@type': 'LearningResource',
     name: en.title, url, description: en.summary, inLanguage: 'en',
@@ -66,7 +66,7 @@ function makePage(section) {
     styles + '<script type="application/ld+json">' +
     JSON.stringify(data).replace(/</g, '\\u003c') + '</script></head>' +
     '<body><header><nav><a href="/en/">Containnect</a> / ' +
-    '<a href="/en/physics-topics/">Physics Topics</a> · ' +
+    '<a href="/en/physics-catalog.html">Physics Topics</a> · ' +
     '<a lang="ja" href="' + escapeHtml(japaneseUrl) + '">日本語</a></nav></header>' +
     '<main>' + body + '</main><footer><a href="/en/">Containnect</a></footer>' +
     '</body></html>\n';
