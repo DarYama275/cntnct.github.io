@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Learning Catalog — Sawatte Oboeru Physics</title>
+  <meta name="description" content="Browse 41 physics topics by chapter. Search concepts and explore interactive diagrams, quizzes, and practice problems in Sawatte Oboeru Physics.">
+  <link rel="canonical" href="https://containnect.com/en/physics-catalog.html">
+  <link rel="alternate" hreflang="ja" href="https://containnect.com/physics-catalog.html">
+  <link rel="alternate" hreflang="en" href="https://containnect.com/en/physics-catalog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://containnect.com/en/physics-catalog.html">
+  <meta property="og:site_name" content="Containnect">
+  <meta property="og:title" content="Physics Learning Catalog — Sawatte Oboeru Physics">
+  <meta property="og:description" content="Explore physics topics by chapter, with interactive diagrams, quizzes, and practice exercises.">
+  <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans:wght@300;400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../physics-catalog.css">
+  <style>body{font-family:'Noto Sans',sans-serif}.catalog-detail-link{margin:1rem 0 0;font-size:.85rem}.catalog-detail-link a{color:var(--accent)}.nav-actions{display:flex;align-items:center;gap:1rem}.lang-toggle{color:var(--accent);font-family:var(--mono);font-size:.78rem}</style>
+</head>
+<body>
+  <nav>
+    <a href="./" class="nav-logo">cntnct</a>
+    <div class="nav-actions">
+      <ul class="nav-links">
+        <li><a href="./physics.html">Physics App</a></li>
+        <li><a href="#catalog">Topics</a></li>
+      </ul>
+      <a class="lang-toggle" href="../physics-catalog.html" hreflang="ja" lang="ja">JA</a>
+    </div>
+  </nav>
+  <main>
+    <section class="catalog-hero">
+      <div class="catalog-hero-inner">
+        <p class="section-label">// learning catalog</p>
+        <h1>Explore physics,<br><span class="catalog-accent">topic by topic.</span></h1>
+        <p class="catalog-lead">Find high school physics topics, key concepts, interactive diagrams, concept quizzes, and practice problems from Sawatte Oboeru Physics.</p>
+        <div class="catalog-note">This catalog is updated from ViteReact learning data. English topic summaries are available, but the app's full textbook and interactive screens are currently mainly in Japanese.</div>
+      </div>
+    </section>
+    <section id="catalog" class="catalog-section">
+      <div class="catalog-shell">
+        <div id="catalog-status" class="catalog-status" aria-live="polite">Loading physics topics…</div>
+        <div id="catalog-stats" class="catalog-stats" hidden></div>
+        <div class="catalog-controls">
+          <label class="catalog-search">
+            <span>Search</span>
+            <input id="catalog-search-input" type="search" placeholder="e.g. momentum, waves, induction" autocomplete="off">
+          </label>
+          <div id="chapter-filters" class="chapter-filters" aria-label="Filter by chapter"></div>
+        </div>
+        <div id="catalog-results" class="catalog-results"></div>
+      </div>
+    </section>
+    <section class="catalog-cta">
+      <div class="catalog-shell">
+        <p class="section-label">// app</p>
+        <h2>Learn with interactive physics.</h2>
+        <p>Use the app to explore moving diagrams, concept quizzes, and practice problems. Core lessons are free; AI assistance requires paid tickets.</p>
+        <div class="catalog-actions">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.daryama275.physics" target="_blank" rel="noopener noreferrer">Google Play</a>
+          <a class="btn btn-primary" href="https://apps.apple.com/jp/app/id6803118421" target="_blank" rel="noopener noreferrer">App Store</a>
+          <a class="btn btn-ghost" href="./physics.html">About the App</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="./" class="footer-logo">cntnct</a>
+    <ul class="footer-links">
+      <li><a href="./physics.html">Sawatte Oboeru Physics</a></li>
+      <li><a href="../privacy_physics.html">Privacy Policy (Japanese)</a></li>
+      <li><a href="../terms_physics.html">Terms of Use (Japanese)</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 Containnect. All rights reserved.</p>
+  </footer>
+  <script src="../main.js"></script>
+  <script src="../physics-catalog.js"></script>
+</body>
+</html>
