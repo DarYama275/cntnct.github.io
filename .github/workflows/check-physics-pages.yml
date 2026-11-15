@@ -8,6 +8,11 @@ on:
       - 'scripts/test-english-physics-pages.mjs'
       - '.github/workflows/generate-sitemap.yml'
       - 'en/physics.html'
+      - 'en/physics-catalog.html'
+      - 'physics-catalog.html'
+      - 'physics-catalog.js'
+      - 'physics-catalog.css'
+      - 'scripts/test-bilingual-physics-catalog.mjs'
       - 'en/index.html'
       - 'physics.html'
       - 'data/learning-content-index.json'
@@ -31,6 +36,7 @@ jobs:
           node --check scripts/generate-physics-pages.mjs
           node --check scripts/generate-english-physics-pages.mjs
           node --test scripts/test-english-physics-pages.mjs
+          node --test scripts/test-bilingual-physics-catalog.mjs
       - name: Generate HTML from catalog index
         run: node scripts/generate-physics-pages.mjs
       - name: Validate output count, HTML metadata, and sitemap entries
