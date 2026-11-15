@@ -37,7 +37,7 @@ test('generate English HTML without leaking Japanese labels or claiming full tra
     assert.match(html, /not yet available in English/);
     assert.doesNotMatch(html, /波の図解/);
     const index = await readFile(path.join(root, 'en/physics-topics/index.html'), 'utf8');
-    assert.match(index, /Wave Equations and Superposition/);
+    assert.match(index, /en\/physics-catalog\.html/);
   } finally {
     await rm(root, { recursive: true, force: true });
   }
