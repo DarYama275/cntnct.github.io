@@ -1,0 +1,42 @@
+name: Check physics topic page generator
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/generate-physics-pages.mjs'
+      - 'data/learning-content-index.json'
+      - 'sitemap.xml'
+      - '.github/workflows/check-physics-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check script syntax
+        run: node --check scripts/generate-physics-pages.mjs
+      - name: Generate HTML from catalog index
+        run: node scripts/generate-physics-pages.mjs
+      - name: Validate output count, HTML metadata, and sitemap entries
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const index=JSON.parse(fs.readFileSync('data/learning-content-index.json','utf8'));
+          const sitemap=fs.readFileSync('sitemap.xml','utf8');
+          for (const section of index.sections) {
+            const id=section.id.replaceAll('.','-');
+            const url='https://containnect.com/physics-topics/'+id+'.html';
+            const html=fs.readFileSync('physics-topics/'+id+'.html','utf8');
+            if (!html.includes('<title>') || !html.includes('rel="canonical"') || !sitemap.includes(url)) {
+              throw Error('Invalid static topic page: '+section.id);
+            }
+          }
+          console.log('Validated '+index.sections.length+' topic pages');
+          NODE
