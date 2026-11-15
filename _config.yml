@@ -1,2 +1,9 @@
 include:
   - .well-known
+
+# Build tools are in the public GitHub repo but excluded from Jekyll Pages output.
+exclude:
+  - scripts/
+  - node_modules/
+  - package.json
+  - package-lock.json
