@@ -6,6 +6,7 @@ on:
     paths:
       - '**.html'
       - '.github/workflows/generate-sitemap.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,59 +14,85 @@ permissions:
 jobs:
   sitemap:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
       - name: Generate sitemap.xml
+        shell: bash
         run: |
+          set -euo pipefail
           BASE_URL="https://containnect.com"
           TODAY=$(date +%Y-%m-%d)
 
-          # 除外するHTMLファイルのパターン（必要に応じて追加）
+          # Preserve the existing exclusions for root-level pages.
           EXCLUDE_PATTERN="404|privacy|terms"
 
-          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
-          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+          } > sitemap.xml
 
-          # ルートのHTMLファイルを列挙（サブディレクトリは含まない）
-          for file in *.html; do
-            # 除外パターンに一致するファイルはスキップ
-            if echo "$file" | grep -qiE "$EXCLUDE_PATTERN"; then
+          # Root pages plus the generated physics topic pages.
+          # Do not scan the entire repository, which can include tooling/tests.
+          shopt -s nullglob
+          files=( *.html physics-topics/*.html )
+          if (( ${#files[@]} == 0 )); then
+            echo "No HTML pages found" >&2
+            exit 1
+          fi
+
+          for file in "${files[@]}"; do
+            if [[ "$file" != physics-topics/* ]] && echo "$file" | grep -qiE "$EXCLUDE_PATTERN"; then
               continue
             fi
 
-            if [ "$file" = "index.html" ]; then
+            if [[ "$file" == "index.html" ]]; then
               loc="${BASE_URL}/"
               priority="1.0"
-              changefreq="monthly"
             else
-              # index.html以外: .htmlを除いたパス
-              slug="${file%.html}"
-              loc="${BASE_URL}/${slug}.html"
+              loc="${BASE_URL}/${file}"
               priority="0.9"
-              changefreq="monthly"
             fi
 
-            echo "  <url>" >> sitemap.xml
-            echo "    <loc>${loc}</loc>" >> sitemap.xml
-            echo "    <lastmod>${TODAY}</lastmod>" >> sitemap.xml
-            echo "    <changefreq>${changefreq}</changefreq>" >> sitemap.xml
-            echo "    <priority>${priority}</priority>" >> sitemap.xml
-            echo "  </url>" >> sitemap.xml
+            {
+              echo "  <url>"
+              echo "    <loc>${loc}</loc>"
+              echo "    <lastmod>${TODAY}</lastmod>"
+              echo "    <changefreq>monthly</changefreq>"
+              echo "    <priority>${priority}</priority>"
+              echo "  </url>"
+            } >> sitemap.xml
           done
 
           echo '</urlset>' >> sitemap.xml
 
-          echo "--- Generated sitemap.xml ---"
-          cat sitemap.xml
+      - name: Validate topic URLs and sitemap XML
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          root = ET.parse('sitemap.xml').getroot()
+          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [el.text for el in root.findall('sm:url/sm:loc', ns)]
+          if len(urls) != len(set(urls)):
+              raise SystemExit('Duplicate sitemap URLs')
+          index = json.loads(Path('data/learning-content-index.json').read_text())
+          expected = {
+              'https://containnect.com/physics-topics/' + str(section['id']).replace('.', '-') + '.html'
+              for section in index['sections']
+          }
+          actual = {url for url in urls if '/physics-topics/' in url}
+          if actual != expected:
+              raise SystemExit(f'Topic URL mismatch: missing={sorted(expected-actual)} extra={sorted(actual-expected)}')
+          print(f'Validated {len(actual)} topic URLs and {len(urls)} total URLs')
+          PY
 
       - name: Commit sitemap.xml
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add sitemap.xml
-          # 変更がなければコミットしない
           git diff --cached --quiet || git commit -m "chore: auto-update sitemap.xml [skip ci]"
           git push
-
